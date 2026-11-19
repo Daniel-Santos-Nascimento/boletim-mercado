@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block titulo %}{{ a.ticker }}: cotação, valor de mercado e comunicados | {{ cfg.nome }}{% endblock %}
+{% block descricao %}{{ a.ticker }} ({{ a.nome }}): cotação de R$ {{ a.preco | num }}, valor de mercado de {{ a.valor_mercado | compacto }}, setor {{ a.setor | lower }} e os comunicados mais recentes à CVM.{% endblock %}
+{% block conteudo %}
+{% macro variacao(v) -%}
+  {%- if v is not none -%}<span class="var {{ 'sobe' if v > 0 else ('desce' if v < 0 else 'neutro') }}">{{ '▲' if v > 0 else ('▼' if v < 0 else '■') }} {{ v | num }}%</span>{%- endif -%}
+{%- endmacro %}
+<section class="fii-topo">
+  <div class="wrap">
+    <p class="trilha"><a href="{{ raiz }}acoes/index.html">Ações</a> / {{ a.ticker }}</p>
+    <div class="fii-cabecalho">
+      <div>
+        <h1>{{ a.ticker }}</h1>
+        <p class="fii-nome">{{ a.nome }}</p>
+        <p class="fii-etiquetas"><span>{{ a.setor }}</span>{% if a.subsetor %}<span>{{ a.subsetor }}</span>{% endif %}{% if a.listagem %}<span>{{ a.listagem }}</span>{% endif %}</p>
+      </div>
+      <div class="fii-cotacao">
+        <p class="fii-preco">R$ {{ a.preco | num }}</p>
+        <p>{{ variacao(a.var_pct) }} <span>no último pregão</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="painel fii-indicadores painel-4">
+    <div class="celula"><h3>Valor de mercado</h3><p class="valor">{{ a.valor_mercado | compacto }}</p><p class="meta">Todas as classes de ações da empresa</p></div>
+    <div class="celula"><h3>Giro no pregão</h3><p class="valor">{{ a.financeiro | compacto }}</p><p class="meta">Volume financeiro de {{ a.ticker }}</p></div>
+    <div class="celula"><h3>Tipo de ação</h3><p class="valor valor-texto">{{ a.classe or "Não informado" }}</p><p class="meta">{% if irmas %}Outras classes: {% for i in irmas %}<a href="{{ raiz }}acoes/{{ i.ticker }}/index.html">{{ i.ticker }}</a>{{ ", " if not loop.last }}{% endfor %}{% else %}Única classe listada{% endif %}</p></div>
+    <div class="celula"><h3>Controle acionário</h3><p class="valor valor-texto">{{ a.controle or "Não informado" }}</p><p class="meta">{% if a.fundacao %}Empresa constituída em {{ a.fundacao }}{% endif %}</p></div>
+  </div>
+</section>
+
+<div class="wrap duas-colunas">
+  <section class="bloco">
+    <h2>Sobre a empresa</h2>
+    {% if a.atividade %}<p class="atividade">{{ a.atividade }}</p>{% else %}<p class="vazio">A empresa não informou a descrição da atividade.</p>{% endif %}
+    <dl class="ficha">
+      <div><dt>Razão social</dt><dd>{{ a.nome }}</dd></div>
+      <div><dt>CNPJ</dt><dd>{{ a.cnpj }}</dd></div>
+      <div><dt>Segmento de listagem</dt><dd>{{ a.listagem or "Tradicional" }}</dd></div>
+      {% if a.site %}<div><dt>Site</dt><dd><a href="{{ a.site if a.site.startswith('http') else 'https://' ~ a.site }}" target="_blank" rel="noopener">{{ a.site }}</a></dd></div>{% endif %}
+    </dl>
+  </section>
+  <section class="bloco">
+    <h2>Comunicados à CVM</h2>
+    <p class="sub">Fatos relevantes, avisos aos acionistas (dividendos e JCP), relatórios de proventos e comunicados ao mercado.</p>
+    {% if a.comunicados %}
+    <ul class="fatos">
+      {% for d in a.comunicados %}
+      <li>
+        <time>{{ d.data | data_curta }}</time>
+        <div>
+          <p class="empresa">{{ d.categoria }}</p>
+          <p class="assunto">{{ d.assunto }}</p>
+          {% if d.link %}<a href="{{ d.link }}" target="_blank" rel="noopener">Abrir documento na CVM</a>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="vazio">Nenhum comunicado dessas categorias entregue neste ano.</p>
+    {% endif %}
+  </section>
+</div>
+
+<section class="wrap">
+  <p class="nota">Fontes: cotação e valor de mercado da B3 via brapi.dev; cadastro e comunicados da CVM (dados abertos). Conteúdo informativo, não é recomendação de investimento.</p>
+</section>
+
+{% if relacionados %}
+<section class="wrap">
+  <h2 class="titulo-secao">Outras empresas de {{ a.setor | lower }}</h2>
+  <div class="cartoes-fii">
+    {% for r in relacionados %}
+    <a class="cartao-fii" href="{{ raiz }}acoes/{{ r.ticker }}/index.html">
+      <span class="cartao-linha"><span class="ticker">{{ r.ticker }}</span>{{ variacao(r.var_pct) }}</span>
+      <span class="empresa-curta">{{ r.nome }}</span>
+      <span class="cartao-linha"><span>R$ {{ r.preco | num }}</span><span>{{ r.valor_mercado | compacto }}</span></span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+<div class="espaco-final"></div>
+{% endblock %}
