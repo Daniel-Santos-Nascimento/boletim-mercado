@@ -71,13 +71,13 @@
 
 <section class="bloco">
   <h2>Fatos relevantes</h2>
-  <p class="sub">Comunicados entregues à CVM desde o último pregão</p>
+  <p class="sub">Comunicados mais recentes entregues à CVM</p>
   {% if b.fatos_relevantes %}
   <ul class="fatos">
     {% for f in b.fatos_relevantes %}
     <li>
       <span class="empresa">{{ f.empresa }}</span>
-      <span class="assunto">{{ f.assunto or "Fato relevante" }}</span>
+      <span class="assunto">{{ f.data | data_curta }} · {{ f.assunto or "Fato relevante" }}</span>
       {% if f.link %}<a href="{{ f.link }}" target="_blank" rel="noopener">documento na CVM ↗</a>{% endif %}
     </li>
     {% endfor %}
