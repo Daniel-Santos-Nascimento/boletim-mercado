@@ -86,6 +86,15 @@ def manchete(b):
 
 
 
+def hora(iso, referencia=None):
+    """Mostra só a hora se for do mesmo dia do boletim; senão, a data."""
+    if not iso:
+        return ""
+    if referencia and iso[:10] == referencia[:10]:
+        return iso[11:16].replace(":", "h")
+    return data_curta(iso)
+
+
 def focus_tabela(focus):
     """Agrupa as linhas do Focus por indicador, mantendo a ordem."""
     if not focus:
@@ -118,7 +127,7 @@ def main():
         sys.exit("Nenhum boletim encontrado. Rode coletar.py antes (ou use --exemplo).")
 
     env = Environment(loader=FileSystemLoader(BASE / "templates"), autoescape=select_autoescape())
-    env.filters.update(num=num, data_longa=data_longa, data_curta=data_curta, spark=spark)
+    env.filters.update(num=num, data_longa=data_longa, data_curta=data_curta, spark=spark, hora=hora)
     env.globals.update(manchete=manchete)
     css = (BASE / "templates" / "style.css").read_text(encoding="utf-8")
     ctx = {"cfg": cfg, "css": css, "arquivo": [b["data_boletim"] for b in boletins]}
