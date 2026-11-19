@@ -1,0 +1,58 @@
+name: Boletim diário
+
+on:
+  schedule:
+    - cron: "0 9 * * 1-5"      # 06:00 em Brasília, segunda a sexta
+  push:
+    branches: [main]
+    paths: ["comentarios/**", "templates/**", "config.json", "gerar_site.py"]
+  workflow_dispatch:            # botão "Run workflow" para rodar na hora
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: boletim
+  cancel-in-progress: false
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Coletar dados (só no horário agendado ou manual)
+        if: github.event_name != 'push'
+        env:
+          BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
+        run: python coletar.py
+
+      - name: Gerar site
+        run: python gerar_site.py
+
+      - name: Salvar dados no repositório
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "robo-boletim"
+          git config user.email "robo-boletim@users.noreply.github.com"
+          git add data/
+          git commit -m "Boletim $(date -u +%F)" || echo "Nada novo"
+          git push
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
