@@ -1,6 +1,6 @@
 {
   "data_boletim": "2026-11-19",
-  "gerado_em": "2026-11-19T10:18-03:00",
+  "gerado_em": "2026-11-19T10:30-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
@@ -225,8 +225,8 @@
   },
   "bolsa": {
     "ibov": {
-      "valor": 167586.84,
-      "var_pct": 0.03,
+      "valor": 168090.45,
+      "var_pct": 0.33,
       "data": "2026-11-19",
       "hist": [
         208296,
@@ -250,12 +250,12 @@
         169295,
         169817,
         167538,
-        167586.8438
+        167740.5469
       ]
     },
     "ifix": {
-      "valor": 3516.96,
-      "var_pct": 0.11,
+      "valor": 3514.45,
+      "var_pct": 0.04,
       "data": "2026-11-19"
     }
   },
@@ -390,6 +390,106 @@
       "assunto": "Saída do Novo Mercado e migração para o N2",
       "data": "2026-11-13",
       "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589472&numSequencia=1114178&numVersao=1"
+    }
+  ],
+  "manchetes": [
+    {
+      "titulo": "PSB e PDT oficializam federação; pedido será protocolado no TSE",
+      "link": "https://www.infomoney.com.br/politica/psb-e-pdt-oficializam-federacao-pedido-sera-protocolado-no-tse/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-19T10:29-03:00"
+    },
+    {
+      "titulo": "Moretti diz que ainda não é o momento de tratar de medidas fiscais adicionais",
+      "link": "https://www.infomoney.com.br/mercados/moretti-diz-que-ainda-nao-e-o-momento-de-tratar-de-medidas-fiscais-adicionais/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-19T10:27-03:00"
+    },
+    {
+      "titulo": "ANTH34: BDR da Anthropic estreia na B3 junto com ação na Nasdaq por cerca de R$ 60",
+      "link": "https://www.infomoney.com.br/mercados/anth34-bdr-da-anthropic-estreia-na-b3-simultaneamente-a-estreia-na-nasdaq-por-cerca-de-r-60/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-19T10:24-03:00"
+    },
+    {
+      "titulo": "Pacote fiscal e inflação elevada: cenário continua favorecendo PACC11",
+      "link": "https://www.moneytimes.com.br/pacote-fiscal-e-inflacao-elevada-cenario-continua-favorecendo-pacc11-mlem/",
+      "fonte": "Money Times",
+      "quando": "2026-11-19T10:21-03:00"
+    },
+    {
+      "titulo": "Ibovespa Hoje Ao Vivo: Bolsa sobe com ajuste fiscal no radar",
+      "link": "https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-19112026/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-19T10:19-03:00"
+    },
+    {
+      "titulo": "Todo mundo decidiu abandonar o Brasil? BTG e Itaú BBA também tiram o pé da bolsa brasileira após eleições",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/todo-mundo-decidiu-abandonar-o-brasil-btg-e-itau-bba-tambem-tiram-o-pe-da-bolsa-brasileira-apos-eleicoes-miql/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-19T10:18-03:00"
+    },
+    {
+      "titulo": "Apenas 2 em cada 10 profissionais se sentem preparados para utilizar IA no trabalho; entenda como você pode sair na frente e aproveitar a tecnologia",
+      "link": "https://www.moneytimes.com.br/apenas-2-em-cada-10-profissionais-se-sentem-preparados-para-utilizar-ia-no-trabalho-entenda-como-voce-pode-sair-na-frente-e-aproveitar-a-tecnologia-lbrdjm054/",
+      "fonte": "Money Times",
+      "quando": "2026-11-19T10:00-03:00"
+    },
+    {
+      "titulo": "PSB e PDT oficializam federação; pedido será protocolado no TSE",
+      "link": "https://www.moneytimes.com.br/psb-e-pdt-oficializam-federacao-pedido-sera-protocolado-no-tse/",
+      "fonte": "Money Times",
+      "quando": "2026-11-19T09:41-03:00"
+    },
+    {
+      "titulo": "IPO bilionário da Anthropic vira termômetro do apetite por IA — e do temor de uma bolha em Wall Street",
+      "link": "https://www.moneytimes.com.br/ipo-historica-da-anthropic-colocara-a-prova-promessas-e-riscos-da-ia-em-wall-street/",
+      "fonte": "Money Times",
+      "quando": "2026-11-19T09:37-03:00"
+    },
+    {
+      "titulo": "Após colocar Ribeirão Preto no mapa do vinho global, Terras Altas agora aposta no enoturismo",
+      "link": "https://www.seudinheiro.com/2026/lifestyle/apos-colocar-vinhos-de-ribeirao-preto-no-mapa-global-terras-altas-agora-aposta-no-enoturismo-edvl/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-19T09:02-03:00"
+    },
+    {
+      "titulo": "Investir em opções: veja como funciona e aprenda a executar operações com a classe de ativos que gerou até 368% de lucro após as eleições",
+      "link": "https://www.seudinheiro.com/2026/financas-pessoais/investir-em-opcoes-veja-como-funciona-e-aprenda-a-executar-operacoes-com-a-classe-de-ativos-que-gerou-ate-368-de-lucro-apos-as-eleicoes-lbrdis630/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-19T09:00-03:00"
+    },
+    {
+      "titulo": "O que faz a diferença: investidores repercutem ajuste fiscal, estreia da Anthopic e encontro Xi-Trump-Putin",
+      "link": "https://www.seudinheiro.com/2026/colunistas/faz-diferenca-investidores-repercutem-ajuste-fiscal-estreia-anthopic-encontro-xi-trump-putin-rsgp/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-19T08:35-03:00"
+    }
+  ],
+  "oficiais": [
+    {
+      "titulo": "BC divulga Fluxo cambial mensal",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21323/nota",
+      "fonte": "Banco Central",
+      "quando": "2026-11-18T14:31-03:00"
+    },
+    {
+      "titulo": "BC divulga estudo sobre os canais de transmissão da política monetária por meio do crédito",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21322/nota",
+      "fonte": "Banco Central",
+      "quando": "2026-11-18T09:30-03:00"
+    },
+    {
+      "titulo": "BC anuncia leilões de swap cambial tradicional para fins de rolagem dos contratos vincendos em 4 de janeiro de 2027",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21321/nota",
+      "fonte": "Banco Central",
+      "quando": "2026-11-17T18:30-03:00"
+    },
+    {
+      "titulo": "BC divulga o IBC-Br de setembro de 2026",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21319/nota",
+      "fonte": "Banco Central",
+      "quando": "2026-11-16T09:01-03:00"
     }
   ],
   "erros": []
