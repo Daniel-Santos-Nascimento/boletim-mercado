@@ -129,6 +129,11 @@ def brapi(ticker, nome):
         return None
 
 
+def logo_valido(url):
+    """Ícone fornecido pela brapi; ignora o genérico usado quando não há logo."""
+    return url if url and not url.rstrip("/").endswith("BRAPI.svg") else None
+
+
 def limpar_nome(nome):
     """'CIA BRASILEIRA DE DISTRIBUICAO S/A' -> 'Cia Brasileira de Distribuicao'"""
     ligacoes = {"de", "da", "do", "das", "dos", "e"}
@@ -155,6 +160,7 @@ def destaques_bolsa():
                 "preco": a["close"],
                 "var_pct": round(a["change"], 2),
                 "financeiro": a["close"] * (a.get("volume") or 0),
+                "logo": logo_valido(a.get("logo")),
             })
         if not acoes:
             return None
@@ -310,7 +316,8 @@ def main():
         "gerado_em": datetime.now(FUSO_BR).isoformat(timespec="minutes"),
         "exemplo": False,
         "juros": {"selic": serie("Selic", 432, 365, grafico=True, passo=7),
-                  "cdi": serie("CDI", 4389, 365, grafico=True, passo=7)},
+                  "cdi": serie("CDI", 4389, 365, grafico=True, passo=7),
+                  "poupanca": serie("Poupança", 196, 100)},  # rendimento mensal oficial
         "inflacao": {"ipca_mes": serie("IPCA mês", 433, 100),
                      "ipca_12m": serie("IPCA 12m", 13522, 760, grafico=True)},
         "cambio": {"dolar": serie("Dólar", 1, 45, com_variacao=True, grafico=True),

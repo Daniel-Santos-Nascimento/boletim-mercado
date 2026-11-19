@@ -118,6 +118,7 @@ def coletar_acoes(get, hoje, erros, pasta):
                 "var_pct": round(p.get("change") or 0, 2),
                 "financeiro": p["close"] * (p.get("volume") or 0),
                 "valor_mercado": p.get("market_cap"),
+                "logo": p.get("logo") if p.get("logo") and not p["logo"].endswith("BRAPI.svg") else None,
                 "comunicados": recentes[:10],
             })
         acoes.sort(key=lambda a: a["valor_mercado"] or 0, reverse=True)

@@ -127,6 +127,7 @@ def coletar_fiis(get, hoje, erros, pasta):
                 "preco": preco,
                 "var_pct": round(p.get("change") or 0, 2),
                 "financeiro": preco * (p.get("volume") or 0),
+                "logo": p.get("logo") if p.get("logo") and not p["logo"].endswith("BRAPI.svg") else None,
                 "vpc": vpc,
                 "pvp": round(preco / vpc, 2) if vpc else None,
                 "pl": _num(ult.get("Patrimonio_Liquido")),
