@@ -97,7 +97,7 @@
     <ul>
       {% for a in lista %}
       <li>
-        <span class="ticker">{{ a.ticker }}</span>
+        {% if a.ticker in acoes_set %}<a class="ticker" href="{{ raiz }}acoes/{{ a.ticker }}/index.html">{{ a.ticker }}</a>{% else %}<span class="ticker">{{ a.ticker }}</span>{% endif %}
         <span class="empresa-curta">{{ a.nome }}</span>
         <span class="preco">R$ {{ a.preco | num }}</span>
         {% if coluna == "var" %}{{ variacao(a.var_pct) }}{% else %}<span class="giro">{{ a.financeiro | compacto }}</span>{% endif %}
