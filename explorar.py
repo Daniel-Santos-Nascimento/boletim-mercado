@@ -1,42 +1,33 @@
-"""Script temporário: mostra a estrutura dos dados de ações (CVM e brapi) no log."""
-import csv, io, os, zipfile
+"""Script temporário: mostra a estrutura dos balanços (ITR/DFP) da CVM no log."""
+import csv, io, zipfile, time
 import requests
 
 H = {"User-Agent": "Mozilla/5.0 (compatible; boletim-mercado/1.0)"}
+ALVOS = {"33.000.167/0001-01": "PETROBRAS", "60.872.504/0001-23": "ITAU"}
 
-def zipar(url):
-    return zipfile.ZipFile(io.BytesIO(requests.get(url, headers=H, timeout=180).content))
+def baixar(url):
+    t = time.time(); r = requests.get(url, headers=H, timeout=300)
+    print(f"{url} -> {r.status_code} {len(r.content)/1e6:.1f} MB em {time.time()-t:.0f}s")
+    return zipfile.ZipFile(io.BytesIO(r.content))
 
-print("=== FCA 2026 ===")
-z = zipar("https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FCA/DADOS/fca_cia_aberta_2026.zip")
-for n in z.namelist():
-    t = z.read(n).decode("latin-1")
-    linhas = list(csv.reader(io.StringIO(t), delimiter=";"))
-    print(f"--- {n}: {len(linhas)} linhas")
-    print(" | ".join(linhas[0]))
-    alvo = [l for l in linhas if any("PETR" in c or "PETROLEO BRASILEIRO" in c.upper() for c in l)]
-    for l in (alvo[-2:] or linhas[1:2]):
-        print("   ", " | ".join(l)[:700])
-
-print("=== IPE categorias ===")
-z = zipar("https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/IPE/DADOS/ipe_cia_aberta_2026.zip")
-t = z.read(z.namelist()[0]).decode("latin-1")
-linhas = list(csv.DictReader(io.StringIO(t), delimiter=";"))
-print("colunas:", list(linhas[0].keys()))
-cont = {}
-for l in linhas:
-    cont[l["Categoria"]] = cont.get(l["Categoria"], 0) + 1
-print(sorted(cont.items(), key=lambda x: -x[1])[:20])
-print([ (l["Data_Entrega"], l["Categoria"], l["Assunto"][:60]) for l in linhas if "PETROLEO BRASILEIRO" in l["Nome_Companhia"].upper()][-5:])
-
-print("=== BRAPI STOCKS ===")
-p = {"type": "stock", "sortBy": "volume", "sortOrder": "desc", "limit": 1000}
-if os.getenv("BRAPI_TOKEN"):
-    p["token"] = os.getenv("BRAPI_TOKEN")
-j = requests.get("https://brapi.dev/api/quote/list", params=p, headers=H, timeout=60).json()
-print("itens:", len(j.get("stocks", [])), "total:", j.get("totalCount"))
-setores = {}
-for s in j.get("stocks", []):
-    setores[s.get("sector")] = setores.get(s.get("sector"), 0) + 1
-print(setores)
-print([s for s in j.get("stocks", []) if s["stock"] in ("PETR4", "ITUB4", "WEGE3")])
+for url in ["https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+            "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip"]:
+    z = baixar(url)
+    nomes = z.namelist()
+    print("arquivos:", nomes)
+    for parte in ("DRE_con", "BPP_con", "BPA_con"):
+        n = next((x for x in nomes if parte in x), None)
+        if not n:
+            continue
+        t = z.read(n).decode("latin-1")
+        print(f"--- {n}: {len(t)/1e6:.1f} MB")
+        leitor = csv.DictReader(io.StringIO(t), delimiter=";")
+        print("colunas:", leitor.fieldnames)
+        vistos = 0
+        for l in leitor:
+            if l["CNPJ_CIA"] in ALVOS and l["CD_CONTA"].count(".") <= 2:
+                print(" ", ALVOS[l["CNPJ_CIA"]], l["DT_REFER"], l.get("ORDEM_EXERC"), l.get("DT_INI_EXERC", ""), l["DT_FIM_EXERC"],
+                      l["ESCALA_MOEDA"], l["CD_CONTA"], l["DS_CONTA"][:60], l["VL_CONTA"], l.get("ST_CONTA_FIXA"))
+                vistos += 1
+                if vistos > 110:
+                    break
