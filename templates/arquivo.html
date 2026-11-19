@@ -1,7 +1,8 @@
 {% extends "base.html" %}
-{% block titulo %}Arquivo · {{ cfg.nome }}{% endblock %}
+{% block titulo %}Arquivo | {{ cfg.nome }}{% endblock %}
 {% block conteudo %}
-<section class="capa"><p class="sobretitulo">Arquivo</p><h1>Todos os boletins</h1></section>
+<div class="wrap pagina">
+<section class="capa"><h1>Todos os boletins</h1></section>
 <section class="bloco">
   <ul class="lista-arquivo">
   {% for d in arquivo %}
@@ -9,4 +10,5 @@
   {% endfor %}
   </ul>
 </section>
+</div>
 {% endblock %}
