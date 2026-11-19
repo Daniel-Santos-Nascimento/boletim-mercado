@@ -327,6 +327,8 @@ def main():
     dados["fiis_total"] = coletar_fiis(get, HOJE, erros, BASE / "data")
     from acoes import coletar_acoes  # páginas de ações: grava data/acoes.json
     dados["acoes_total"] = coletar_acoes(get, HOJE, erros, BASE / "data")
+    from fundamentos import coletar_fundamentos  # balanços da CVM, uma vez por dia
+    dados["fundamentos"] = coletar_fundamentos(get, HOJE, erros, BASE / "data")
     dados["erros"] = erros
 
     (BASE / "data" / "historico").mkdir(parents=True, exist_ok=True)
