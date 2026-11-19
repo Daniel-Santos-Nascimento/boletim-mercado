@@ -1,103 +1,154 @@
 {% extends "base.html" %}
-{% block titulo %}Boletim de {{ b.data_boletim | data_longa }} · {{ cfg.nome }}{% endblock %}
-{% block descricao %}Selic, CDI, IPCA, dólar, Ibovespa, IFIX, Focus e fatos relevantes de {{ b.data_boletim | data_curta }}.{% endblock %}
+{% block titulo %}{{ manchete(b) }} | {{ cfg.nome }}{% endblock %}
+{% block descricao %}Boletim de {{ b.data_boletim | data_curta }}: Selic, CDI, IPCA, dólar, Ibovespa, IFIX, Focus e fatos relevantes, direto das fontes oficiais.{% endblock %}
+
+{% macro variacao(v) -%}
+  {%- if v is not none -%}
+  <span class="var {{ 'sobe' if v > 0 else ('desce' if v < 0 else 'neutro') }}">{{ '▲' if v > 0 else ('▼' if v < 0 else '■') }} {{ v | num }}%</span>
+  {%- endif -%}
+{%- endmacro %}
+
+{% block ticker %}
+{% set itens = [
+  ("Ibovespa", b.bolsa.ibov, 0, " pts", ""),
+  ("IFIX", b.bolsa.ifix, 0, " pts", ""),
+  ("Dólar", b.cambio.dolar, 4, "", "R$ "),
+  ("Euro", b.cambio.euro, 4, "", "R$ "),
+  ("Selic", b.juros.selic, 2, "% a.a.", ""),
+  ("CDI", b.juros.cdi, 2, "% a.a.", ""),
+  ("IPCA 12 meses", b.inflacao.ipca_12m, 2, "%", ""),
+  ("IPCA do mês", b.inflacao.ipca_mes, 2, "%", ""),
+] %}
+<div class="fita" aria-label="Resumo das cotações">
+  <div class="fita-trilho">
+    {% for rodada in [1, 2] %}
+    <ul class="fita-lista" {% if rodada == 2 %}aria-hidden="true"{% endif %}>
+      {% for nome, item, casas, suf, pre in itens if item %}
+      <li><span class="fita-nome">{{ nome }}</span> {{ pre }}{{ item.valor | num(casas) }}{{ suf }} {% if item.var_pct is defined %}{{ variacao(item.var_pct) }}{% endif %}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
 {% block conteudo %}
 
-{% if b.exemplo %}<div class="aviso-exemplo">Pré-visualização com <strong>dados de exemplo</strong>. Os números reais entram quando o robô diário rodar.</div>{% endif %}
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-texto">
+      {% if b.exemplo %}<p class="aviso-exemplo">Pré-visualização com dados de exemplo</p>{% endif %}
+      <p class="hero-data">{{ b.data_boletim | data_longa | capitalize }}</p>
+      <h1 class="manchete">{{ manchete(b) }}</h1>
+      <p class="hero-sub">{{ cfg.slogan }}</p>
+      <div class="hero-acoes">
+        {% if b.comentario_html %}<a class="botao" href="#leitura">Ler a análise do dia</a>{% endif %}
+        <a class="botao {{ 'secundario' if b.comentario_html else '' }}" href="#indicadores">Ver os indicadores</a>
+      </div>
+    </div>
 
-<section class="capa">
-  <p class="sobretitulo">Boletim diário</p>
-  <h1>{{ b.data_boletim | data_longa | capitalize }}</h1>
-  <p class="slogan">{{ cfg.slogan }}</p>
+    {% set ibov = b.bolsa.ibov %}
+    <div class="destaque">
+      <p class="destaque-nome">Ibovespa</p>
+      {% if ibov %}
+        <p class="destaque-valor">{{ ibov.valor | num(0) }}<small> pts</small></p>
+        <p class="destaque-meta">{{ variacao(ibov.var_pct) }} <span>no pregão de {{ ibov.data | data_curta }}</span></p>
+        <div class="destaque-grafico">{{ ibov | spark(320, 110) }}</div>
+        {% if ibov.hist %}<p class="destaque-legenda">Fechamento dos últimos {{ ibov.hist | length }} pregões</p>{% endif %}
+      {% else %}
+        <p class="destaque-valor indisponivel">–</p>
+        <p class="destaque-meta">Cotação indisponível nesta edição</p>
+      {% endif %}
+    </div>
+  </div>
 </section>
 
-{% macro card(rotulo, item, sufixo="", prefixo="", casas=2, nota="") %}
-  <div class="card">
-    <span class="rotulo">{{ rotulo }}</span>
+{% macro celula(nome, item, casas=2, suf="", pre="", periodo="", nota="", neutro=False) %}
+  <div class="celula">
+    <h3>{{ nome }}</h3>
     {% if item %}
-      <span class="valor">{{ prefixo }}{{ item.valor | num(casas) }}<small>{{ sufixo }}</small></span>
-      <span class="meta">
-        {% if item.var_pct is defined and item.var_pct is not none %}
-          <span class="var {{ 'sobe' if item.var_pct > 0 else ('desce' if item.var_pct < 0 else '') }}">
-            {{ '▲' if item.var_pct > 0 else ('▼' if item.var_pct < 0 else '•') }} {{ item.var_pct | num }}%
-          </span>
-        {% endif %}
-        {{ nota }} {{ item.data | data_curta }}
-      </span>
+      <p class="valor">{{ pre }}{{ item.valor | num(casas) }}<small>{{ suf }}</small></p>
+      <p class="meta">{% if item.var_pct is defined %}{{ variacao(item.var_pct) }} {% endif %}<span>{{ nota }}{{ item.data | data_curta }}</span></p>
+      {% if item.hist %}<div class="mini">{{ item | spark(neutro=neutro) }}</div><p class="periodo">{{ periodo }}</p>{% endif %}
     {% else %}
-      <span class="valor indisponivel">–</span><span class="meta">indisponível hoje</span>
+      <p class="valor indisponivel">–</p><p class="meta">Indisponível nesta edição</p>
     {% endif %}
   </div>
 {% endmacro %}
 
-<section class="painel">
-  {{ card("Selic meta", b.juros.selic, "% a.a.") }}
-  {{ card("CDI", b.juros.cdi, "% a.a.") }}
-  {{ card("IPCA 12 meses", b.inflacao.ipca_12m, "%", nota="ref.") }}
-  {{ card("Dólar PTAX", b.cambio.dolar, "", "R$ ", 4) }}
-  {{ card("Ibovespa", b.bolsa.ibov, " pts", casas=0) }}
-  {{ card("IFIX", b.bolsa.ifix, " pts", casas=0) }}
+<section class="wrap indicadores" id="indicadores">
+  <div class="painel">
+    {{ celula("Selic", b.juros.selic, 2, "% a.a.", periodo="Últimos 12 meses", nota="Meta vigente em ", neutro=True) }}
+    {{ celula("CDI", b.juros.cdi, 2, "% a.a.", periodo="Últimos 12 meses", neutro=True) }}
+    {{ celula("IPCA 12 meses", b.inflacao.ipca_12m, 2, "%", periodo="Últimos 2 anos", nota="Referência ", neutro=True) }}
+    {{ celula("Dólar PTAX", b.cambio.dolar, 4, "", "R$ ", periodo="Últimos 30 dias") }}
+    {{ celula("IFIX", b.bolsa.ifix, 0, " pts", periodo="Último mês") }}
+  </div>
 </section>
 
 {% if b.comentario_html %}
-<section class="bloco leitura">
-  <h2>A leitura do dia</h2>
-  <div class="texto">{{ b.comentario_html | safe }}</div>
-  <p class="assinatura">— {{ cfg.autor }}</p>
+<section class="wrap leitura" id="leitura">
+  <h2>A análise do dia</h2>
+  <div class="leitura-texto">{{ b.comentario_html | safe }}</div>
+  <p class="assinatura">{{ cfg.autor }}</p>
 </section>
 {% endif %}
 
-<div class="duas-colunas">
-{% if b.focus %}
-<section class="bloco">
-  <h2>Boletim Focus</h2>
-  <p class="sub">Mediana das projeções do mercado · divulgado em {{ b.focus.data | data_curta }}</p>
-  <table class="tabela">
-    <thead><tr><th>Indicador</th><th>Ano</th><th>Atual</th><th>Sem. anterior</th></tr></thead>
-    <tbody>
-    {% for l in b.focus.linhas %}
-      {% set dif = (l.mediana - l.semana_anterior) if l.semana_anterior is not none else 0 %}
-      <tr>
-        <td>{{ l.indicador }}</td><td>{{ l.ano }}</td>
-        <td class="n"><strong>{{ l.mediana | num }}</strong>
-          {% if dif > 0 %}<span class="seta">▲</span>{% elif dif < 0 %}<span class="seta">▼</span>{% endif %}</td>
-        <td class="n">{{ l.semana_anterior | num }}</td>
-      </tr>
-    {% endfor %}
-    </tbody>
-  </table>
-</section>
-{% endif %}
-
-<section class="bloco">
-  <h2>Fatos relevantes</h2>
-  <p class="sub">Comunicados mais recentes entregues à CVM</p>
-  {% if b.fatos_relevantes %}
-  <ul class="fatos">
-    {% for f in b.fatos_relevantes %}
-    <li>
-      <span class="empresa">{{ f.empresa }}</span>
-      <span class="assunto">{{ f.data | data_curta }} · {{ f.assunto or "Fato relevante" }}</span>
-      {% if f.link %}<a href="{{ f.link }}" target="_blank" rel="noopener">documento na CVM ↗</a>{% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <p class="vazio">Nenhum fato relevante entregue no período.</p>
+<div class="wrap duas-colunas">
+  {% if b.focus_tab %}
+  <section class="bloco">
+    <h2>O que o mercado espera</h2>
+    <p class="sub">Mediana das projeções do Boletim Focus, divulgado em {{ b.focus.data | data_curta }}. A seta compara com a semana anterior.</p>
+    <div class="focus">
+      <div class="focus-cab"><span></span>{% for a in b.focus_tab[0].anos %}<span>{{ a.ano }}</span>{% endfor %}</div>
+      {% for g in b.focus_tab %}
+      <div class="focus-linha">
+        <span class="focus-nome">{{ g.indicador }}</span>
+        {% for a in g.anos %}
+        <span class="focus-valor">{{ a.mediana | num }}
+          {% if a.dif %}<em class="{{ 'sobe' if a.dif > 0 else 'desce' }}" title="Semana anterior: {{ a.semana_anterior | num }}">{{ '▲' if a.dif > 0 else '▼' }}</em>{% endif %}
+        </span>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
   {% endif %}
-</section>
+
+  <section class="bloco">
+    <h2>Fatos relevantes</h2>
+    <p class="sub">Comunicados mais recentes que as empresas entregaram à CVM.</p>
+    {% if b.fatos_relevantes %}
+    <ul class="fatos">
+      {% for f in b.fatos_relevantes %}
+      <li>
+        <time>{{ f.data | data_curta }}</time>
+        <div>
+          <p class="empresa">{{ f.empresa }}</p>
+          <p class="assunto">{{ f.assunto or "Fato relevante" }}</p>
+          {% if f.link %}<a href="{{ f.link }}" target="_blank" rel="noopener">Abrir documento na CVM</a>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="vazio">Nenhum fato relevante entregue no período.</p>
+    {% endif %}
+  </section>
 </div>
 
-<section class="newsletter">
-  <div>
-    <h2>Receba o boletim no seu e-mail</h2>
-    <p>Todo dia útil, antes das 8h. Grátis, e você cancela quando quiser.</p>
+<section class="wrap">
+  <div class="newsletter">
+    <div>
+      <h2>Receba o boletim antes das 8h</h2>
+      <p>Todo dia útil no seu e-mail, de graça. Você cancela quando quiser.</p>
+    </div>
+    {% if cfg.newsletter_url %}
+      <a class="botao" href="{{ cfg.newsletter_url }}" target="_blank" rel="noopener">Quero receber</a>
+    {% else %}
+      <span class="botao desativado">Inscrições em breve</span>
+    {% endif %}
   </div>
-  {% if cfg.newsletter_url %}
-    <a class="botao" href="{{ cfg.newsletter_url }}" target="_blank" rel="noopener">Quero receber</a>
-  {% else %}
-    <span class="botao desativado">Em breve</span>
-  {% endif %}
 </section>
 
 {% endblock %}
