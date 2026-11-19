@@ -323,6 +323,8 @@ def main():
         "manchetes": noticias(FONTES_MANCHETES, total=12, por_fonte=3, horas=36),
         "oficiais": noticias(FONTES_OFICIAIS, total=6, por_fonte=3, horas=24 * 30),
     }
+    from fiis import coletar_fiis  # páginas de FIIs: grava data/fiis.json
+    dados["fiis_total"] = coletar_fiis(get, HOJE, erros, BASE / "data")
     dados["erros"] = erros
 
     (BASE / "data" / "historico").mkdir(parents=True, exist_ok=True)
