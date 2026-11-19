@@ -18,6 +18,8 @@ import markdown
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markupsafe import Markup
 
+from fundamentos import indicadores
+
 BASE = Path(__file__).parent
 SAIDA = BASE / "site"
 MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho",
@@ -97,6 +99,12 @@ def compacto(v):
     return f"R$ {num(v, 0)}"
 
 
+def compacto_sinal(v):
+    if v is None:
+        return "–"
+    return ("-" if v < 0 else "") + compacto(abs(v))
+
+
 def milhar(v):
     return "–" if v is None else num(v, 0)
 
@@ -172,12 +180,17 @@ def main():
 
     env = Environment(loader=FileSystemLoader(BASE / "templates"), autoescape=select_autoescape())
     env.filters.update(num=num, data_longa=data_longa, data_curta=data_curta, spark=spark, hora=hora, compacto=compacto,
-                       milhar=milhar, mes_ano=mes_ano, barras=barras)
+                       milhar=milhar, mes_ano=mes_ano, barras=barras,
+                       compacto_sinal=compacto_sinal)
     env.globals.update(manchete=manchete)
     arq_fiis = BASE / "data" / ("fiis_exemplo.json" if exemplo else "fiis.json")
     fundos = json.loads(arq_fiis.read_text(encoding="utf-8"))["fundos"] if arq_fiis.exists() else []
     arq_acoes = BASE / "data" / ("acoes_exemplo.json" if exemplo else "acoes.json")
     acoes = json.loads(arq_acoes.read_text(encoding="utf-8"))["acoes"] if arq_acoes.exists() else []
+    arq_fund = BASE / "data" / ("fundamentos_exemplo.json" if exemplo else "fundamentos.json")
+    fund = json.loads(arq_fund.read_text(encoding="utf-8"))["empresas"] if arq_fund.exists() else {}
+    for a in acoes:  # P/L, P/VP, ROE etc. com o valor de mercado do dia
+        a["fund"] = indicadores(fund.get(a["cnpj"]), a.get("valor_mercado"))
     ctx = {"cfg": cfg, "arquivo": [b["data_boletim"] for b in boletins],
            "fiis_destaque": fundos[:6], "tem_fiis": bool(fundos),
            "tem_acoes": bool(acoes), "acoes_set": {a["ticker"] for a in acoes}}
