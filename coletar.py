@@ -129,6 +129,15 @@ def brapi(ticker, nome):
         return None
 
 
+def limpar_nome(nome):
+    """'CIA BRASILEIRA DE DISTRIBUICAO S/A' -> 'Cia Brasileira de Distribuicao'"""
+    ligacoes = {"de", "da", "do", "das", "dos", "e"}
+    fora = {"s.a.", "s.a", "s/a", "sa", "-"}
+    palavras = [p for p in (nome or "").split() if p.lower() not in fora]
+    return " ".join(p.lower() if p.lower() in ligacoes and i else p.capitalize()
+                    for i, p in enumerate(palavras)).strip(" -.")
+
+
 def destaques_bolsa():
     """Maiores altas, baixas e mais negociadas entre as 150 ações de maior volume."""
     try:
@@ -142,7 +151,7 @@ def destaques_bolsa():
                 continue
             acoes.append({
                 "ticker": a["stock"],
-                "nome": " ".join(p.capitalize() if len(p) > 3 else p for p in (a.get("name") or "").replace("S.A.", "").split()).strip(" -."),
+                "nome": limpar_nome(a.get("name")),
                 "preco": a["close"],
                 "var_pct": round(a["change"], 2),
                 "financeiro": a["close"] * (a.get("volume") or 0),
