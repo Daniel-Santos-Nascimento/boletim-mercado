@@ -5,29 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block titulo %}{{ cfg.nome }}{% endblock %}</title>
 <meta name="description" content="{% block descricao %}{{ cfg.slogan }}{% endblock %}">
+<meta name="theme-color" content="#0E2A47">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>{{ css | safe }}</style>
 </head>
 <body>
 <header class="topo">
   <div class="wrap topo-in">
-    <a class="marca" href="{{ raiz }}index.html"><span class="ponto"></span>{{ cfg.nome }}</a>
+    <a class="marca" href="{{ raiz }}index.html">
+      <svg class="logo" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7"/><polyline points="5,19 11,13 15,16 23,8"/><circle cx="23" cy="8" r="2"/></svg>
+      {{ cfg.nome }}
+    </a>
     <nav>
       <a href="{{ raiz }}index.html">Hoje</a>
       <a href="{{ raiz }}arquivo/index.html">Arquivo</a>
       <a href="{{ raiz }}sobre/index.html">Sobre</a>
     </nav>
   </div>
+  {% block ticker %}{% endblock %}
 </header>
 
-<main class="wrap">
+<main>
 {% block conteudo %}{% endblock %}
 </main>
 
 <footer class="rodape">
-  <div class="wrap">
-    <p><strong>{{ cfg.nome }}</strong> — conteúdo informativo e educacional. Não é recomendação de compra ou venda de ativos.
-      <a href="{{ raiz }}aviso-legal/index.html">Aviso legal</a> · <a href="{{ raiz }}privacidade/index.html">Privacidade</a></p>
-    <p class="fontes">Fontes: Banco Central do Brasil (SGS e Focus), CVM (dados abertos), B3 via brapi.dev. Dados de fechamento, sujeitos a revisão pelas fontes.</p>
+  <div class="wrap rodape-in">
+    <div>
+      <p class="rodape-marca">{{ cfg.nome }}</p>
+      <p>Conteúdo informativo e educacional. Não é recomendação de compra ou venda de ativos.</p>
+    </div>
+    <div>
+      <p>Fontes: Banco Central do Brasil (SGS e Focus), CVM (dados abertos) e B3, via brapi.dev. Dados de fechamento, sujeitos a revisão pelas fontes.</p>
+      <p><a href="{{ raiz }}aviso-legal/index.html">Aviso legal</a> &nbsp; <a href="{{ raiz }}privacidade/index.html">Privacidade</a> &nbsp; <a href="{{ raiz }}sobre/index.html">Contato</a></p>
+    </div>
   </div>
 </footer>
 </body>
