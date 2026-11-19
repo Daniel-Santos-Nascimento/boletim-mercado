@@ -1,0 +1,41 @@
+{
+  "data_boletim": "2026-11-19",
+  "gerado_em": "2026-11-19T06:00-03:00",
+  "exemplo": true,
+  "juros": {
+    "selic": {"valor": 14.25, "data": "2026-11-18"},
+    "cdi": {"valor": 14.15, "data": "2026-11-18"}
+  },
+  "inflacao": {
+    "ipca_mes": {"valor": 0.31, "data": "2026-10-01"},
+    "ipca_12m": {"valor": 4.62, "data": "2026-10-01"}
+  },
+  "cambio": {
+    "dolar": {"valor": 5.4123, "var_pct": -0.38, "data": "2026-11-18"},
+    "euro": {"valor": 6.2510, "var_pct": 0.12, "data": "2026-11-18"}
+  },
+  "bolsa": {
+    "ibov": {"valor": 142380, "var_pct": 0.84, "data": "2026-11-18"},
+    "ifix": {"valor": 3412, "var_pct": -0.15, "data": "2026-11-18"}
+  },
+  "focus": {
+    "data": "2026-11-14",
+    "linhas": [
+      {"indicador": "IPCA (%)", "ano": "2026", "mediana": 4.55, "semana_anterior": 4.58},
+      {"indicador": "IPCA (%)", "ano": "2027", "mediana": 4.10, "semana_anterior": 4.10},
+      {"indicador": "Selic (% a.a.)", "ano": "2026", "mediana": 14.25, "semana_anterior": 14.25},
+      {"indicador": "Selic (% a.a.)", "ano": "2027", "mediana": 12.50, "semana_anterior": 12.75},
+      {"indicador": "Dólar (R$)", "ano": "2026", "mediana": 5.45, "semana_anterior": 5.50},
+      {"indicador": "Dólar (R$)", "ano": "2027", "mediana": 5.55, "semana_anterior": 5.55},
+      {"indicador": "PIB (%)", "ano": "2026", "mediana": 2.10, "semana_anterior": 2.05},
+      {"indicador": "PIB (%)", "ano": "2027", "mediana": 1.80, "semana_anterior": 1.80}
+    ]
+  },
+  "fatos_relevantes": [
+    {"empresa": "Empresa Exemplo Energia S.A.", "assunto": "Aprovação de pagamento de juros sobre capital próprio", "data": "2026-11-18", "link": "https://www.rad.cvm.gov.br/"},
+    {"empresa": "Exemplo Varejo S.A.", "assunto": "Conclusão de aquisição de participação societária", "data": "2026-11-18", "link": "https://www.rad.cvm.gov.br/"},
+    {"empresa": "Banco Exemplo S.A.", "assunto": "Programa de recompra de ações", "data": "2026-11-18", "link": "https://www.rad.cvm.gov.br/"}
+  ],
+  "erros": [],
+  "comentario_exemplo": true
+}
