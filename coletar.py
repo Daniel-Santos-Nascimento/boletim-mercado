@@ -168,15 +168,17 @@ def fatos_relevantes():
 
 
 # ---------------------------------------------------------------- Notícias (RSS)
+# (fonte, feed, seções aceitas no link — None aceita tudo)
+SECOES_INFOMONEY = ("/mercados/", "/economia/", "/onde-investir/", "/negocios/", "/minhas-financas/")
 FONTES_MANCHETES = [
-    ("InfoMoney", "https://www.infomoney.com.br/feed/"),
-    ("Money Times", "https://www.moneytimes.com.br/feed/"),
-    ("Seu Dinheiro", "https://www.seudinheiro.com/feed/"),
-    ("Agência Brasil", "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml"),
+    ("InfoMoney", "https://www.infomoney.com.br/feed/", SECOES_INFOMONEY),
+    ("Money Times", "https://www.moneytimes.com.br/mercados/feed/", None),
+    ("Seu Dinheiro", "https://www.seudinheiro.com/bolsa-dolar/feed/", None),
+    ("Agência Brasil", "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml", None),
 ]
 FONTES_OFICIAIS = [
-    ("Banco Central", "https://www.bcb.gov.br/api/feed/sitebcb/sitefeeds/notasImprensa"),
-    ("CVM", f"https://www.gov.br/cvm/pt-br/assuntos/noticias/{HOJE.year}/RSS"),
+    ("Banco Central", "https://www.bcb.gov.br/api/feed/sitebcb/sitefeeds/notasImprensa", None),
+    ("CVM", f"https://www.gov.br/cvm/pt-br/assuntos/noticias/{HOJE.year}/RSS", None),
 ]
 
 
@@ -196,7 +198,7 @@ def _data_feed(texto):
     return d.astimezone(FUSO_BR)
 
 
-def ler_feed(fonte, url, limite=8):
+def ler_feed(fonte, url, limite=8, secoes=None):
     """Lê RSS 2.0, RSS 1.0 (RDF) ou Atom e devolve título, link, fonte e horário."""
     raiz = ET.fromstring(get(url).content)
     itens = []
@@ -215,6 +217,8 @@ def ler_feed(fonte, url, limite=8):
                 quando = _data_feed(filhos[campo].text)
                 if quando:
                     break
+        if secoes and not any(sec in link for sec in secoes):
+            continue
         if titulo and link and not titulo.isdigit():  # o feed da CVM inclui pastas como "2026"
             itens.append({"titulo": " ".join(titulo.split()), "link": link, "fonte": fonte,
                           "quando": quando.isoformat(timespec="minutes") if quando else None})
@@ -225,19 +229,27 @@ def ler_feed(fonte, url, limite=8):
 def noticias(fontes, total, por_fonte, horas):
     agora = datetime.now(FUSO_BR)
     todas = []
-    for fonte, url in fontes:
+    vistos = set()
+    for fonte, url, secoes in fontes:
         try:
-            todas += ler_feed(fonte, url, por_fonte * 3)
+            itens = ler_feed(fonte, url, 30, secoes)
         except Exception as e:
             erros.append(f"Notícias {fonte}: {e}")
-    recentes = [n for n in todas if n["quando"] and agora - datetime.fromisoformat(n["quando"]) <= timedelta(hours=horas)]
-    recentes.sort(key=lambda n: n["quando"], reverse=True)
-    contagem, escolhidas = {}, []
-    for n in recentes:  # limita por fonte para não ficar tudo de um veículo só
-        if contagem.get(n["fonte"], 0) < por_fonte:
-            contagem[n["fonte"]] = contagem.get(n["fonte"], 0) + 1
-            escolhidas.append(n)
-    return escolhidas[:total]
+            continue
+        da_fonte = 0
+        for n in itens:  # mais recentes primeiro; no máximo "por_fonte" de cada veículo
+            if not n["quando"] or agora - datetime.fromisoformat(n["quando"]) > timedelta(hours=horas):
+                continue
+            chave = "".join(ch for ch in n["titulo"].lower() if ch.isalnum())[:60]
+            if chave in vistos:  # mesma notícia publicada por dois veículos
+                continue
+            vistos.add(chave)
+            todas.append(n)
+            da_fonte += 1
+            if da_fonte >= por_fonte:
+                break
+    todas.sort(key=lambda n: n["quando"], reverse=True)
+    return todas[:total]
 
 
 # ---------------------------------------------------------------- Principal
@@ -255,8 +267,8 @@ def main():
         "bolsa": {"ibov": brapi("^BVSP", "Ibovespa"), "ifix": brapi("IFIX", "IFIX")},
         "focus": focus(),
         "fatos_relevantes": fatos_relevantes(),
-        "manchetes": noticias(FONTES_MANCHETES, total=12, por_fonte=4, horas=36),
-        "oficiais": noticias(FONTES_OFICIAIS, total=6, por_fonte=4, horas=24 * 10),
+        "manchetes": noticias(FONTES_MANCHETES, total=12, por_fonte=3, horas=36),
+        "oficiais": noticias(FONTES_OFICIAIS, total=6, por_fonte=3, horas=24 * 30),
     }
     dados["erros"] = erros
 
