@@ -18,6 +18,8 @@ import io
 import json
 import os
 import zipfile
+import xml.etree.ElementTree as ET
+from email.utils import parsedate_to_datetime
 from urllib.parse import quote
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -28,7 +30,7 @@ BASE = Path(__file__).parent
 FUSO_BR = timezone(timedelta(hours=-3))
 HOJE = datetime.now(FUSO_BR).date()
 TIMEOUT = 40
-HEADERS = {"User-Agent": "boletim-mercado/1.0"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; boletim-mercado/1.0; +https://daniel-santos-nascimento.github.io/boletim-mercado)"}
 erros = []
 
 
@@ -165,6 +167,79 @@ def fatos_relevantes():
         return []
 
 
+# ---------------------------------------------------------------- Notícias (RSS)
+FONTES_MANCHETES = [
+    ("InfoMoney", "https://www.infomoney.com.br/feed/"),
+    ("Money Times", "https://www.moneytimes.com.br/feed/"),
+    ("Seu Dinheiro", "https://www.seudinheiro.com/feed/"),
+    ("Agência Brasil", "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml"),
+]
+FONTES_OFICIAIS = [
+    ("Banco Central", "https://www.bcb.gov.br/api/feed/sitebcb/sitefeeds/notasImprensa"),
+    ("CVM", f"https://www.gov.br/cvm/pt-br/assuntos/noticias/{HOJE.year}/RSS"),
+]
+
+
+def _data_feed(texto):
+    texto = (texto or "").strip()
+    if not texto:
+        return None
+    try:
+        d = parsedate_to_datetime(texto)          # RSS 2.0: "Thu, 19 Nov 2026 10:00:00 -0300"
+    except (TypeError, ValueError):
+        try:
+            d = datetime.fromisoformat(texto.replace("Z", "+00:00"))  # Atom / RDF
+        except ValueError:
+            return None
+    if d.tzinfo is None:
+        d = d.replace(tzinfo=FUSO_BR)
+    return d.astimezone(FUSO_BR)
+
+
+def ler_feed(fonte, url, limite=8):
+    """Lê RSS 2.0, RSS 1.0 (RDF) ou Atom e devolve título, link, fonte e horário."""
+    raiz = ET.fromstring(get(url).content)
+    itens = []
+    for el in raiz.iter():
+        tag = el.tag.split("}")[-1]
+        if tag not in ("item", "entry"):
+            continue
+        filhos = {c.tag.split("}")[-1]: c for c in el}
+        titulo = (filhos.get("title").text or "").strip() if "title" in filhos else ""
+        link = ""
+        if "link" in filhos:
+            link = (filhos["link"].text or "").strip() or filhos["link"].get("href", "")
+        quando = None
+        for campo in ("pubDate", "date", "published", "updated"):
+            if campo in filhos:
+                quando = _data_feed(filhos[campo].text)
+                if quando:
+                    break
+        if titulo and link and not titulo.isdigit():  # o feed da CVM inclui pastas como "2026"
+            itens.append({"titulo": " ".join(titulo.split()), "link": link, "fonte": fonte,
+                          "quando": quando.isoformat(timespec="minutes") if quando else None})
+    itens.sort(key=lambda n: n["quando"] or "", reverse=True)
+    return itens[:limite]
+
+
+def noticias(fontes, total, por_fonte, horas):
+    agora = datetime.now(FUSO_BR)
+    todas = []
+    for fonte, url in fontes:
+        try:
+            todas += ler_feed(fonte, url, por_fonte * 3)
+        except Exception as e:
+            erros.append(f"Notícias {fonte}: {e}")
+    recentes = [n for n in todas if n["quando"] and agora - datetime.fromisoformat(n["quando"]) <= timedelta(hours=horas)]
+    recentes.sort(key=lambda n: n["quando"], reverse=True)
+    contagem, escolhidas = {}, []
+    for n in recentes:  # limita por fonte para não ficar tudo de um veículo só
+        if contagem.get(n["fonte"], 0) < por_fonte:
+            contagem[n["fonte"]] = contagem.get(n["fonte"], 0) + 1
+            escolhidas.append(n)
+    return escolhidas[:total]
+
+
 # ---------------------------------------------------------------- Principal
 def main():
     dados = {
@@ -180,6 +255,8 @@ def main():
         "bolsa": {"ibov": brapi("^BVSP", "Ibovespa"), "ifix": brapi("IFIX", "IFIX")},
         "focus": focus(),
         "fatos_relevantes": fatos_relevantes(),
+        "manchetes": noticias(FONTES_MANCHETES, total=12, por_fonte=4, horas=36),
+        "oficiais": noticias(FONTES_OFICIAIS, total=6, por_fonte=4, horas=24 * 10),
     }
     dados["erros"] = erros
 
