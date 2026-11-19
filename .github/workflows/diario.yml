@@ -2,7 +2,7 @@ name: Boletim diário
 
 on:
   schedule:
-    - cron: "0 9 * * 1-5"      # 06:00 em Brasília, segunda a sexta
+    - cron: "0 9,12,15,18,21 * * 1-5"   # 6h, 9h, 12h, 15h e 18h em Brasília, segunda a sexta
   push:
     branches: [main]
     paths: ["comentarios/**", "templates/**", "config.json", "gerar_site.py"]
