@@ -1,6 +1,6 @@
 {
   "data_boletim": "2026-11-19",
-  "gerado_em": "2026-11-19T13:48-03:00",
+  "gerado_em": "2026-11-19T19:36-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
@@ -106,6 +106,10 @@
         13.65,
         13.65
       ]
+    },
+    "poupanca": {
+      "valor": 0.6202,
+      "data": "2026-11-01"
     }
   },
   "inflacao": {
@@ -227,8 +231,8 @@
   },
   "bolsa": {
     "ibov": {
-      "valor": 166518.39,
-      "var_pct": -0.61,
+      "valor": 166376.44,
+      "var_pct": -0.69,
       "data": "2026-11-19",
       "hist": [
         208296,
@@ -252,12 +256,12 @@
         169295,
         169817,
         167538,
-        166474.0938
+        166376.4375
       ]
     },
     "ifix": {
-      "valor": 3486.63,
-      "var_pct": -0.75,
+      "valor": 3485.06,
+      "var_pct": -0.8,
       "data": "2026-11-19"
     }
   },
@@ -319,129 +323,144 @@
       {
         "ticker": "PCAR3",
         "nome": "Cia Brasileira de Distribuicao",
-        "preco": 3.18,
-        "var_pct": 6.35,
-        "financeiro": 23082984.0
+        "preco": 3.23,
+        "var_pct": 8.03,
+        "financeiro": 51470696.0,
+        "logo": "https://icons.brapi.dev/icons/PCAR3.svg"
       },
       {
         "ticker": "LIGT3",
         "nome": "Light",
-        "preco": 3.03,
-        "var_pct": 5.94,
-        "financeiro": 6527529.0
+        "preco": 3.06,
+        "var_pct": 6.99,
+        "financeiro": 14236956.0,
+        "logo": "https://icons.brapi.dev/icons/LIGT3.svg"
       },
       {
-        "ticker": "TEND3",
-        "nome": "Construtora Tenda",
-        "preco": 15.48,
-        "var_pct": 2.79,
-        "financeiro": 65926224.0
+        "ticker": "POSI3",
+        "nome": "Positivo Tecnologia",
+        "preco": 3.37,
+        "var_pct": 6.31,
+        "financeiro": 4552870.0,
+        "logo": "https://icons.brapi.dev/icons/POSI3.svg"
       },
       {
-        "ticker": "BRKM5",
-        "nome": "Braskem",
-        "preco": 2.7,
-        "var_pct": 2.66,
-        "financeiro": 5981040.0
+        "ticker": "MELK3",
+        "nome": "Melnick Desenvolvimento Imobiliário",
+        "preco": 2.05,
+        "var_pct": 4.59,
+        "financeiro": 2233475.0,
+        "logo": "https://icons.brapi.dev/icons/MELK3.svg"
       },
       {
-        "ticker": "TUPY3",
-        "nome": "Tupy",
-        "preco": 20.85,
-        "var_pct": 2.61,
-        "financeiro": 21143985.0
+        "ticker": "QUAL3",
+        "nome": "Qualicorp Consultoria e Corretora de Seguros",
+        "preco": 1.84,
+        "var_pct": 4.55,
+        "financeiro": 13402560.0,
+        "logo": "https://icons.brapi.dev/icons/QUAL3.svg"
       }
     ],
     "baixas": [
       {
-        "ticker": "POMO4",
-        "nome": "Marcopolo",
-        "preco": 3.53,
-        "var_pct": -6.61,
-        "financeiro": 58521399.0
-      },
-      {
-        "ticker": "POMO3",
-        "nome": "Marcopolo",
-        "preco": 3.32,
-        "var_pct": -6.48,
-        "financeiro": 5691144.0
+        "ticker": "AZZA3",
+        "nome": "Azzas 2154",
+        "preco": 14.63,
+        "var_pct": -7.29,
+        "financeiro": 67994388.0,
+        "logo": "https://icons.brapi.dev/icons/AZZA3.svg"
       },
       {
         "ticker": "HBRE3",
         "nome": "Hbr Realty Empreendimentos Imobiliarios",
-        "preco": 1.23,
-        "var_pct": -6.11,
-        "financeiro": 1524216.0
+        "preco": 1.22,
+        "var_pct": -6.87,
+        "financeiro": 2905186.0,
+        "logo": "https://icons.brapi.dev/icons/HBRE3.svg"
       },
       {
-        "ticker": "CSED3",
-        "nome": "Cruzeiro do Sul Educacional",
-        "preco": 3.35,
-        "var_pct": -5.9,
-        "financeiro": 1999615.0
+        "ticker": "DASA3",
+        "nome": "Diagnosticos da America",
+        "preco": 3.26,
+        "var_pct": -6.86,
+        "financeiro": 4502712.0,
+        "logo": "https://icons.brapi.dev/icons/DASA3.svg"
       },
       {
-        "ticker": "VTRU3",
-        "nome": "Vitru Educação",
-        "preco": 13.47,
-        "var_pct": -5.8,
-        "financeiro": 4854588.0
+        "ticker": "NATU3",
+        "nome": "Natura Cosmeticos",
+        "preco": 4.48,
+        "var_pct": -6.28,
+        "financeiro": 77015232.0,
+        "logo": null
+      },
+      {
+        "ticker": "CSNA3",
+        "nome": "Cia Siderurgica Nacional",
+        "preco": 3.43,
+        "var_pct": -6.03,
+        "financeiro": 94672459.0,
+        "logo": "https://icons.brapi.dev/icons/CSNA3.svg"
       }
     ],
     "negociadas": [
       {
-        "ticker": "VALE3",
-        "nome": "Vale",
-        "preco": 58.76,
-        "var_pct": -0.41,
-        "financeiro": 780274040.0
-      },
-      {
         "ticker": "PETR4",
         "nome": "Petroleo Brasileiro Petrobras",
-        "preco": 43.06,
-        "var_pct": -0.25,
-        "financeiro": 662602974.0
+        "preco": 42.67,
+        "var_pct": -1.16,
+        "financeiro": 1673948367.0,
+        "logo": "https://icons.brapi.dev/icons/PETR4.svg"
+      },
+      {
+        "ticker": "VALE3",
+        "nome": "Vale",
+        "preco": 58.48,
+        "var_pct": -0.88,
+        "financeiro": 1362595696.0,
+        "logo": "https://icons.brapi.dev/icons/VALE3.svg"
       },
       {
         "ticker": "ITUB4",
         "nome": "Itau Unibanco Holding",
-        "preco": 39.75,
-        "var_pct": -1.09,
-        "financeiro": 616375425.0
-      },
-      {
-        "ticker": "CPLE3",
-        "nome": "Cia Paranaense de Energia Copel",
-        "preco": 15.13,
-        "var_pct": -0.98,
-        "financeiro": 583135921.0
+        "preco": 40.07,
+        "var_pct": -0.3,
+        "financeiro": 1234909316.0,
+        "logo": "https://icons.brapi.dev/icons/ITUB4.svg"
       },
       {
         "ticker": "B3SA3",
         "nome": "B3 Brasil. Bolsa. Balcão",
-        "preco": 14.3,
-        "var_pct": 0,
-        "financeiro": 547160900.0
+        "preco": 14.28,
+        "var_pct": -0.14,
+        "financeiro": 1042986924.0,
+        "logo": "https://icons.brapi.dev/icons/B3SA3.svg"
+      },
+      {
+        "ticker": "BPAC11",
+        "nome": "Bco Btg Pactual",
+        "preco": 49.69,
+        "var_pct": -0.84,
+        "financeiro": 984214799.0,
+        "logo": "https://icons.brapi.dev/icons/BPAC11.svg"
       }
     ]
   },
   "cripto": [
     {
       "nome": "Bitcoin",
-      "valor": 372419,
-      "var_pct": 2.43
+      "valor": 368309,
+      "var_pct": 0.1
     },
     {
       "nome": "Ethereum",
-      "valor": 10501.91,
-      "var_pct": 3.69
+      "valor": 10442.06,
+      "var_pct": 0.6
     },
     {
       "nome": "Solana",
-      "valor": 434.95,
-      "var_pct": 2.96
+      "valor": 432.94,
+      "var_pct": 0.88
     }
   ],
   "fatos_relevantes": [
@@ -526,40 +545,64 @@
   ],
   "manchetes": [
     {
-      "titulo": "Taxas dos DIs aceleram altas após declarações de Lula sobre área fiscal",
-      "link": "https://www.infomoney.com.br/mercados/dis-juros-futuros-sobem-com-dolar-e-exterior-apesar-de-aprovacao-de-ajuste-fiscal-no-senado/",
+      "titulo": "Ministério para idosos? Veja como o mercado de seguros já se adapta à longevidade",
+      "link": "https://www.infomoney.com.br/minhas-financas/ministerio-para-idosos-veja-como-o-mercado-de-seguros-ja-se-adapta-a-longevidade/",
       "fonte": "InfoMoney",
-      "quando": "2026-11-19T13:48-03:00"
+      "quando": "2026-11-19T19:34-03:00"
     },
     {
-      "titulo": "Dólar ganha (ainda mais) fôlego e passa os R$ 5,90 — e aqui estão os motores da disparada do dia",
+      "titulo": "“Trump fraco é dólar forte”: moeda ganhou força após midterms, diz diretor do Pine",
+      "link": "https://www.infomoney.com.br/mercados/trump-fraco-e-dolar-forte-moeda-ganhou-forca-apos-midterms-diz-diretor-do-pine/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-19T19:19-03:00"
+    },
+    {
+      "titulo": "Como a intervenção do BC no mercado de câmbio acabou estressando a curva de juros",
+      "link": "https://www.infomoney.com.br/mercados/como-a-intervencao-do-bc-no-mercado-de-cambio-acabou-estressando-a-curva-de-juros/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-19T19:15-03:00"
+    },
+    {
+      "titulo": "IPO da Anthropic não conseguiu animar Wall Street, e bolsas de NY fecham em forte queda",
+      "link": "https://www.moneytimes.com.br/ipo-da-anthropic-nao-conseguiu-animar-wall-street-e-bolsas-de-ny-fecham-em-forte-queda-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-19T18:48-03:00"
+    },
+    {
+      "titulo": "Ibovespa perde os 167 mil pontos com incertezas fiscais e políticas do Brasil",
+      "link": "https://www.moneytimes.com.br/ibovespa-19-11-2026-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-19T18:29-03:00"
+    },
+    {
+      "titulo": "Petróleo fecha perto da estabilidade com aumento das tensões entre EUA e Irã",
+      "link": "https://www.moneytimes.com.br/petroleo-fecha-perto-da-estabilidade-com-aumento-das-tensoes-entre-eua-e-ira-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-19T17:33-03:00"
+    },
+    {
+      "titulo": "Nem pacote fiscal acalma o mercado: o que falta para estancar a queda do Ibovespa e frear o dólar?",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/nem-pacote-fiscal-acalma-o-mercado-o-que-falta-para-interromper-a-queda-do-ibovespa-e-a-disparada-do-dolar-jcav/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-19T17:30-03:00"
+    },
+    {
+      "titulo": "Veja como será o cálculo da hora extra com a escala de trabalho 5x2",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/veja-como-sera-o-calculo-da-hora-extra-com-escala-de-trabalho-5x2",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-19T16:39-03:00"
+    },
+    {
+      "titulo": "BNDES injetou R$ 254 bi de crédito na economia de janeiro a setembro",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bndes-injetou-r-254-bi-de-credito-na-economia-de-janeiro-setembro",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-19T16:24-03:00"
+    },
+    {
+      "titulo": "Dólar vai na máxima em 19 meses e fecha a R$ 5,93 — e aqui estão os motores da disparada do dia",
       "link": "https://www.seudinheiro.com/2026/bolsa-dolar/dolar-ganha-ainda-mais-folego-e-passa-os-r-590-entenda-o-que-impulsiona-a-moeda-davs/",
       "fonte": "Seu Dinheiro",
       "quando": "2026-11-19T13:46-03:00"
-    },
-    {
-      "titulo": "Banco do Brasil (BBAS3): XP vê recuperação lenta, corta preço-alvo e tem visão neutra",
-      "link": "https://www.infomoney.com.br/mercados/banco-do-brasil-bbas3-xp-ve-recuperacao-lenta-corta-preco-alvo-e-tem-visao-neutra/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-19T13:45-03:00"
-    },
-    {
-      "titulo": "Ibovespa Hoje Ao Vivo: Bolsa cai após intervenção do BC no dólar, que sobe a R$ 5,93",
-      "link": "https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-19112026/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-19T13:35-03:00"
-    },
-    {
-      "titulo": "Dólar nas alturas: Banco Central intervém em leilão de US$ 1 bilhão",
-      "link": "https://www.moneytimes.com.br/dolar-nas-alturas-banco-central-intervem-em-leilao-de-us-1-bilhao/",
-      "fonte": "Money Times",
-      "quando": "2026-11-19T13:04-03:00"
-    },
-    {
-      "titulo": "Tesouro Direto hoje: prefixado 2029 volta a pagar mais de 15% ao ano com pressão fiscal e juros dos EUA",
-      "link": "https://www.moneytimes.com.br/tesouro-direto-hoje-prefixado-2029-volta-a-pagar-mais-de-15-ao-ano-com-pressao-fiscal-e-juros-dos-eua-mlim/",
-      "fonte": "Money Times",
-      "quando": "2026-11-19T12:40-03:00"
     },
     {
       "titulo": "Maior FII de energia renovável da B3 quer usar caixa para recomprar as próprias cotas",
@@ -568,54 +611,30 @@
       "quando": "2026-11-19T11:02-03:00"
     },
     {
-      "titulo": "Ibovespa pode subir 20%, mas Itaú BBA não vê motivos para comprar; banco rebaixa bolsa para neutra",
-      "link": "https://www.moneytimes.com.br/ibovespa-pode-subir-20-mas-itau-bba-nao-ve-motivos-para-comprar-banco-rebaixa-bolsa-para-neutra-miql/",
-      "fonte": "Money Times",
-      "quando": "2026-11-19T10:48-03:00"
-    },
-    {
-      "titulo": "Todo mundo decidiu abandonar o Brasil? BTG e Itaú BBA também tiram o pé da bolsa brasileira após eleições",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/todo-mundo-decidiu-abandonar-o-brasil-btg-e-itau-bba-tambem-tiram-o-pe-da-bolsa-brasileira-apos-eleicoes-miql/",
-      "fonte": "Seu Dinheiro",
-      "quando": "2026-11-19T10:18-03:00"
-    },
-    {
       "titulo": "Dólar sobe para R$ 5,87 com expectativa sobre votação de ajuste fiscal",
       "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-sobe-para-r-587-com-expectativa-sobre-votacao-de-ajuste-fiscal",
       "fonte": "Agência Brasil",
       "quando": "2026-11-18T19:26-03:00"
-    },
-    {
-      "titulo": "Senado pede explicações a TCU sobre alíquota de 11,3% da CBS",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/senado-pede-explicacoes-tcu-sobre-aliquota-de-113-da-cbs",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-18T17:07-03:00"
-    },
-    {
-      "titulo": "Número de desempregados há dois anos ou mais é o menor já registrado",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/numero-de-desempregados-ha-dois-anos-ou-mais-e-o-menor-ja-registrado",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-18T12:36-03:00"
     }
   ],
   "oficiais": [
+    {
+      "titulo": "BC aperfeiçoa norma sobre a participação em operações no mercado aberto",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21326/nota",
+      "fonte": "Banco Central",
+      "quando": "2026-11-19T18:14-03:00"
+    },
+    {
+      "titulo": "BC publica Pesquisa Trimestral de Condições de Crédito (PTC)",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21324/nota",
+      "fonte": "Banco Central",
+      "quando": "2026-11-19T14:31-03:00"
+    },
     {
       "titulo": "BC divulga Fluxo cambial mensal",
       "link": "https://www.bcb.gov.br/detalhenoticia/21323/nota",
       "fonte": "Banco Central",
       "quando": "2026-11-18T14:31-03:00"
-    },
-    {
-      "titulo": "BC divulga estudo sobre os canais de transmissão da política monetária por meio do crédito",
-      "link": "https://www.bcb.gov.br/detalhenoticia/21322/nota",
-      "fonte": "Banco Central",
-      "quando": "2026-11-18T09:30-03:00"
-    },
-    {
-      "titulo": "BC anuncia leilões de swap cambial tradicional para fins de rolagem dos contratos vincendos em 4 de janeiro de 2027",
-      "link": "https://www.bcb.gov.br/detalhenoticia/21321/nota",
-      "fonte": "Banco Central",
-      "quando": "2026-11-17T18:30-03:00"
     },
     {
       "titulo": "CVM atualiza rol de certificações aceitas para o exercício da atividade de consultoria de valores mobiliários",
@@ -636,8 +655,8 @@
       "quando": "2026-11-06T16:34-03:00"
     }
   ],
-  "fiis_total": 312,
-  "acoes_total": 341,
-  "fundamentos": 466,
+  "fiis_total": 311,
+  "acoes_total": 342,
+  "fundamentos": "em cache",
   "erros": []
 }
