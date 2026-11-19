@@ -45,7 +45,7 @@ jobs:
         run: |
           git config user.name "robo-boletim"
           git config user.email "robo-boletim@users.noreply.github.com"
-          git add data/historico data/latest.json
+          git add data/historico data/latest.json data/fundamentos.json
           git commit -m "Boletim $(date -u +%F)" || echo "Nada novo"
           git push
 
