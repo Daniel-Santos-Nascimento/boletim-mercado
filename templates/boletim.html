@@ -129,6 +129,22 @@
 </section>
 {% endif %}
 
+{% if fiis_destaque %}
+<section class="wrap bolsa-hoje" id="fiis">
+  <div class="titulo-com-link"><h2>Fundos imobiliários mais negociados</h2><a href="{{ raiz }}fiis/index.html">Ver ranking completo</a></div>
+  <p class="sub">P/VP e dividend yield calculados com os informes mensais entregues à CVM.</p>
+  <div class="cartoes-fii">
+    {% for r in fiis_destaque %}
+    <a class="cartao-fii" href="{{ raiz }}fiis/{{ r.ticker }}/index.html">
+      <span class="cartao-linha"><span class="ticker">{{ r.ticker }}</span>{{ variacao(r.var_pct) }}</span>
+      <span class="empresa-curta">{{ r.nome }} · {{ r.segmento }}</span>
+      <span class="cartao-linha"><span>R$ {{ r.preco | num }}</span><span>P/VP {{ r.pvp | num }}</span><span>DY 12m {{ r.dy_12m | num }}%</span></span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 {% if b.comentario_html %}
 <section class="wrap leitura" id="leitura">
   <h2>A análise do dia</h2>
