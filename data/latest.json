@@ -1,11 +1,11 @@
 {
   "data_boletim": "2026-11-19",
-  "gerado_em": "2026-11-19T09:54-03:00",
+  "gerado_em": "2026-11-19T09:58-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
       "valor": 13.75,
-      "data": "2026-12-09"
+      "data": "2026-11-19"
     },
     "cdi": {
       "valor": 13.65,
@@ -38,14 +38,141 @@
     "ibov": null,
     "ifix": null
   },
-  "focus": null,
-  "fatos_relevantes": [],
+  "focus": {
+    "data": "2026-11-13",
+    "linhas": [
+      {
+        "indicador": "IPCA (%)",
+        "ano": "2026",
+        "mediana": 5.1082,
+        "semana_anterior": 5.2195
+      },
+      {
+        "indicador": "IPCA (%)",
+        "ano": "2027",
+        "mediana": 5.0,
+        "semana_anterior": 4.9005
+      },
+      {
+        "indicador": "Selic (% a.a.)",
+        "ano": "2026",
+        "mediana": 13.75,
+        "semana_anterior": 13.75
+      },
+      {
+        "indicador": "Selic (% a.a.)",
+        "ano": "2027",
+        "mediana": 12.75,
+        "semana_anterior": 12.5
+      },
+      {
+        "indicador": "Dólar (R$)",
+        "ano": "2026",
+        "mediana": 5.4,
+        "semana_anterior": 5.35
+      },
+      {
+        "indicador": "Dólar (R$)",
+        "ano": "2027",
+        "mediana": 5.45,
+        "semana_anterior": 5.4
+      },
+      {
+        "indicador": "PIB (%)",
+        "ano": "2026",
+        "mediana": 1.7215,
+        "semana_anterior": 1.7546
+      },
+      {
+        "indicador": "PIB (%)",
+        "ano": "2027",
+        "mediana": 1.0224,
+        "semana_anterior": 1.1513
+      }
+    ]
+  },
+  "fatos_relevantes": [
+    {
+      "empresa": "Banco Abc Brasil S/A",
+      "assunto": "Associação com Angá Asset Management",
+      "data": "2026-11-14",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589681&numSequencia=1114387&numVersao=1"
+    },
+    {
+      "empresa": "Telec. Brasileiras S.A. - Telebrás",
+      "assunto": "Publicação de Decreto que autoriza aumento de capital",
+      "data": "2026-11-13",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589338&numSequencia=1114044&numVersao=1"
+    },
+    {
+      "empresa": "Rni Negócios Imobiliários S.A.",
+      "assunto": "Cancelamento de Registro de Companhia Aberta",
+      "data": "2026-11-13",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589346&numSequencia=1114052&numVersao=1"
+    },
+    {
+      "empresa": "Nova Transportadora Do Sudeste S.A. - Nts",
+      "assunto": "Fato Relevante sobre revisão tarifária em complemento ao FR divulgado em 05/11/2026.",
+      "data": "2026-11-13",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589370&numSequencia=1114076&numVersao=1"
+    },
+    {
+      "empresa": "Grupo Casas Bahia S.A. - Em Recuperação Judicial",
+      "assunto": "Celebração de acordo com a CBD - GPA para encerramento do Acordo de Associação",
+      "data": "2026-11-13",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589330&numSequencia=1114036&numVersao=1"
+    },
+    {
+      "empresa": "Cosan S.A.",
+      "assunto": "Alterações da Diretoria Executiva",
+      "data": "2026-11-13",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589612&numSequencia=1114318&numVersao=1"
+    },
+    {
+      "empresa": "Companhia Brasileira De Distribuição",
+      "assunto": "Celebração de Acordo com Grupo Casas Bahia",
+      "data": "2026-11-13",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589339&numSequencia=1114045&numVersao=1"
+    },
+    {
+      "empresa": "Companhia Brasileira De Distribuição",
+      "assunto": "Protocolo de Oferta Publica - Emissão de Debêntures",
+      "data": "2026-11-13",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589574&numSequencia=1114280&numVersao=1"
+    },
+    {
+      "empresa": "Brk Ambiental Participações S.A.",
+      "assunto": "16ª Emissão de Debêntures Simples",
+      "data": "2026-11-13",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589602&numSequencia=1114308&numVersao=1"
+    },
+    {
+      "empresa": "Brisanet Serviços De Telecomunicações S.A.",
+      "assunto": "Pagamento de Juros sobre Capital Próprio",
+      "data": "2026-11-13",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589383&numSequencia=1114089&numVersao=1"
+    },
+    {
+      "empresa": "Banco Do Estado Do Pará S/A.",
+      "assunto": "PAGAMENTO DE JUROS SOBRE O CAPITAL PRÓPRIO REFERENTE AO 3º TRIMESTRE DE 2026",
+      "data": "2026-11-13",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589372&numSequencia=1114078&numVersao=1"
+    },
+    {
+      "empresa": "B100 S.A.",
+      "assunto": "Levantamento da Indisponibilidade de bens",
+      "data": "2026-11-13",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589470&numSequencia=1114176&numVersao=1"
+    },
+    {
+      "empresa": "B100 S.A.",
+      "assunto": "Saída do Novo Mercado e migração para o N2",
+      "data": "2026-11-13",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589472&numSequencia=1114178&numVersao=1"
+    }
+  ],
   "erros": [
     "Ibovespa: defina o secret BRAPI_TOKEN no GitHub",
-    "IFIX: defina o secret BRAPI_TOKEN no GitHub",
-    "Focus IPCA: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador+eq+%27IPCA%27+and+baseCalculo+eq+0&%24orderby=Data+desc&%24top=120&%24format=json&%24select=Indicador%2CData%2CDataReferencia%2CMediana",
-    "Focus Selic: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador+eq+%27Selic%27+and+baseCalculo+eq+0&%24orderby=Data+desc&%24top=120&%24format=json&%24select=Indicador%2CData%2CDataReferencia%2CMediana",
-    "Focus Câmbio: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador+eq+%27C%C3%A2mbio%27+and+baseCalculo+eq+0&%24orderby=Data+desc&%24top=120&%24format=json&%24select=Indicador%2CData%2CDataReferencia%2CMediana",
-    "Focus PIB Total: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador+eq+%27PIB+Total%27+and+baseCalculo+eq+0&%24orderby=Data+desc&%24top=120&%24format=json&%24select=Indicador%2CData%2CDataReferencia%2CMediana"
+    "IFIX: defina o secret BRAPI_TOKEN no GitHub"
   ]
 }
