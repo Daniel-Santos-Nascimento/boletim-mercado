@@ -56,7 +56,7 @@ def _limpar_nome(nome):
     """'TRX REAL ESTATE FII - FII RESP LIMITADA' -> 'Trx Real Estate FII'"""
     n = (nome or "").upper()
     n = re.sub(r"FUNDO DE INVESTIMENTO IMOBILI[AÁ]RIO|FUNDO DE INVESTIMENTO IMOB\.?|FI IMOBILI[AÁ]RIO", "FII", n)
-    n = re.sub(r"\b(RESPONSABILIDADE LIMITADA|RESP\.? LIMITADA|RESP LTDA|DE RL|RL)\b", "", n)
+    n = re.sub(r"\b(RESPONSABILIDADE LIMITADA|RESPONSABIL\w*|RESP\.? LIMITADA|RESP LTDA|DE RL|RL)\b", "", n)
     n = re.sub(r"(\s*-\s*FII)+$", "", n.strip(" -"))
     n = re.sub(r"\s+-\s+$|\s{2,}", " ", n).strip(" -")
     n = re.sub(r"\bFII\b(\s+FII\b)+", "FII", n)
