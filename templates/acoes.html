@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block titulo %}Ações da B3: cotação, valor de mercado e setor | {{ cfg.nome }}{% endblock %}
+{% block descricao %}Lista de {{ fundos | length }} ações negociadas na B3 com cotação, variação, valor de mercado, giro e setor, com cadastro oficial da CVM.{% endblock %}
+{% block conteudo %}
+<section class="fii-topo">
+  <div class="wrap">
+    <h1>Ações</h1>
+    <p class="fii-nome">{{ fundos | length }} ações negociadas na B3, da maior para a menor empresa em valor de mercado. Clique no título de uma coluna para mudar a ordem.</p>
+  </div>
+</section>
+
+<section class="wrap ranking-fiis">
+  <div class="filtros">
+    <label>Buscar <input type="search" id="busca" placeholder="Código ou nome, ex.: PETR4" autocomplete="off"></label>
+    <label>Setor
+      <select id="segmento">
+        <option value="">Todos</option>
+        {% for s in segmentos %}<option>{{ s }}</option>{% endfor %}
+      </select>
+    </label>
+    <p id="contagem" class="sub" aria-live="polite"></p>
+  </div>
+  <div class="tabela-rolagem">
+    <table class="tabela-fiis" id="tabela">
+      <thead>
+        <tr>
+          <th data-tipo="texto">Ação</th>
+          <th data-tipo="texto">Setor</th>
+          <th data-tipo="num">Preço</th>
+          <th data-tipo="num">Dia</th>
+          <th data-tipo="num">Valor de mercado</th>
+          <th data-tipo="num">Giro</th>
+          <th data-tipo="texto">Listagem</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for f in fundos %}
+        <tr data-seg="{{ f.setor }}" data-busca="{{ (f.ticker ~ ' ' ~ f.nome) | lower }}">
+          <td data-v="{{ f.ticker }}"><a href="{{ raiz }}acoes/{{ f.ticker }}/index.html"><strong>{{ f.ticker }}</strong><span>{{ f.nome }}</span></a></td>
+          <td data-v="{{ f.setor }}">{{ f.setor }}</td>
+          <td data-v="{{ f.preco }}">R$ {{ f.preco | num }}</td>
+          <td data-v="{{ f.var_pct }}" class="{{ 'sobe' if f.var_pct > 0 else ('desce' if f.var_pct < 0 else '') }}">{{ f.var_pct | num }}%</td>
+          <td data-v="{{ f.valor_mercado or 0 }}">{{ f.valor_mercado | compacto }}</td>
+          <td data-v="{{ f.financeiro }}">{{ f.financeiro | compacto }}</td>
+          <td data-v="{{ f.listagem }}">{{ f.listagem or "Tradicional" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="nota">Valor de mercado considera todas as classes de ações da empresa. Giro é o volume financeiro negociado no último pregão. Cotações via brapi.dev; cadastro da CVM. Dados informativos, não constituem recomendação.</p>
+</section>
+
+<script>
+(function () {
+  var tabela = document.getElementById('tabela'), corpo = tabela.tBodies[0];
+  var linhas = Array.prototype.slice.call(corpo.rows);
+  var busca = document.getElementById('busca'), seg = document.getElementById('segmento'), cont = document.getElementById('contagem');
+  function filtrar() {
+    var q = busca.value.trim().toLowerCase(), s = seg.value, n = 0;
+    linhas.forEach(function (l) {
+      var ok = (!q || l.dataset.busca.indexOf(q) > -1) && (!s || l.dataset.seg === s);
+      l.hidden = !ok; if (ok) n++;
+    });
+    cont.textContent = n + (n === 1 ? ' ação' : ' ações');
+  }
+  busca.addEventListener('input', filtrar); seg.addEventListener('change', filtrar);
+  Array.prototype.forEach.call(tabela.tHead.rows[0].cells, function (th, i) {
+    th.tabIndex = 0; th.setAttribute('role', 'button');
+    function ordenar() {
+      var num = th.dataset.tipo === 'num', desc = th.getAttribute('aria-sort') !== 'descending';
+      Array.prototype.forEach.call(tabela.tHead.rows[0].cells, function (c) { c.removeAttribute('aria-sort'); });
+      th.setAttribute('aria-sort', desc ? 'descending' : 'ascending');
+      linhas.sort(function (a, b) {
+        var x = a.cells[i].dataset.v, y = b.cells[i].dataset.v;
+        var r = num ? (parseFloat(x) - parseFloat(y)) : x.localeCompare(y, 'pt-BR');
+        return desc ? -r : r;
+      });
+      linhas.forEach(function (l) { corpo.appendChild(l); });
+    }
+    th.addEventListener('click', ordenar);
+    th.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); ordenar(); } });
+  });
+  var q = new URLSearchParams(location.search).get('q'); if (q) busca.value = q;
+  filtrar();
+})();
+</script>
+{% endblock %}
