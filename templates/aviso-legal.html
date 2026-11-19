@@ -1,7 +1,8 @@
 {% extends "base.html" %}
-{% block titulo %}Aviso legal · {{ cfg.nome }}{% endblock %}
+{% block titulo %}Aviso legal | {{ cfg.nome }}{% endblock %}
 {% block conteudo %}
-<section class="capa"><p class="sobretitulo">Aviso legal</p><h1>Informação, não recomendação</h1></section>
+<div class="wrap pagina">
+<section class="capa"><h1>Informação, não recomendação</h1></section>
 <section class="bloco texto">
   <p>O conteúdo do {{ cfg.nome }} tem caráter exclusivamente informativo e educacional. Nada aqui é recomendação de compra,
   venda ou manutenção de valores mobiliários, nem relatório de análise nos termos da Resolução CVM nº 20/2021.</p>
@@ -12,4 +13,5 @@
   procure um profissional certificado.</p>
   <p>Links de parceiros, quando houver, serão identificados como publicidade.</p>
 </section>
+</div>
 {% endblock %}
