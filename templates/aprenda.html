@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block titulo %}Aprenda a investir: guias para iniciantes | {{ cfg.nome }}{% endblock %}
+{% block descricao %}Guias em linguagem simples sobre Tesouro Direto, CDB, LCI e LCA, fundos imobiliários, ações e ETFs: como funcionam, quanto custam, imposto de renda e riscos.{% endblock %}
+{% block conteudo %}
+<div class="wrap">
+<section class="capa">
+  <h1>Aprenda a investir</h1>
+  <p class="sub">Guias curtos, sem jargão, para entender cada investimento antes de colocar dinheiro nele. Comece pelo primeiro se nunca investiu.</p>
+</section>
+<ol class="guias-lista">
+  {% for g in guias %}
+  <li>
+    <a href="{{ raiz }}aprenda/{{ g.slug }}/index.html">
+      <span class="guia-num">{{ loop.index }}</span>
+      <span class="guia-tit">{{ g.titulo }}</span>
+      <span class="guia-res">{{ g.resumo }}</span>
+      <span class="guia-tempo">{{ g.leitura }} min de leitura</span>
+    </a>
+  </li>
+  {% endfor %}
+</ol>
+<section class="guias-calc">
+  <div>
+    <h2>Faça as contas</h2>
+    <p>Compare CDB, LCI, Tesouro Selic e poupança com o imposto já descontado, e veja o efeito dos juros compostos.</p>
+  </div>
+  <a class="botao" href="{{ raiz }}calculadoras/index.html">Abrir as calculadoras</a>
+</section>
+</div>
+{% endblock %}

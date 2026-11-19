@@ -11,7 +11,7 @@
     <p class="trilha"><a href="{{ raiz }}fiis/index.html">Fundos imobiliários</a> / {{ f.ticker }}</p>
     <div class="fii-cabecalho">
       <div>
-        <h1>{{ f.ticker }}</h1>
+        <h1>{{ f.logo | logo(44) }}{{ f.ticker }}</h1>
         <p class="fii-nome">{{ f.nome }}</p>
         <p class="fii-etiquetas"><span>{{ f.segmento }}</span>{% if f.gestao %}<span>Gestão {{ f.gestao | lower }}</span>{% endif %}{% if f.mandato %}<span>{{ f.mandato }}</span>{% endif %}</p>
       </div>
@@ -70,7 +70,7 @@
   <div class="cartoes-fii">
     {% for r in relacionados %}
     <a class="cartao-fii" href="{{ raiz }}fiis/{{ r.ticker }}/index.html">
-      <span class="ticker">{{ r.ticker }}</span>
+      <span class="ticker">{{ r.logo | logo(22) }}{{ r.ticker }}</span>
       <span class="empresa-curta">{{ r.nome }}</span>
       <span class="cartao-linha"><span>P/VP {{ r.pvp | num }}</span><span>DY 12m {{ r.dy_12m | num }}%</span></span>
     </a>

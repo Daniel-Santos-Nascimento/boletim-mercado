@@ -10,7 +10,7 @@
     <p class="trilha"><a href="{{ raiz }}acoes/index.html">Ações</a> / {{ a.ticker }}</p>
     <div class="fii-cabecalho">
       <div>
-        <h1>{{ a.ticker }}</h1>
+        <h1>{{ a.logo | logo(44) }}{{ a.ticker }}</h1>
         <p class="fii-nome">{{ a.nome }}</p>
         <p class="fii-etiquetas"><span>{{ a.setor }}</span>{% if a.subsetor %}<span>{{ a.subsetor }}</span>{% endif %}{% if a.listagem %}<span>{{ a.listagem }}</span>{% endif %}</p>
       </div>
@@ -112,7 +112,7 @@
   <div class="cartoes-fii">
     {% for r in relacionados %}
     <a class="cartao-fii" href="{{ raiz }}acoes/{{ r.ticker }}/index.html">
-      <span class="cartao-linha"><span class="ticker">{{ r.ticker }}</span>{{ variacao(r.var_pct) }}</span>
+      <span class="cartao-linha"><span class="ticker">{{ r.logo | logo(22) }}{{ r.ticker }}</span>{{ variacao(r.var_pct) }}</span>
       <span class="empresa-curta">{{ r.nome }}</span>
       <span class="cartao-linha"><span>R$ {{ r.preco | num }}</span><span>{{ r.valor_mercado | compacto }}</span></span>
     </a>

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block titulo %}{{ g.titulo }} | {{ cfg.nome }}{% endblock %}
+{% block descricao %}{{ g.descricao }}{% endblock %}
+{% block conteudo %}
+{% set pos = guias | map(attribute="slug") | list %}
+{% set i = pos.index(g.slug) %}
+<div class="wrap guia">
+  <p class="trilha"><a href="{{ raiz }}aprenda/index.html">Aprenda</a> / {{ g.titulo }}</p>
+  <header class="guia-cab">
+    <h1>{{ g.titulo }}</h1>
+    <p class="sub">{{ g.descricao }}</p>
+    <p class="guia-meta">{{ g.leitura }} min de leitura. Taxas atualizadas em {{ taxas.data | data_curta }}.</p>
+  </header>
+  <article class="guia-texto">{{ corpo_html }}</article>
+  <p class="guia-aviso">Este guia é educacional e não é recomendação de investimento. Regras de imposto podem mudar; confira sempre a legislação vigente e as condições do produto antes de investir.</p>
+  <nav class="guia-nav" aria-label="Outros guias">
+    {% if i > 0 %}{% set a = guias[i-1] %}<a href="{{ raiz }}aprenda/{{ a.slug }}/index.html"><span>Guia anterior</span>{{ a.titulo }}</a>{% else %}<span></span>{% endif %}
+    {% if i < guias|length - 1 %}{% set p = guias[i+1] %}<a class="prox" href="{{ raiz }}aprenda/{{ p.slug }}/index.html"><span>Próximo guia</span>{{ p.titulo }}</a>{% endif %}
+  </nav>
+</div>
+<script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "Article", "headline": g.titulo, "description": g.descricao, "inLanguage": "pt-BR", "dateModified": taxas.data, "author": {"@type": "Person", "name": cfg.autor}, "publisher": {"@type": "Organization", "name": cfg.nome}, "mainEntityOfPage": url_pagina} | tojson }}</script>
+{% endblock %}

@@ -97,7 +97,7 @@
     <ul>
       {% for a in lista %}
       <li>
-        {% if a.ticker in acoes_set %}<a class="ticker" href="{{ raiz }}acoes/{{ a.ticker }}/index.html">{{ a.ticker }}</a>{% else %}<span class="ticker">{{ a.ticker }}</span>{% endif %}
+        {% if a.ticker in acoes_set %}<a class="ticker" href="{{ raiz }}acoes/{{ a.ticker }}/index.html">{{ a.logo | logo(20) }}{{ a.ticker }}</a>{% else %}<span class="ticker">{{ a.logo | logo(20) }}{{ a.ticker }}</span>{% endif %}
         <span class="empresa-curta">{{ a.nome }}</span>
         <span class="preco">R$ {{ a.preco | num }}</span>
         {% if coluna == "var" %}{{ variacao(a.var_pct) }}{% else %}<span class="giro">{{ a.financeiro | compacto }}</span>{% endif %}
@@ -136,11 +136,28 @@
   <div class="cartoes-fii">
     {% for r in fiis_destaque %}
     <a class="cartao-fii" href="{{ raiz }}fiis/{{ r.ticker }}/index.html">
-      <span class="cartao-linha"><span class="ticker">{{ r.ticker }}</span>{{ variacao(r.var_pct) }}</span>
+      <span class="cartao-linha"><span class="ticker">{{ r.logo | logo(22) }}{{ r.ticker }}</span>{{ variacao(r.var_pct) }}</span>
       <span class="empresa-curta">{{ r.nome }} · {{ r.segmento }}</span>
       <span class="cartao-linha"><span>R$ {{ r.preco | num }}</span><span>P/VP {{ r.pvp | num }}</span><span>DY 12m {{ r.dy_12m | num }}%</span></span>
     </a>
     {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if capa %}
+<section class="wrap atalhos-capa" id="ferramentas">
+  <a class="atalho atalho-calc" href="{{ raiz }}calculadoras/index.html">
+    <span class="atalho-tit">Quanto rende o seu dinheiro?</span>
+    <span class="atalho-txt">Compare CDB, LCI, Tesouro Selic e poupança com o imposto já descontado, usando a Selic de hoje.</span>
+    <span class="atalho-cta">Abrir as calculadoras</span>
+  </a>
+  <div class="atalho atalho-guias">
+    <span class="atalho-tit">Começando agora?</span>
+    <ul>
+      {% for g in guias[:4] %}<li><a href="{{ raiz }}aprenda/{{ g.slug }}/index.html">{{ g.titulo }}</a></li>{% endfor %}
+    </ul>
+    <a class="atalho-cta" href="{{ raiz }}aprenda/index.html">Ver todos os guias</a>
   </div>
 </section>
 {% endif %}

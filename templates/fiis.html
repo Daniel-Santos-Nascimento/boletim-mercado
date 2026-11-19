@@ -38,7 +38,7 @@
       <tbody>
         {% for f in fundos %}
         <tr data-seg="{{ f.segmento }}" data-busca="{{ (f.ticker ~ ' ' ~ f.nome) | lower }}">
-          <td data-v="{{ f.ticker }}"><a href="{{ raiz }}fiis/{{ f.ticker }}/index.html"><strong>{{ f.ticker }}</strong><span>{{ f.nome }}</span></a></td>
+          <td data-v="{{ f.ticker }}"><a href="{{ raiz }}fiis/{{ f.ticker }}/index.html">{{ f.logo | logo(28) }}<strong>{{ f.ticker }}</strong><span>{{ f.nome }}</span></a></td>
           <td data-v="{{ f.segmento }}">{{ f.segmento }}</td>
           <td data-v="{{ f.preco }}">R$ {{ f.preco | num }}</td>
           <td data-v="{{ f.var_pct }}" class="{{ 'sobe' if f.var_pct > 0 else ('desce' if f.var_pct < 0 else '') }}">{{ f.var_pct | num }}%</td>

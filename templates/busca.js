@@ -14,8 +14,13 @@
     achados.forEach(function (a, i) {
       var li = document.createElement('li'), link = document.createElement('a');
       link.href = raiz + a.u; link.id = 'busca-op-' + i;
-      link.innerHTML = '<strong></strong><span></span><em></em>';
-      link.children[0].textContent = a.t; link.children[1].textContent = a.n; link.children[2].textContent = a.k;
+      link.innerHTML = '<i class="logo-ativo"></i><strong></strong><span></span><em></em>';
+      if (a.l) {
+        var img = new Image(22, 22); img.src = a.l; img.alt = ''; img.className = 'logo-ativo';
+        img.onerror = function () { this.replaceWith(Object.assign(document.createElement('i'), { className: 'logo-ativo' })); };
+        link.replaceChild(img, link.children[0]);
+      }
+      link.children[1].textContent = a.t; link.children[2].textContent = a.n; link.children[3].textContent = a.k;
       if (i === ativo) link.setAttribute('aria-selected', 'true');
       li.appendChild(link); lista.appendChild(li);
     });
