@@ -155,6 +155,59 @@ h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
 .manchetes .noticias li:first-child a{padding-top:4px;padding-bottom:16px}
 .oficiais .noticias li{border-color:#D3DEE9}
 
+/* FIIs */
+.titulo-com-link{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.titulo-com-link a{font-weight:700;color:var(--alta)}
+.titulo-secao{font-size:1.45rem;margin:48px 0 16px}
+.cartoes-fii{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cartao-fii{display:flex;flex-direction:column;gap:6px;background:var(--branco);border:1px solid var(--linha);border-radius:14px;padding:16px 18px;text-decoration:none;transition:border-color .15s}
+.cartao-fii:hover{border-color:var(--cedula)}
+.cartao-linha{display:flex;justify-content:space-between;gap:10px;font-size:.86rem;font-variant-numeric:tabular-nums}
+.cartao-fii .empresa-curta{grid-column:auto;grid-row:auto}
+.fii-topo{background:var(--cedula);color:var(--branco);padding:36px 0 64px;position:relative;overflow:hidden}
+.fii-topo::after{content:"";position:absolute;inset:auto -10% -1px -10%;height:56px;background:var(--papel);clip-path:polygon(0 100%,100% 100%,100% 30%,0 100%)}
+.fii-topo .wrap{position:relative;z-index:1}
+.fii-topo h1{font-size:clamp(2.4rem,5vw,3.6rem);font-weight:800;letter-spacing:-.03em}
+.trilha{margin:0 0 14px;font-size:.88rem;color:#9FB3C8}
+.trilha a{color:#C9D6E3}
+.fii-cabecalho{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.fii-nome{margin:6px 0 12px;color:#C9D6E3;font-size:1.05rem;max-width:60ch}
+.fii-etiquetas{display:flex;gap:8px;flex-wrap:wrap;margin:0}
+.fii-etiquetas span{background:rgba(255,255,255,.1);border-radius:99px;padding:3px 12px;font-size:.82rem;font-weight:600}
+.fii-cotacao{text-align:right}
+.fii-cotacao p{margin:0}
+.fii-preco{font-family:var(--display);font-weight:800;font-size:2.6rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.fii-cotacao span:not(.var){color:#9FB3C8}
+.fii-cotacao .var.sobe{color:#3DDC97} .fii-cotacao .var.desce{color:#FF7A88}
+.fii-indicadores{margin-top:-30px;position:relative;z-index:2}
+.barras{width:100%;height:auto;display:block}
+.barras rect{fill:var(--cedula)}
+.barras rect:last-of-type{fill:var(--ouro)}
+.barras text{font-size:10px;fill:var(--suave);font-family:var(--texto)}
+.grafico-vpc .spark{width:100%;height:150px}
+.fii-dados dl{display:grid;grid-template-columns:repeat(2,1fr);gap:0 32px;margin:16px 0 0}
+.fii-dados dl div{padding:11px 0;border-bottom:1px solid var(--linha)}
+.fii-dados dt{font-size:.8rem;color:var(--suave)}
+.fii-dados dd{margin:2px 0 0;font-weight:600}
+.nota{font-size:.82rem;color:var(--suave);margin:18px 0 0;max-width:90ch}
+.fii-dados{margin-top:24px}
+.ranking-fiis{margin-top:-24px;position:relative;z-index:2;padding-bottom:56px}
+.filtros{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;background:var(--branco);border:1px solid var(--linha);border-radius:14px;padding:16px 18px;margin-bottom:14px}
+.filtros label{display:flex;flex-direction:column;gap:4px;font-size:.82rem;font-weight:600;color:var(--suave)}
+.filtros input,.filtros select{font:inherit;font-size:.95rem;color:var(--tinta);padding:9px 12px;border:1px solid var(--linha);border-radius:9px;min-width:240px;background:var(--papel)}
+.filtros .sub{margin:0 0 8px auto}
+.tabela-rolagem{overflow-x:auto;background:var(--branco);border:1px solid var(--linha);border-radius:14px}
+.tabela-fiis{width:100%;border-collapse:collapse;font-size:.9rem;font-variant-numeric:tabular-nums;min-width:860px}
+.tabela-fiis th{position:sticky;top:0;background:#EEF3F8;text-align:right;font-size:.8rem;color:var(--suave);padding:11px 12px;cursor:pointer;white-space:nowrap;user-select:none}
+.tabela-fiis th:nth-child(-n+2),.tabela-fiis td:nth-child(-n+2){text-align:left}
+.tabela-fiis th[aria-sort="descending"]::after{content:" ▼"} .tabela-fiis th[aria-sort="ascending"]::after{content:" ▲"}
+.tabela-fiis td{padding:10px 12px;border-top:1px solid var(--linha);text-align:right;white-space:nowrap}
+.tabela-fiis td a{text-decoration:none;display:flex;flex-direction:column}
+.tabela-fiis td a span{font-size:.76rem;color:var(--suave);max-width:240px;overflow:hidden;text-overflow:ellipsis}
+.tabela-fiis td a:hover strong{color:var(--alta)}
+.tabela-fiis td.sobe{color:var(--alta)} .tabela-fiis td.desce{color:var(--baixa)}
+.tabela-fiis tr:hover td{background:#F7F9FB}
+
 /* Newsletter */
 .newsletter{margin:56px 0 64px;background:var(--cedula);color:var(--branco);border-radius:20px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background-image:radial-gradient(circle at 100% 0,rgba(242,183,5,.22),transparent 45%)}
 .newsletter h2{font-size:1.7rem;letter-spacing:-.02em}
@@ -187,6 +240,7 @@ h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
   .duas-colunas{grid-template-columns:1fr}
   .noticias-grade{grid-template-columns:1fr}
   .rankings{grid-template-columns:1fr 1fr}
+  .cartoes-fii{grid-template-columns:1fr 1fr}
   .leitura{grid-template-columns:1fr}
   .assinatura{grid-column:1}
 }
@@ -205,6 +259,11 @@ h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
   .rodape-in{grid-template-columns:1fr}
   .newsletter{padding:26px 22px}
   .rankings{grid-template-columns:1fr}
+  .cartoes-fii{grid-template-columns:1fr}
+  .fii-dados dl{grid-template-columns:1fr}
+  .fii-cotacao{text-align:left}
+  .filtros input,.filtros select{min-width:0;width:100%}
+  .filtros label{flex:1 1 100%}
 }
 @media (prefers-reduced-motion:reduce){
   .fita-trilho{animation:none}
