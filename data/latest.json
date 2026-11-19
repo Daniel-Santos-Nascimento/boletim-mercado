@@ -1,6 +1,6 @@
 {
   "data_boletim": "2026-11-19",
-  "gerado_em": "2026-11-19T12:46-03:00",
+  "gerado_em": "2026-11-19T13:01-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
@@ -225,8 +225,8 @@
   },
   "bolsa": {
     "ibov": {
-      "valor": 167183.89,
-      "var_pct": -0.21,
+      "valor": 167021.53,
+      "var_pct": -0.31,
       "data": "2026-11-19",
       "hist": [
         208296,
@@ -250,12 +250,12 @@
         169295,
         169817,
         167538,
-        167183.8906
+        166833.1875
       ]
     },
     "ifix": {
-      "valor": 3481.8,
-      "var_pct": -0.89,
+      "valor": 3483.75,
+      "var_pct": -0.84,
       "data": "2026-11-19"
     }
   },
@@ -315,131 +315,131 @@
   "destaques": {
     "altas": [
       {
-        "ticker": "LIGT3",
-        "nome": "Light",
-        "preco": 3.04,
-        "var_pct": 6.29,
-        "financeiro": 4980736.0
+        "ticker": "PCAR3",
+        "nome": "Cia Brasileira de Distribuicao",
+        "preco": 3.19,
+        "var_pct": 6.69,
+        "financeiro": 21732194.0
       },
       {
-        "ticker": "PCAR3",
-        "nome": "CIA Brasileira DE Distribuicao",
-        "preco": 3.15,
-        "var_pct": 5.35,
-        "financeiro": 15836940.0
+        "ticker": "LIGT3",
+        "nome": "Light",
+        "preco": 3.05,
+        "var_pct": 6.64,
+        "financeiro": 5278330.0
+      },
+      {
+        "ticker": "AZEV3",
+        "nome": "Azevedo e Travassos",
+        "preco": 11.49,
+        "var_pct": 5.9,
+        "financeiro": 4392627.0
       },
       {
         "ticker": "TEND3",
         "nome": "Construtora Tenda",
-        "preco": 15.82,
-        "var_pct": 5.05,
-        "financeiro": 52928974.0
-      },
-      {
-        "ticker": "AZEV3",
-        "nome": "Azevedo E Travassos",
-        "preco": 11.32,
-        "var_pct": 4.33,
-        "financeiro": 3580516.0
+        "preco": 15.68,
+        "var_pct": 4.12,
+        "financeiro": 55725152.0
       },
       {
         "ticker": "TUPY3",
         "nome": "Tupy",
-        "preco": 21,
-        "var_pct": 3.35,
-        "financeiro": 17178000
+        "preco": 20.96,
+        "var_pct": 3.15,
+        "financeiro": 18107344.0
       }
     ],
     "baixas": [
       {
+        "ticker": "VTRU3",
+        "nome": "Vitru Educação",
+        "preco": 13.52,
+        "var_pct": -5.45,
+        "financeiro": 4126304.0
+      },
+      {
         "ticker": "HBRE3",
-        "nome": "HBR Realty Empreendimentos Imobiliarios S/A",
+        "nome": "Hbr Realty Empreendimentos Imobiliarios",
         "preco": 1.24,
         "var_pct": -5.34,
-        "financeiro": 1197096.0
+        "financeiro": 1250416.0
       },
       {
         "ticker": "CSED3",
-        "nome": "Cruzeiro DO SUL Educacional",
-        "preco": 3.38,
-        "var_pct": -5.06,
-        "financeiro": 1734954.0
-      },
-      {
-        "ticker": "VTRU3",
-        "nome": "Vitru Educação S.A",
-        "preco": 13.61,
-        "var_pct": -4.83,
-        "financeiro": 3700559.0
+        "nome": "Cruzeiro do Sul Educacional",
+        "preco": 3.37,
+        "var_pct": -5.34,
+        "financeiro": 1813734.0
       },
       {
         "ticker": "POMO4",
         "nome": "Marcopolo",
-        "preco": 3.6,
-        "var_pct": -4.76,
-        "financeiro": 41842440.0
+        "preco": 3.59,
+        "var_pct": -5.03,
+        "financeiro": 50795628.0
       },
       {
         "ticker": "POMO3",
         "nome": "Marcopolo",
-        "preco": 3.41,
-        "var_pct": -3.94,
-        "financeiro": 3615282.0
+        "preco": 3.4,
+        "var_pct": -4.23,
+        "financeiro": 4175540.0
       }
     ],
     "negociadas": [
       {
         "ticker": "PETR4",
         "nome": "Petroleo Brasileiro Petrobras",
-        "preco": 43.21,
-        "var_pct": 0.09,
-        "financeiro": 516178018.0
+        "preco": 43.06,
+        "var_pct": -0.25,
+        "financeiro": 549824528.0
       },
       {
         "ticker": "CPLE3",
-        "nome": "CIA Paranaense DE Energia - Copel",
-        "preco": 15.18,
-        "var_pct": -0.65,
-        "financeiro": 503702760.0
-      },
-      {
-        "ticker": "ITUB4",
-        "nome": "Itau Unibanco Holding",
-        "preco": 40,
-        "var_pct": -0.47,
-        "financeiro": 469416000
+        "nome": "Cia Paranaense de Energia Copel",
+        "preco": 15.16,
+        "var_pct": -0.79,
+        "financeiro": 511093628.0
       },
       {
         "ticker": "VALE3",
         "nome": "Vale",
-        "preco": 58.98,
-        "var_pct": -0.03,
-        "financeiro": 458758236.0
+        "preco": 58.76,
+        "var_pct": -0.41,
+        "financeiro": 501904416.0
+      },
+      {
+        "ticker": "ITUB4",
+        "nome": "Itau Unibanco Holding",
+        "preco": 39.94,
+        "var_pct": -0.62,
+        "financeiro": 500400272.0
       },
       {
         "ticker": "B3SA3",
-        "nome": "B3 - Brasil. Bolsa. Balcão",
-        "preco": 14.41,
-        "var_pct": 0.77,
-        "financeiro": 458468560.0
+        "nome": "B3 Brasil. Bolsa. Balcão",
+        "preco": 14.42,
+        "var_pct": 0.84,
+        "financeiro": 470860586.0
       }
     ]
   },
   "cripto": [
     {
       "nome": "Bitcoin",
-      "valor": 370912,
-      "var_pct": 0.98
+      "valor": 372340,
+      "var_pct": 1.5
     },
     {
       "nome": "Ethereum",
-      "valor": 10474.02,
-      "var_pct": 2.08
+      "valor": 10511.9,
+      "var_pct": 2.28
     },
     {
       "nome": "Solana",
-      "valor": 434.59,
-      "var_pct": 1.96
+      "valor": 434.43,
+      "var_pct": 1.82
     }
   ],
   "fatos_relevantes": [
@@ -524,28 +524,28 @@
   ],
   "manchetes": [
     {
-      "titulo": "BNDES tem lucro líquido de R$ 4,27 bi no 3º tri",
-      "link": "https://www.infomoney.com.br/mercados/bndes-tem-lucro-liquido-de-r-427-bi-no-3o-tri/",
+      "titulo": "Entenda o decreto que regulamenta o fim da escala 6×1",
+      "link": "https://www.infomoney.com.br/minhas-financas/entenda-o-decreto-que-regulamenta-o-fim-da-escala-6x1/",
       "fonte": "InfoMoney",
-      "quando": "2026-11-19T12:41-03:00"
+      "quando": "2026-11-19T13:00-03:00"
+    },
+    {
+      "titulo": "Petz Cobasi: XP atualiza estimativa e mantém recomendação neutra após 3º tri",
+      "link": "https://www.infomoney.com.br/mercados/petz-cobasi-xp-atualiza-estimativa-e-mantem-recomendacao-neutra-apos-3o-tri/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-19T12:59-03:00"
+    },
+    {
+      "titulo": "Pacote fiscal ‘tímido’ impede avanço do Ibovespa",
+      "link": "https://www.infomoney.com.br/mercados/pacote-fiscal-timido-impede-avanco-do-ibovespa/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-19T12:56-03:00"
     },
     {
       "titulo": "Tesouro Direto hoje: prefixado 2029 volta a pagar mais de 15% ao ano com pressão fiscal e juros dos EUA",
       "link": "https://www.moneytimes.com.br/tesouro-direto-hoje-prefixado-2029-volta-a-pagar-mais-de-15-ao-ano-com-pressao-fiscal-e-juros-dos-eua-mlim/",
       "fonte": "Money Times",
       "quando": "2026-11-19T12:40-03:00"
-    },
-    {
-      "titulo": "Marcopolo (POMO4) fecha acordo para PDV e suspensão temporária de contratos; ação cai",
-      "link": "https://www.infomoney.com.br/mercados/marcopolo-pomo4-fecha-acordo-para-pdv-e-suspensao-temporaria-de-contratos/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-19T12:37-03:00"
-    },
-    {
-      "titulo": "Dólar hoje chega a zerar após leilão do BC, mas volta a subir e encosta nos R$ 5,90",
-      "link": "https://www.infomoney.com.br/mercados/dolar-hoje-abertura-fechamento-comercial-turismo-19112026/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-19T12:34-03:00"
     },
     {
       "titulo": "Maior FII de energia renovável da B3 quer usar caixa para recomprar as próprias cotas",
@@ -634,5 +634,6 @@
       "quando": "2026-11-06T16:34-03:00"
     }
   ],
+  "fiis_total": 345,
   "erros": []
 }
