@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titulo %}Sobre · {{ cfg.nome }}{% endblock %}
+{% block conteudo %}
+<section class="capa"><p class="sobretitulo">Sobre</p><h1>O que é o {{ cfg.nome }}</h1></section>
+<section class="bloco texto">
+  <p>O {{ cfg.nome }} reúne, todo dia útil, os números que mais pesam no bolso do investidor: juros, inflação, câmbio, bolsa,
+  fundos imobiliários e as expectativas do mercado. Os dados vêm direto das fontes oficiais (Banco Central, CVM e B3),
+  sem intermediários.</p>
+  <p>Junto com os números vai uma leitura curta e em linguagem simples do que eles significam. O objetivo é informar e
+  educar, não indicar o que comprar ou vender.</p>
+  <h2>Quem escreve</h2>
+  <p>{{ cfg.autor }}. [Escreva aqui 2 ou 3 linhas sobre você e por que criou o boletim.]</p>
+  <h2>Contato</h2>
+  <p>{{ cfg.email_contato }}</p>
+</section>
+{% endblock %}
