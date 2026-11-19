@@ -13,6 +13,7 @@ import csv
 import io
 import json
 import os
+import re
 import zipfile
 from pathlib import Path
 
@@ -49,6 +50,18 @@ def _dy_fracao(v):
     if v is None:
         return None
     return v / 100 if v > 0.05 else v
+
+
+def _limpar_nome(nome):
+    """'TRX REAL ESTATE FII - FII RESP LIMITADA' -> 'Trx Real Estate FII'"""
+    n = (nome or "").upper()
+    n = re.sub(r"FUNDO DE INVESTIMENTO IMOBILI[AÁ]RIO|FUNDO DE INVESTIMENTO IMOB\.?|FI IMOBILI[AÁ]RIO", "FII", n)
+    n = re.sub(r"\b(RESPONSABILIDADE LIMITADA|RESP\.? LIMITADA|RESP LTDA|DE RL|RL)\b", "", n)
+    n = re.sub(r"(\s*-\s*FII)+$", "", n.strip(" -"))
+    n = re.sub(r"\s+-\s+$|\s{2,}", " ", n).strip(" -")
+    n = re.sub(r"\bFII\b(\s+FII\b)+", "FII", n)
+    n = n.title().replace("Fii", "FII")
+    return re.sub(r"\b(II|III|IV|VI|VII|VIII)\b", lambda m: m.group(0).upper(), n, flags=re.I).strip()
 
 
 def _precos(get):
@@ -104,7 +117,7 @@ def coletar_fiis(get, hoje, erros, pasta):
             taxa = _num(ult.get("Percentual_Despesas_Taxa_Administracao"))
             fundos.append({
                 "ticker": ticker,
-                "nome": (cad.get("Nome_Fundo_Classe") or "").replace(" - FUNDO DE INVESTIMENTO IMOBILIÁRIO", "").replace("FUNDO DE INVESTIMENTO IMOBILIÁRIO", "FII").strip(" -").title().replace("Fii", "FII"),
+                "nome": _limpar_nome(cad.get("Nome_Fundo_Classe")),
                 "cnpj": cnpj,
                 "segmento": (cad.get("Segmento_Atuacao") or "").strip() or "Não informado",
                 "mandato": (cad.get("Mandato") or "").strip(),
@@ -125,7 +138,16 @@ def coletar_fiis(get, hoje, erros, pasta):
                 "ref": meses[-1][0],
                 "hist": hist,
             })
-        fundos.sort(key=lambda f: f["financeiro"], reverse=True)
+        # Descarta cruzamentos ISIN -> ticker improváveis e fundos fechados,
+        # e, se dois fundos caírem no mesmo ticker, fica o de mais cotistas.
+        por_ticker = {}
+        for f in fundos:
+            if not f["pvp"] or not 0.1 <= f["pvp"] <= 5 or (f["cotistas"] or 0) < 50:
+                continue
+            atual = por_ticker.get(f["ticker"])
+            if not atual or (f["cotistas"] or 0) > (atual["cotistas"] or 0):
+                por_ticker[f["ticker"]] = f
+        fundos = sorted(por_ticker.values(), key=lambda f: f["cotistas"] or 0, reverse=True)
         Path(pasta).mkdir(parents=True, exist_ok=True)
         (Path(pasta) / "fiis.json").write_text(
             json.dumps({"atualizado": hoje.isoformat(), "fundos": fundos}, ensure_ascii=False), encoding="utf-8")
