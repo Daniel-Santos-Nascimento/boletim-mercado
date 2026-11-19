@@ -309,7 +309,7 @@ h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
   .newsletter{padding:26px 22px}
   .rankings{grid-template-columns:1fr}
   .cartoes-fii{grid-template-columns:1fr}
-  .topo-in{flex-wrap:wrap;height:auto;padding:10px 0;row-gap:10px}
+  .topo-in{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:0;row-gap:10px}
   .busca-topo{order:3;flex:1 1 100%;max-width:none;margin:0}
   .fii-dados dl{grid-template-columns:1fr}
   .fii-cotacao{text-align:left}
@@ -422,3 +422,11 @@ h1 .logo-ativo{margin-right:14px;border-radius:10px;vertical-align:-6px}
 .atalho-cta{margin-top:auto;font-weight:700;color:var(--cedula);text-decoration:underline;text-underline-offset:3px}
 @media (max-width:820px){.atalhos-capa{grid-template-columns:1fr}}
 .guia .trilha,.guia .trilha a{color:var(--suave)}
+
+/* Menu em telas estreitas: vai para uma linha própria, rolável se precisar */
+@media (max-width:900px){
+  .topo-in{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:0;row-gap:6px}
+  .topo nav{order:4;flex:1 1 100%;overflow-x:auto;gap:22px;padding:4px 0 10px;scrollbar-width:none}
+  .topo nav::-webkit-scrollbar{display:none}
+  .topo nav a{margin-left:0}
+}
