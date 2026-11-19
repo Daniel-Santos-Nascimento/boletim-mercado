@@ -31,6 +31,44 @@
   </div>
 </section>
 
+{% set f = a.fund %}
+{% if f %}
+<section class="wrap fundamentos">
+  <div class="titulo-com-link"><h2>Indicadores fundamentalistas</h2><span class="sub">{{ "Últimos 12 meses até " ~ (f.ate | data_curta) ~ "/" ~ f.ate[:4] if f.base == "12 meses" else "Exercício de " ~ f.ate[:4] }}</span></div>
+  <div class="painel painel-indicadores">
+    <div class="celula"><h3>P/L</h3><p class="valor">{{ f.pl_ratio | num if f.pl_ratio else "–" }}</p><p class="meta">Valor de mercado dividido pelo lucro{% if f.lucro_12m is not none and f.lucro_12m <= 0 %}; a empresa teve prejuízo{% endif %}</p></div>
+    <div class="celula"><h3>P/VP</h3><p class="valor">{{ f.pvp | num if f.pvp else "–" }}</p><p class="meta">Valor de mercado dividido pelo patrimônio líquido</p></div>
+    <div class="celula"><h3>ROE</h3><p class="valor">{% if f.roe is defined %}{{ f.roe | num }}<small>%</small>{% else %}–{% endif %}</p><p class="meta">Lucro dividido pelo patrimônio líquido</p></div>
+    {% if f.financeira %}
+    <div class="celula"><h3>Patrimônio líquido</h3><p class="valor">{{ f.pl | compacto }}</p><p class="meta">Dos acionistas controladores</p></div>
+    {% else %}
+    <div class="celula"><h3>Margem líquida</h3><p class="valor">{% if f.margem is defined %}{{ f.margem | num }}<small>%</small>{% else %}–{% endif %}</p><p class="meta">Lucro dividido pela receita</p></div>
+    <div class="celula"><h3>Dívida líquida / PL</h3><p class="valor">{{ f.div_liq_pl | num if f.div_liq_pl is defined else "–" }}</p><p class="meta">{% if f.div_liq is defined %}Dívida líquida de {{ f.div_liq | compacto_sinal }}{% else %}Empréstimos menos caixa{% endif %}</p></div>
+    {% endif %}
+  </div>
+  {% if f.anos %}
+  {% set maior = (f.anos | map(attribute="lucro") | map("abs") | max) or 1 %}
+  <div class="bloco resultados">
+    <h3>Receita e lucro por ano</h3>
+    <table>
+      <thead><tr><th>Período</th><th>Receita</th><th>Lucro líquido</th><th class="col-barra"></th></tr></thead>
+      <tbody>
+        {% for ano in f.anos %}
+        <tr><td>{{ ano.ano }}</td><td>{{ ano.receita | compacto_sinal }}</td><td class="{{ 'desce' if ano.lucro < 0 }}">{{ ano.lucro | compacto_sinal }}</td>
+          <td class="col-barra"><span class="barra-h {{ 'neg' if ano.lucro < 0 }}" style="width:{{ (ano.lucro | abs) / maior * 100 }}%"></span></td></tr>
+        {% endfor %}
+        {% if f.base == "12 meses" %}
+        <tr class="linha-ttm"><td>12 meses até {{ f.ate | data_curta }}/{{ f.ate[:4] }}</td><td>{{ f.receita_12m | compacto_sinal }}</td><td class="{{ 'desce' if f.lucro_12m < 0 }}">{{ f.lucro_12m | compacto_sinal }}</td>
+          <td class="col-barra"><span class="barra-h ouro {{ 'neg' if f.lucro_12m < 0 }}" style="width:{{ [(f.lucro_12m | abs) / maior * 100, 100] | min }}%"></span></td></tr>
+        {% endif %}
+      </tbody>
+    </table>
+    <p class="nota">Demonstrações consolidadas entregues à CVM (DFP e ITR). Lucro atribuído aos acionistas controladores; patrimônio líquido sem a parcela dos minoritários{% if f.financeira %}; para instituições financeiras, "receita" é a receita da intermediação financeira e não se calcula dívida líquida{% endif %}. Balanço de {{ f.data_balanco | data_curta }}/{{ f.data_balanco[:4] }}.</p>
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+
 <div class="wrap duas-colunas">
   <section class="bloco">
     <h2>Sobre a empresa</h2>
