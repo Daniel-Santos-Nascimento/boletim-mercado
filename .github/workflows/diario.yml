@@ -32,8 +32,7 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Coletar dados (só no horário agendado ou manual)
-        if: github.event_name != 'push'
+      - name: Coletar dados
         env:
           BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
         run: python coletar.py
@@ -46,7 +45,7 @@ jobs:
         run: |
           git config user.name "robo-boletim"
           git config user.email "robo-boletim@users.noreply.github.com"
-          git add data/
+          git add data/historico data/latest.json
           git commit -m "Boletim $(date -u +%F)" || echo "Nada novo"
           git push
 
