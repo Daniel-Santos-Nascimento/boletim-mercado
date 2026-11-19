@@ -97,6 +97,39 @@ def compacto(v):
     return f"R$ {num(v, 0)}"
 
 
+def milhar(v):
+    return "–" if v is None else num(v, 0)
+
+
+def mes_ano(ref):
+    """'2026-10' -> 'out/2026'"""
+    if not ref:
+        return ""
+    return f"{MESES[int(ref[5:7]) - 1][:3]}/{ref[:4]}"
+
+
+def barras(hist, largura=520, altura=150):
+    """Gráfico de barras SVG do DY mensal (valores em fração)."""
+    pts = [(h["mes"], h["dy"] * 100) for h in hist if h.get("dy") is not None]
+    if not pts:
+        return Markup('<p class="vazio">Sem dados de DY informados.</p>')
+    topo = max(v for _, v in pts) or 1
+    passo = largura / len(pts)
+    larg = max(passo * 0.62, 2)
+    partes = []
+    for i, (mes, v) in enumerate(pts):
+        h = max(v / topo * (altura - 26), 1)
+        x = i * passo + (passo - larg) / 2
+        partes.append(f'<rect x="{x:.1f}" y="{altura - 18 - h:.1f}" width="{larg:.1f}" height="{h:.1f}" rx="2">'
+                      f'<title>{mes_ano(mes)}: {num(v)}%</title></rect>')
+        if i % 3 == 0 or i == len(pts) - 1:
+            cx = min(max(x + larg / 2, 16), largura - 16)  # não deixa o rótulo sair do gráfico
+            partes.append(f'<text x="{cx:.1f}" y="{altura - 4}" text-anchor="middle">{mes_ano(mes)[:3]}/{mes[2:4]}</text>')
+    ultimo = pts[-1][1]
+    return Markup(f'<svg class="barras" viewBox="0 0 {largura} {altura}" role="img" '
+                  f'aria-label="DY mensal; último mês {num(ultimo)}%">{"".join(partes)}</svg>')
+
+
 def hora(iso, referencia=None):
     """Mostra só a hora se for do mesmo dia do boletim; senão, a data."""
     if not iso:
@@ -138,10 +171,13 @@ def main():
         sys.exit("Nenhum boletim encontrado. Rode coletar.py antes (ou use --exemplo).")
 
     env = Environment(loader=FileSystemLoader(BASE / "templates"), autoescape=select_autoescape())
-    env.filters.update(num=num, data_longa=data_longa, data_curta=data_curta, spark=spark, hora=hora, compacto=compacto)
+    env.filters.update(num=num, data_longa=data_longa, data_curta=data_curta, spark=spark, hora=hora, compacto=compacto,
+                       milhar=milhar, mes_ano=mes_ano, barras=barras)
     env.globals.update(manchete=manchete)
-    css = (BASE / "templates" / "style.css").read_text(encoding="utf-8")
-    ctx = {"cfg": cfg, "css": css, "arquivo": [b["data_boletim"] for b in boletins]}
+    arq_fiis = BASE / "data" / ("fiis_exemplo.json" if exemplo else "fiis.json")
+    fundos = json.loads(arq_fiis.read_text(encoding="utf-8"))["fundos"] if arq_fiis.exists() else []
+    ctx = {"cfg": cfg, "arquivo": [b["data_boletim"] for b in boletins],
+           "fiis_destaque": fundos[:6], "tem_fiis": bool(fundos)}
 
     if SAIDA.exists():
         shutil.rmtree(SAIDA)
@@ -164,8 +200,18 @@ def main():
     for pagina in ["arquivo", "sobre", "aviso-legal", "privacidade"]:
         salvar(f"{pagina}/index.html", env.get_template(f"{pagina}.html").render(raiz="../", **ctx))
 
+    # Uma página por FII + ranking
+    if fundos:
+        tpl_fii = env.get_template("fii.html")
+        for f in fundos:
+            relacionados = [r for r in fundos if r["segmento"] == f["segmento"] and r["ticker"] != f["ticker"]][:6]
+            salvar(f"fiis/{f['ticker']}/index.html", tpl_fii.render(f=f, relacionados=relacionados, raiz="../../", **ctx))
+        segmentos = sorted({f["segmento"] for f in fundos})
+        salvar("fiis/index.html", env.get_template("fiis.html").render(fundos=fundos, segmentos=segmentos, raiz="../", **ctx))
+
+    shutil.copy(BASE / "templates" / "style.css", SAIDA / "style.css")
     (SAIDA / ".nojekyll").write_text("")
-    print(f"Site gerado em {SAIDA} com {len(boletins)} boletim(ns).")
+    print(f"Site gerado em {SAIDA} com {len(boletins)} boletim(ns) e {len(fundos)} FIIs.")
 
 
 if __name__ == "__main__":
