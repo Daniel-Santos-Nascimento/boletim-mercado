@@ -1,6 +1,6 @@
 {
   "data_boletim": "2026-11-19",
-  "gerado_em": "2026-11-19T10:33-03:00",
+  "gerado_em": "2026-11-19T12:46-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
@@ -225,8 +225,8 @@
   },
   "bolsa": {
     "ibov": {
-      "valor": 167833.19,
-      "var_pct": 0.18,
+      "valor": 167183.89,
+      "var_pct": -0.21,
       "data": "2026-11-19",
       "hist": [
         208296,
@@ -250,12 +250,12 @@
         169295,
         169817,
         167538,
-        167877.1875
+        167183.8906
       ]
     },
     "ifix": {
-      "valor": 3514.45,
-      "var_pct": 0.04,
+      "valor": 3481.8,
+      "var_pct": -0.89,
       "data": "2026-11-19"
     }
   },
@@ -312,6 +312,136 @@
       }
     ]
   },
+  "destaques": {
+    "altas": [
+      {
+        "ticker": "LIGT3",
+        "nome": "Light",
+        "preco": 3.04,
+        "var_pct": 6.29,
+        "financeiro": 4980736.0
+      },
+      {
+        "ticker": "PCAR3",
+        "nome": "CIA Brasileira DE Distribuicao",
+        "preco": 3.15,
+        "var_pct": 5.35,
+        "financeiro": 15836940.0
+      },
+      {
+        "ticker": "TEND3",
+        "nome": "Construtora Tenda",
+        "preco": 15.82,
+        "var_pct": 5.05,
+        "financeiro": 52928974.0
+      },
+      {
+        "ticker": "AZEV3",
+        "nome": "Azevedo E Travassos",
+        "preco": 11.32,
+        "var_pct": 4.33,
+        "financeiro": 3580516.0
+      },
+      {
+        "ticker": "TUPY3",
+        "nome": "Tupy",
+        "preco": 21,
+        "var_pct": 3.35,
+        "financeiro": 17178000
+      }
+    ],
+    "baixas": [
+      {
+        "ticker": "HBRE3",
+        "nome": "HBR Realty Empreendimentos Imobiliarios S/A",
+        "preco": 1.24,
+        "var_pct": -5.34,
+        "financeiro": 1197096.0
+      },
+      {
+        "ticker": "CSED3",
+        "nome": "Cruzeiro DO SUL Educacional",
+        "preco": 3.38,
+        "var_pct": -5.06,
+        "financeiro": 1734954.0
+      },
+      {
+        "ticker": "VTRU3",
+        "nome": "Vitru Educação S.A",
+        "preco": 13.61,
+        "var_pct": -4.83,
+        "financeiro": 3700559.0
+      },
+      {
+        "ticker": "POMO4",
+        "nome": "Marcopolo",
+        "preco": 3.6,
+        "var_pct": -4.76,
+        "financeiro": 41842440.0
+      },
+      {
+        "ticker": "POMO3",
+        "nome": "Marcopolo",
+        "preco": 3.41,
+        "var_pct": -3.94,
+        "financeiro": 3615282.0
+      }
+    ],
+    "negociadas": [
+      {
+        "ticker": "PETR4",
+        "nome": "Petroleo Brasileiro Petrobras",
+        "preco": 43.21,
+        "var_pct": 0.09,
+        "financeiro": 516178018.0
+      },
+      {
+        "ticker": "CPLE3",
+        "nome": "CIA Paranaense DE Energia - Copel",
+        "preco": 15.18,
+        "var_pct": -0.65,
+        "financeiro": 503702760.0
+      },
+      {
+        "ticker": "ITUB4",
+        "nome": "Itau Unibanco Holding",
+        "preco": 40,
+        "var_pct": -0.47,
+        "financeiro": 469416000
+      },
+      {
+        "ticker": "VALE3",
+        "nome": "Vale",
+        "preco": 58.98,
+        "var_pct": -0.03,
+        "financeiro": 458758236.0
+      },
+      {
+        "ticker": "B3SA3",
+        "nome": "B3 - Brasil. Bolsa. Balcão",
+        "preco": 14.41,
+        "var_pct": 0.77,
+        "financeiro": 458468560.0
+      }
+    ]
+  },
+  "cripto": [
+    {
+      "nome": "Bitcoin",
+      "valor": 370912,
+      "var_pct": 0.98
+    },
+    {
+      "nome": "Ethereum",
+      "valor": 10474.02,
+      "var_pct": 2.08
+    },
+    {
+      "nome": "Solana",
+      "valor": 434.59,
+      "var_pct": 1.96
+    }
+  ],
   "fatos_relevantes": [
     {
       "empresa": "Banco Abc Brasil S/A",
@@ -394,46 +524,52 @@
   ],
   "manchetes": [
     {
-      "titulo": "Pacote fiscal depende 70% de receita incerta e não banca gastos extras, alerta IFI",
-      "link": "https://www.infomoney.com.br/economia/plp-299-2026-ifi-orcamento-2027-receitas-incertas/",
+      "titulo": "BNDES tem lucro líquido de R$ 4,27 bi no 3º tri",
+      "link": "https://www.infomoney.com.br/mercados/bndes-tem-lucro-liquido-de-r-427-bi-no-3o-tri/",
       "fonte": "InfoMoney",
-      "quando": "2026-11-19T10:30-03:00"
+      "quando": "2026-11-19T12:41-03:00"
     },
     {
-      "titulo": "Moretti diz que ainda não é o momento de tratar de medidas fiscais adicionais",
-      "link": "https://www.infomoney.com.br/mercados/moretti-diz-que-ainda-nao-e-o-momento-de-tratar-de-medidas-fiscais-adicionais/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-19T10:27-03:00"
+      "titulo": "Tesouro Direto hoje: prefixado 2029 volta a pagar mais de 15% ao ano com pressão fiscal e juros dos EUA",
+      "link": "https://www.moneytimes.com.br/tesouro-direto-hoje-prefixado-2029-volta-a-pagar-mais-de-15-ao-ano-com-pressao-fiscal-e-juros-dos-eua-mlim/",
+      "fonte": "Money Times",
+      "quando": "2026-11-19T12:40-03:00"
     },
     {
-      "titulo": "ANTH34: BDR da Anthropic estreia na B3 junto com ação na Nasdaq por cerca de R$ 60",
-      "link": "https://www.infomoney.com.br/mercados/anth34-bdr-da-anthropic-estreia-na-b3-simultaneamente-a-estreia-na-nasdaq-por-cerca-de-r-60/",
+      "titulo": "Marcopolo (POMO4) fecha acordo para PDV e suspensão temporária de contratos; ação cai",
+      "link": "https://www.infomoney.com.br/mercados/marcopolo-pomo4-fecha-acordo-para-pdv-e-suspensao-temporaria-de-contratos/",
       "fonte": "InfoMoney",
-      "quando": "2026-11-19T10:24-03:00"
+      "quando": "2026-11-19T12:37-03:00"
+    },
+    {
+      "titulo": "Dólar hoje chega a zerar após leilão do BC, mas volta a subir e encosta nos R$ 5,90",
+      "link": "https://www.infomoney.com.br/mercados/dolar-hoje-abertura-fechamento-comercial-turismo-19112026/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-19T12:34-03:00"
+    },
+    {
+      "titulo": "Maior FII de energia renovável da B3 quer usar caixa para recomprar as próprias cotas",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/barato-demais-maior-fii-de-energia-renovavel-da-b3-quer-usar-caixa-para-comprar-as-proprias-cotas-igdl/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-19T11:02-03:00"
+    },
+    {
+      "titulo": "Ibovespa pode subir 20%, mas Itaú BBA não vê motivos para comprar; banco rebaixa bolsa para neutra",
+      "link": "https://www.moneytimes.com.br/ibovespa-pode-subir-20-mas-itau-bba-nao-ve-motivos-para-comprar-banco-rebaixa-bolsa-para-neutra-miql/",
+      "fonte": "Money Times",
+      "quando": "2026-11-19T10:48-03:00"
+    },
+    {
+      "titulo": "Ibovespa opera em alta e dólar se aproxima dos R$ 5,90; 5 coisas para saber antes de investir hoje (19)",
+      "link": "https://www.moneytimes.com.br/ibovespa-tenta-recuperar-os-169-mil-pontos-de-olho-no-fiscal-5-coisas-para-saber-antes-de-investir-hoje-19-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-19T10:38-03:00"
     },
     {
       "titulo": "Todo mundo decidiu abandonar o Brasil? BTG e Itaú BBA também tiram o pé da bolsa brasileira após eleições",
       "link": "https://www.seudinheiro.com/2026/bolsa-dolar/todo-mundo-decidiu-abandonar-o-brasil-btg-e-itau-bba-tambem-tiram-o-pe-da-bolsa-brasileira-apos-eleicoes-miql/",
       "fonte": "Seu Dinheiro",
       "quando": "2026-11-19T10:18-03:00"
-    },
-    {
-      "titulo": "A bolsa caiu, mas o risco ficou: BTG rebaixa Brasil para neutro e tira Itaú, XP e Assaí da carteira",
-      "link": "https://www.moneytimes.com.br/a-bolsa-caiu-mas-o-risco-ficou-btg-rebaixa-brasil-para-neutro-e-tira-itau-xp-e-assai-da-carteira-miql/",
-      "fonte": "Money Times",
-      "quando": "2026-11-19T09:10-03:00"
-    },
-    {
-      "titulo": "Encontro de Xi Jinping, Putin e Trump domina agenda com IPO da Anthropic; Ibovespa em dólar sobe nesta quinta (19)",
-      "link": "https://www.moneytimes.com.br/encontro-de-xi-jinping-putin-e-trump-domina-agenda-com-ipo-da-anthropic-ibovespa-em-dolar-sobe-nesta-quinta-19-rens/",
-      "fonte": "Money Times",
-      "quando": "2026-11-19T07:07-03:00"
-    },
-    {
-      "titulo": "Bolsas da Ásia fecham sem direção única com estreia da Anthropic em NY no radar",
-      "link": "https://www.moneytimes.com.br/bolsas-da-asia-fecham-sem-direcao-unica-com-estreia-da-anthropic-em-ny-no-radar-fets/",
-      "fonte": "Money Times",
-      "quando": "2026-11-19T06:11-03:00"
     },
     {
       "titulo": "Dólar sobe para R$ 5,87 com expectativa sobre votação de ajuste fiscal",
@@ -458,12 +594,6 @@
       "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/numero-de-desempregados-ha-dois-anos-ou-mais-e-o-menor-ja-registrado",
       "fonte": "Agência Brasil",
       "quando": "2026-11-18T12:36-03:00"
-    },
-    {
-      "titulo": "Em meio à crise, Banco do Brasil (BBAS3) renova contratos com fundo imobiliário por mais 10 anos — e com desconto",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/crise-banco-do-brasil-bbas3-renova-contratos-fundo-imobiliario-por-mais-10-anos-mas-com-desconto-igdl/",
-      "fonte": "Seu Dinheiro",
-      "quando": "2026-11-18T09:07-03:00"
     }
   ],
   "oficiais": [
