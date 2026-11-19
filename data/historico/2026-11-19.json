@@ -1,6 +1,6 @@
 {
   "data_boletim": "2026-11-19",
-  "gerado_em": "2026-11-19T13:01-03:00",
+  "gerado_em": "2026-11-19T13:48-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
@@ -147,9 +147,9 @@
   },
   "cambio": {
     "dolar": {
-      "valor": 5.8102,
-      "data": "2026-11-18",
-      "var_pct": 0.43,
+      "valor": 5.8889,
+      "data": "2026-11-19",
+      "var_pct": 1.35,
       "hist": [
         4.9859,
         4.9698,
@@ -181,13 +181,14 @@
         5.6518,
         5.7324,
         5.7851,
-        5.8102
+        5.8102,
+        5.8889
       ]
     },
     "euro": {
-      "valor": 6.372,
-      "data": "2026-11-18",
-      "var_pct": 0.1,
+      "valor": 6.4672,
+      "data": "2026-11-19",
+      "var_pct": 1.49,
       "hist": [
         5.5897,
         5.5975,
@@ -219,14 +220,15 @@
         6.2334,
         6.3102,
         6.3659,
-        6.372
+        6.372,
+        6.4672
       ]
     }
   },
   "bolsa": {
     "ibov": {
-      "valor": 167021.53,
-      "var_pct": -0.31,
+      "valor": 166518.39,
+      "var_pct": -0.61,
       "data": "2026-11-19",
       "hist": [
         208296,
@@ -250,12 +252,12 @@
         169295,
         169817,
         167538,
-        166833.1875
+        166474.0938
       ]
     },
     "ifix": {
-      "valor": 3483.75,
-      "var_pct": -0.84,
+      "valor": 3486.63,
+      "var_pct": -0.75,
       "data": "2026-11-19"
     }
   },
@@ -317,129 +319,129 @@
       {
         "ticker": "PCAR3",
         "nome": "Cia Brasileira de Distribuicao",
-        "preco": 3.19,
-        "var_pct": 6.69,
-        "financeiro": 21732194.0
+        "preco": 3.18,
+        "var_pct": 6.35,
+        "financeiro": 23082984.0
       },
       {
         "ticker": "LIGT3",
         "nome": "Light",
-        "preco": 3.05,
-        "var_pct": 6.64,
-        "financeiro": 5278330.0
-      },
-      {
-        "ticker": "AZEV3",
-        "nome": "Azevedo e Travassos",
-        "preco": 11.49,
-        "var_pct": 5.9,
-        "financeiro": 4392627.0
+        "preco": 3.03,
+        "var_pct": 5.94,
+        "financeiro": 6527529.0
       },
       {
         "ticker": "TEND3",
         "nome": "Construtora Tenda",
-        "preco": 15.68,
-        "var_pct": 4.12,
-        "financeiro": 55725152.0
+        "preco": 15.48,
+        "var_pct": 2.79,
+        "financeiro": 65926224.0
+      },
+      {
+        "ticker": "BRKM5",
+        "nome": "Braskem",
+        "preco": 2.7,
+        "var_pct": 2.66,
+        "financeiro": 5981040.0
       },
       {
         "ticker": "TUPY3",
         "nome": "Tupy",
-        "preco": 20.96,
-        "var_pct": 3.15,
-        "financeiro": 18107344.0
+        "preco": 20.85,
+        "var_pct": 2.61,
+        "financeiro": 21143985.0
       }
     ],
     "baixas": [
       {
-        "ticker": "VTRU3",
-        "nome": "Vitru Educação",
-        "preco": 13.52,
-        "var_pct": -5.45,
-        "financeiro": 4126304.0
-      },
-      {
-        "ticker": "HBRE3",
-        "nome": "Hbr Realty Empreendimentos Imobiliarios",
-        "preco": 1.24,
-        "var_pct": -5.34,
-        "financeiro": 1250416.0
-      },
-      {
-        "ticker": "CSED3",
-        "nome": "Cruzeiro do Sul Educacional",
-        "preco": 3.37,
-        "var_pct": -5.34,
-        "financeiro": 1813734.0
-      },
-      {
         "ticker": "POMO4",
         "nome": "Marcopolo",
-        "preco": 3.59,
-        "var_pct": -5.03,
-        "financeiro": 50795628.0
+        "preco": 3.53,
+        "var_pct": -6.61,
+        "financeiro": 58521399.0
       },
       {
         "ticker": "POMO3",
         "nome": "Marcopolo",
-        "preco": 3.4,
-        "var_pct": -4.23,
-        "financeiro": 4175540.0
+        "preco": 3.32,
+        "var_pct": -6.48,
+        "financeiro": 5691144.0
+      },
+      {
+        "ticker": "HBRE3",
+        "nome": "Hbr Realty Empreendimentos Imobiliarios",
+        "preco": 1.23,
+        "var_pct": -6.11,
+        "financeiro": 1524216.0
+      },
+      {
+        "ticker": "CSED3",
+        "nome": "Cruzeiro do Sul Educacional",
+        "preco": 3.35,
+        "var_pct": -5.9,
+        "financeiro": 1999615.0
+      },
+      {
+        "ticker": "VTRU3",
+        "nome": "Vitru Educação",
+        "preco": 13.47,
+        "var_pct": -5.8,
+        "financeiro": 4854588.0
       }
     ],
     "negociadas": [
-      {
-        "ticker": "PETR4",
-        "nome": "Petroleo Brasileiro Petrobras",
-        "preco": 43.06,
-        "var_pct": -0.25,
-        "financeiro": 549824528.0
-      },
-      {
-        "ticker": "CPLE3",
-        "nome": "Cia Paranaense de Energia Copel",
-        "preco": 15.16,
-        "var_pct": -0.79,
-        "financeiro": 511093628.0
-      },
       {
         "ticker": "VALE3",
         "nome": "Vale",
         "preco": 58.76,
         "var_pct": -0.41,
-        "financeiro": 501904416.0
+        "financeiro": 780274040.0
+      },
+      {
+        "ticker": "PETR4",
+        "nome": "Petroleo Brasileiro Petrobras",
+        "preco": 43.06,
+        "var_pct": -0.25,
+        "financeiro": 662602974.0
       },
       {
         "ticker": "ITUB4",
         "nome": "Itau Unibanco Holding",
-        "preco": 39.94,
-        "var_pct": -0.62,
-        "financeiro": 500400272.0
+        "preco": 39.75,
+        "var_pct": -1.09,
+        "financeiro": 616375425.0
+      },
+      {
+        "ticker": "CPLE3",
+        "nome": "Cia Paranaense de Energia Copel",
+        "preco": 15.13,
+        "var_pct": -0.98,
+        "financeiro": 583135921.0
       },
       {
         "ticker": "B3SA3",
         "nome": "B3 Brasil. Bolsa. Balcão",
-        "preco": 14.42,
-        "var_pct": 0.84,
-        "financeiro": 470860586.0
+        "preco": 14.3,
+        "var_pct": 0,
+        "financeiro": 547160900.0
       }
     ]
   },
   "cripto": [
     {
       "nome": "Bitcoin",
-      "valor": 372340,
-      "var_pct": 1.5
+      "valor": 372419,
+      "var_pct": 2.43
     },
     {
       "nome": "Ethereum",
-      "valor": 10511.9,
-      "var_pct": 2.28
+      "valor": 10501.91,
+      "var_pct": 3.69
     },
     {
       "nome": "Solana",
-      "valor": 434.43,
-      "var_pct": 1.82
+      "valor": 434.95,
+      "var_pct": 2.96
     }
   ],
   "fatos_relevantes": [
@@ -524,22 +526,34 @@
   ],
   "manchetes": [
     {
-      "titulo": "Entenda o decreto que regulamenta o fim da escala 6×1",
-      "link": "https://www.infomoney.com.br/minhas-financas/entenda-o-decreto-que-regulamenta-o-fim-da-escala-6x1/",
+      "titulo": "Taxas dos DIs aceleram altas após declarações de Lula sobre área fiscal",
+      "link": "https://www.infomoney.com.br/mercados/dis-juros-futuros-sobem-com-dolar-e-exterior-apesar-de-aprovacao-de-ajuste-fiscal-no-senado/",
       "fonte": "InfoMoney",
-      "quando": "2026-11-19T13:00-03:00"
+      "quando": "2026-11-19T13:48-03:00"
     },
     {
-      "titulo": "Petz Cobasi: XP atualiza estimativa e mantém recomendação neutra após 3º tri",
-      "link": "https://www.infomoney.com.br/mercados/petz-cobasi-xp-atualiza-estimativa-e-mantem-recomendacao-neutra-apos-3o-tri/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-19T12:59-03:00"
+      "titulo": "Dólar ganha (ainda mais) fôlego e passa os R$ 5,90 — e aqui estão os motores da disparada do dia",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/dolar-ganha-ainda-mais-folego-e-passa-os-r-590-entenda-o-que-impulsiona-a-moeda-davs/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-19T13:46-03:00"
     },
     {
-      "titulo": "Pacote fiscal ‘tímido’ impede avanço do Ibovespa",
-      "link": "https://www.infomoney.com.br/mercados/pacote-fiscal-timido-impede-avanco-do-ibovespa/",
+      "titulo": "Banco do Brasil (BBAS3): XP vê recuperação lenta, corta preço-alvo e tem visão neutra",
+      "link": "https://www.infomoney.com.br/mercados/banco-do-brasil-bbas3-xp-ve-recuperacao-lenta-corta-preco-alvo-e-tem-visao-neutra/",
       "fonte": "InfoMoney",
-      "quando": "2026-11-19T12:56-03:00"
+      "quando": "2026-11-19T13:45-03:00"
+    },
+    {
+      "titulo": "Ibovespa Hoje Ao Vivo: Bolsa cai após intervenção do BC no dólar, que sobe a R$ 5,93",
+      "link": "https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-19112026/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-19T13:35-03:00"
+    },
+    {
+      "titulo": "Dólar nas alturas: Banco Central intervém em leilão de US$ 1 bilhão",
+      "link": "https://www.moneytimes.com.br/dolar-nas-alturas-banco-central-intervem-em-leilao-de-us-1-bilhao/",
+      "fonte": "Money Times",
+      "quando": "2026-11-19T13:04-03:00"
     },
     {
       "titulo": "Tesouro Direto hoje: prefixado 2029 volta a pagar mais de 15% ao ano com pressão fiscal e juros dos EUA",
@@ -560,12 +574,6 @@
       "quando": "2026-11-19T10:48-03:00"
     },
     {
-      "titulo": "Ibovespa opera em alta e dólar se aproxima dos R$ 5,90; 5 coisas para saber antes de investir hoje (19)",
-      "link": "https://www.moneytimes.com.br/ibovespa-tenta-recuperar-os-169-mil-pontos-de-olho-no-fiscal-5-coisas-para-saber-antes-de-investir-hoje-19-davs/",
-      "fonte": "Money Times",
-      "quando": "2026-11-19T10:38-03:00"
-    },
-    {
       "titulo": "Todo mundo decidiu abandonar o Brasil? BTG e Itaú BBA também tiram o pé da bolsa brasileira após eleições",
       "link": "https://www.seudinheiro.com/2026/bolsa-dolar/todo-mundo-decidiu-abandonar-o-brasil-btg-e-itau-bba-tambem-tiram-o-pe-da-bolsa-brasileira-apos-eleicoes-miql/",
       "fonte": "Seu Dinheiro",
@@ -582,12 +590,6 @@
       "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/senado-pede-explicacoes-tcu-sobre-aliquota-de-113-da-cbs",
       "fonte": "Agência Brasil",
       "quando": "2026-11-18T17:07-03:00"
-    },
-    {
-      "titulo": "Goldman Sachs rebaixa ações brasileiras diante de um cenário de recuperação lenta da bolsa após as eleições",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/brasil-fica-para-tras-goldman-sachs-reduz-aposta-e-ve-oportunidades-em-outros-emergentes-lmrs/",
-      "fonte": "Seu Dinheiro",
-      "quando": "2026-11-18T13:00-03:00"
     },
     {
       "titulo": "Número de desempregados há dois anos ou mais é o menor já registrado",
@@ -634,6 +636,8 @@
       "quando": "2026-11-06T16:34-03:00"
     }
   ],
-  "fiis_total": 345,
+  "fiis_total": 312,
+  "acoes_total": 341,
+  "fundamentos": 466,
   "erros": []
 }
