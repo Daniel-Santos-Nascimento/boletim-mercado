@@ -43,19 +43,25 @@ def br_para_iso(d):  # "19/11/2026" -> "2026-11-19"
 
 
 # ---------------------------------------------------------------- Banco Central
-def sgs(codigo, n=2):
-    url = f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo}/dados/ultimos/{n}?formato=json"
+def sgs(codigo, dias):
+    """Série do SGS por período (a API limita a consulta "últimos N" a 20 valores)."""
+    ini = (HOJE - timedelta(days=dias)).strftime("%d/%m/%Y")
+    fim = (HOJE + timedelta(days=60)).strftime("%d/%m/%Y")
+    url = (f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo}/dados"
+           f"?formato=json&dataInicial={ini}&dataFinal={fim}")
     pontos = get(url).json()
     return [{"data": br_para_iso(p["data"]), "valor": float(p["valor"])} for p in pontos]
 
 
-def serie(nome, codigo, com_variacao=False):
+def serie(nome, codigo, dias=15, com_variacao=False, grafico=False, passo=1):
     try:
-        pts = sgs(codigo, 2)
+        pts = sgs(codigo, dias)
         atual = pts[-1]
         item = {"valor": atual["valor"], "data": min(atual["data"], HOJE.isoformat())}
-        if com_variacao and len(pts) == 2 and pts[0]["valor"]:
-            item["var_pct"] = round((atual["valor"] / pts[0]["valor"] - 1) * 100, 2)
+        if com_variacao and len(pts) >= 2 and pts[-2]["valor"]:
+            item["var_pct"] = round((atual["valor"] / pts[-2]["valor"] - 1) * 100, 2)
+        if grafico:
+            item["hist"] = [p["valor"] for p in pts[::-1][::passo][::-1]]
         return item
     except Exception as e:
         erros.append(f"{nome}: {e}")
@@ -101,13 +107,21 @@ def brapi(ticker, nome):
         erros.append(f"{nome}: defina o secret BRAPI_TOKEN no GitHub")
         return None
     try:
-        r = get(f"https://brapi.dev/api/quote/{ticker}", params={"token": token}).json()
+        url = f"https://brapi.dev/api/quote/{ticker}"
+        try:  # com histórico de 1 mês para o minigráfico
+            r = get(url, params={"token": token, "range": "1mo", "interval": "1d"}).json()
+        except Exception:  # se o plano não permitir histórico, pega só a cotação
+            r = get(url, params={"token": token}).json()
         q = r["results"][0]
-        return {
+        item = {
             "valor": q["regularMarketPrice"],
             "var_pct": round(q.get("regularMarketChangePercent") or 0, 2),
             "data": (q.get("regularMarketTime") or "")[:10],
         }
+        hist = [h.get("close") for h in (q.get("historicalDataPrice") or []) if h.get("close")]
+        if len(hist) >= 2:
+            item["hist"] = hist
+        return item
     except Exception as e:
         erros.append(f"{nome}: {e}")
         return None
@@ -157,9 +171,12 @@ def main():
         "data_boletim": HOJE.isoformat(),
         "gerado_em": datetime.now(FUSO_BR).isoformat(timespec="minutes"),
         "exemplo": False,
-        "juros": {"selic": serie("Selic", 432), "cdi": serie("CDI", 4389)},
-        "inflacao": {"ipca_mes": serie("IPCA mês", 433), "ipca_12m": serie("IPCA 12m", 13522)},
-        "cambio": {"dolar": serie("Dólar", 1, True), "euro": serie("Euro", 21619, True)},
+        "juros": {"selic": serie("Selic", 432, 365, grafico=True, passo=7),
+                  "cdi": serie("CDI", 4389, 365, grafico=True, passo=7)},
+        "inflacao": {"ipca_mes": serie("IPCA mês", 433, 100),
+                     "ipca_12m": serie("IPCA 12m", 13522, 760, grafico=True)},
+        "cambio": {"dolar": serie("Dólar", 1, 45, com_variacao=True, grafico=True),
+                   "euro": serie("Euro", 21619, 45, com_variacao=True, grafico=True)},
         "bolsa": {"ibov": brapi("^BVSP", "Ibovespa"), "ifix": brapi("IFIX", "IFIX")},
         "focus": focus(),
         "fatos_relevantes": fatos_relevantes(),
