@@ -26,6 +26,9 @@
       {% for nome, item, casas, suf, pre in itens if item %}
       <li><span class="fita-nome">{{ nome }}</span> {{ pre }}{{ item.valor | num(casas) }}{{ suf }} {% if item.var_pct is defined %}{{ variacao(item.var_pct) }}{% endif %}</li>
       {% endfor %}
+      {% for c in b.cripto or [] %}
+      <li><span class="fita-nome">{{ c.nome }}</span> R$ {{ c.valor | num(0 if c.valor > 1000 else 2) }} {{ variacao(c.var_pct) }}</li>
+      {% endfor %}
     </ul>
     {% endfor %}
   </div>
@@ -85,6 +88,46 @@
     {{ celula("IFIX", b.bolsa.ifix, 0, " pts", periodo="Último mês") }}
   </div>
 </section>
+
+{% set d = b.destaques %}
+{% if d or b.cripto %}
+{% macro tabela_acoes(titulo, lista, coluna="var") %}
+  <div class="ranking">
+    <h3>{{ titulo }}</h3>
+    <ul>
+      {% for a in lista %}
+      <li>
+        <span class="ticker">{{ a.ticker }}</span>
+        <span class="empresa-curta">{{ a.nome }}</span>
+        <span class="preco">R$ {{ a.preco | num }}</span>
+        {% if coluna == "var" %}{{ variacao(a.var_pct) }}{% else %}<span class="giro">{{ a.financeiro | compacto }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endmacro %}
+<section class="wrap bolsa-hoje" id="bolsa">
+  <h2>A bolsa no pregão</h2>
+  <p class="sub">Entre as 150 ações com maior volume na B3{% if b.bolsa.ibov %}, no pregão de {{ b.bolsa.ibov.data | data_curta }}{% endif %}. Giro é o volume financeiro negociado.</p>
+  <div class="rankings">
+    {% if d %}
+    {{ tabela_acoes("Maiores altas", d.altas) }}
+    {{ tabela_acoes("Maiores baixas", d.baixas) }}
+    {{ tabela_acoes("Mais negociadas", d.negociadas, "giro") }}
+    {% endif %}
+    {% if b.cripto %}
+    <div class="ranking cripto">
+      <h3>Criptomoedas</h3>
+      <ul>
+        {% for c in b.cripto %}
+        <li><span class="ticker">{{ c.nome }}</span><span class="empresa-curta">em 24 horas</span><span class="preco">R$ {{ c.valor | num(0 if c.valor > 1000 else 2) }}</span>{{ variacao(c.var_pct) }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
 
 {% if b.comentario_html %}
 <section class="wrap leitura" id="leitura">
