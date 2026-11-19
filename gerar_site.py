@@ -86,6 +86,17 @@ def manchete(b):
 
 
 
+def compacto(v):
+    """R$ 1,2 bi / R$ 350 mi"""
+    if v is None:
+        return "–"
+    if v >= 1e9:
+        return f"R$ {num(v / 1e9, 1)} bi"
+    if v >= 1e6:
+        return f"R$ {num(v / 1e6, 0)} mi"
+    return f"R$ {num(v, 0)}"
+
+
 def hora(iso, referencia=None):
     """Mostra só a hora se for do mesmo dia do boletim; senão, a data."""
     if not iso:
@@ -127,7 +138,7 @@ def main():
         sys.exit("Nenhum boletim encontrado. Rode coletar.py antes (ou use --exemplo).")
 
     env = Environment(loader=FileSystemLoader(BASE / "templates"), autoescape=select_autoescape())
-    env.filters.update(num=num, data_longa=data_longa, data_curta=data_curta, spark=spark, hora=hora)
+    env.filters.update(num=num, data_longa=data_longa, data_curta=data_curta, spark=spark, hora=hora, compacto=compacto)
     env.globals.update(manchete=manchete)
     css = (BASE / "templates" / "style.css").read_text(encoding="utf-8")
     ctx = {"cfg": cfg, "css": css, "arquivo": [b["data_boletim"] for b in boletins]}
