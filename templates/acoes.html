@@ -29,8 +29,10 @@
           <th data-tipo="num">Preço</th>
           <th data-tipo="num">Dia</th>
           <th data-tipo="num">Valor de mercado</th>
+          <th data-tipo="num">P/L</th>
+          <th data-tipo="num">P/VP</th>
+          <th data-tipo="num">ROE</th>
           <th data-tipo="num">Giro</th>
-          <th data-tipo="texto">Listagem</th>
         </tr>
       </thead>
       <tbody>
@@ -41,14 +43,16 @@
           <td data-v="{{ f.preco }}">R$ {{ f.preco | num }}</td>
           <td data-v="{{ f.var_pct }}" class="{{ 'sobe' if f.var_pct > 0 else ('desce' if f.var_pct < 0 else '') }}">{{ f.var_pct | num }}%</td>
           <td data-v="{{ f.valor_mercado or 0 }}">{{ f.valor_mercado | compacto }}</td>
+          <td data-v="{{ f.fund.pl_ratio or -1 }}">{{ f.fund.pl_ratio | num if f.fund.pl_ratio else "–" }}</td>
+          <td data-v="{{ f.fund.pvp or -1 }}">{{ f.fund.pvp | num if f.fund.pvp else "–" }}</td>
+          <td data-v="{{ f.fund.roe if f.fund.roe is defined else -999 }}">{% if f.fund.roe is defined %}{{ f.fund.roe | num }}%{% else %}–{% endif %}</td>
           <td data-v="{{ f.financeiro }}">{{ f.financeiro | compacto }}</td>
-          <td data-v="{{ f.listagem }}">{{ f.listagem or "Tradicional" }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </div>
-  <p class="nota">Valor de mercado considera todas as classes de ações da empresa. Giro é o volume financeiro negociado no último pregão. Cotações via brapi.dev; cadastro da CVM. Dados informativos, não constituem recomendação.</p>
+  <p class="nota">Valor de mercado considera todas as classes de ações da empresa. P/L, P/VP e ROE usam o lucro dos últimos 12 meses e o patrimônio líquido dos balanços entregues à CVM; P/L fica em branco quando houve prejuízo. Giro é o volume financeiro negociado no último pregão. Cotações via brapi.dev; cadastro da CVM. Dados informativos, não constituem recomendação.</p>
 </section>
 
 <script>
