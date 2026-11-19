@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block titulo %}{{ f.ticker }}: cotação, dividend yield e P/VP | {{ cfg.nome }}{% endblock %}
+{% block descricao %}{{ f.ticker }} ({{ f.nome }}): cotação de R$ {{ f.preco | num }}, P/VP {{ f.pvp | num }}, dividend yield informado à CVM, patrimônio e histórico mensal.{% endblock %}
+{% block conteudo %}
+{% macro variacao(v) -%}
+  {%- if v is not none -%}<span class="var {{ 'sobe' if v > 0 else ('desce' if v < 0 else 'neutro') }}">{{ '▲' if v > 0 else ('▼' if v < 0 else '■') }} {{ v | num }}%</span>{%- endif -%}
+{%- endmacro %}
+
+<section class="fii-topo">
+  <div class="wrap">
+    <p class="trilha"><a href="{{ raiz }}fiis/index.html">Fundos imobiliários</a> / {{ f.ticker }}</p>
+    <div class="fii-cabecalho">
+      <div>
+        <h1>{{ f.ticker }}</h1>
+        <p class="fii-nome">{{ f.nome }}</p>
+        <p class="fii-etiquetas"><span>{{ f.segmento }}</span>{% if f.gestao %}<span>Gestão {{ f.gestao | lower }}</span>{% endif %}{% if f.mandato %}<span>{{ f.mandato }}</span>{% endif %}</p>
+      </div>
+      <div class="fii-cotacao">
+        <p class="fii-preco">R$ {{ f.preco | num }}</p>
+        <p>{{ variacao(f.var_pct) }} <span>no último pregão</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="painel fii-indicadores">
+    <div class="celula"><h3>P/VP</h3><p class="valor">{{ f.pvp | num }}</p><p class="meta">Preço dividido pelo valor patrimonial da cota</p></div>
+    <div class="celula"><h3>Valor patrimonial por cota</h3><p class="valor">R$ {{ f.vpc | num }}</p><p class="meta">Informe de {{ f.ref | mes_ano }}</p></div>
+    <div class="celula"><h3>DY do mês</h3><p class="valor">{{ f.dy_mes | num }}<small>%</small></p><p class="meta">Informado à CVM, {{ f.ref | mes_ano }}</p></div>
+    <div class="celula"><h3>DY em 12 meses</h3><p class="valor">{{ f.dy_12m | num }}<small>%</small></p><p class="meta">Soma dos {{ f.meses_dy }} últimos meses informados</p></div>
+    <div class="celula"><h3>Patrimônio líquido</h3><p class="valor">{{ f.pl | compacto }}</p><p class="meta">{{ f.cotistas | milhar }} cotistas</p></div>
+  </div>
+</section>
+
+<div class="wrap duas-colunas">
+  <section class="bloco">
+    <h2>Dividend yield mês a mês</h2>
+    <p class="sub">Percentual informado pelo administrador no informe mensal à CVM.</p>
+    {{ f.hist | barras }}
+  </section>
+  <section class="bloco">
+    <h2>Valor patrimonial da cota</h2>
+    <p class="sub">Evolução nos últimos {{ f.hist | length }} meses, em reais.</p>
+    <div class="grafico-vpc">{{ {"hist": f.hist | map(attribute="vpc") | select | list} | spark(520, 150, neutro=True) }}</div>
+    <p class="periodo">De R$ {{ (f.hist | map(attribute="vpc") | select | first) | num }} para R$ {{ f.vpc | num }}</p>
+  </section>
+</div>
+
+<section class="wrap">
+  <div class="bloco fii-dados">
+    <h2>Dados do fundo</h2>
+    <dl>
+      <div><dt>Nome</dt><dd>{{ f.nome }}</dd></div>
+      <div><dt>CNPJ</dt><dd>{{ f.cnpj }}</dd></div>
+      <div><dt>Segmento</dt><dd>{{ f.segmento }}</dd></div>
+      <div><dt>Mandato</dt><dd>{{ f.mandato or "Não informado" }}</dd></div>
+      <div><dt>Tipo de gestão</dt><dd>{{ f.gestao or "Não informado" }}</dd></div>
+      <div><dt>Administrador</dt><dd>{{ f.administrador }}</dd></div>
+      <div><dt>Público-alvo</dt><dd>{{ f.publico }}</dd></div>
+      <div><dt>Taxa de administração</dt><dd>{% if f.taxa_adm_mes %}{{ (f.taxa_adm_mes * 100) | num(3) }}% do patrimônio no mês{% else %}Não informada{% endif %}</dd></div>
+    </dl>
+    <p class="nota">Fontes: informe mensal estruturado entregue pelo administrador à CVM (referência {{ f.ref | mes_ano }}) e cotação da B3 via brapi.dev. O DY informado pode usar bases de cálculo diferentes entre administradores. Conteúdo informativo, não é recomendação de investimento.</p>
+  </div>
+</section>
+
+{% if relacionados %}
+<section class="wrap">
+  <h2 class="titulo-secao">Outros FIIs de {{ f.segmento | lower }}</h2>
+  <div class="cartoes-fii">
+    {% for r in relacionados %}
+    <a class="cartao-fii" href="{{ raiz }}fiis/{{ r.ticker }}/index.html">
+      <span class="ticker">{{ r.ticker }}</span>
+      <span class="empresa-curta">{{ r.nome }}</span>
+      <span class="cartao-linha"><span>P/VP {{ r.pvp | num }}</span><span>DY 12m {{ r.dy_12m | num }}%</span></span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endblock %}
