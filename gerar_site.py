@@ -176,8 +176,11 @@ def main():
     env.globals.update(manchete=manchete)
     arq_fiis = BASE / "data" / ("fiis_exemplo.json" if exemplo else "fiis.json")
     fundos = json.loads(arq_fiis.read_text(encoding="utf-8"))["fundos"] if arq_fiis.exists() else []
+    arq_acoes = BASE / "data" / ("acoes_exemplo.json" if exemplo else "acoes.json")
+    acoes = json.loads(arq_acoes.read_text(encoding="utf-8"))["acoes"] if arq_acoes.exists() else []
     ctx = {"cfg": cfg, "arquivo": [b["data_boletim"] for b in boletins],
-           "fiis_destaque": fundos[:6], "tem_fiis": bool(fundos)}
+           "fiis_destaque": fundos[:6], "tem_fiis": bool(fundos),
+           "tem_acoes": bool(acoes), "acoes_set": {a["ticker"] for a in acoes}}
 
     if SAIDA.exists():
         shutil.rmtree(SAIDA)
@@ -209,9 +212,33 @@ def main():
         segmentos = sorted({f["segmento"] for f in fundos})
         salvar("fiis/index.html", env.get_template("fiis.html").render(fundos=fundos, segmentos=segmentos, raiz="../", **ctx))
 
+    # Uma página por ação + lista completa
+    if acoes:
+        tpl_acao = env.get_template("acao.html")
+        for a in acoes:
+            irmas = [i for i in acoes if i["cnpj"] == a["cnpj"] and i["ticker"] != a["ticker"]]
+            vistos = {a["cnpj"]}
+            relacionados = []
+            for r in acoes:  # maiores empresas do mesmo setor, uma classe por empresa
+                if r["setor"] == a["setor"] and r["cnpj"] not in vistos:
+                    vistos.add(r["cnpj"])
+                    relacionados.append(r)
+                if len(relacionados) == 6:
+                    break
+            salvar(f"acoes/{a['ticker']}/index.html",
+                   tpl_acao.render(a=a, irmas=irmas, relacionados=relacionados, raiz="../../", **ctx))
+        setores = sorted({a["setor"] for a in acoes})
+        salvar("acoes/index.html", env.get_template("acoes.html").render(fundos=acoes, segmentos=setores, raiz="../", **ctx))
+
+    # Índice da busca do topo
+    indice = [{"t": a["ticker"], "n": a["nome"], "k": "Ação", "u": f"acoes/{a['ticker']}/index.html"} for a in acoes]
+    indice += [{"t": f["ticker"], "n": f["nome"], "k": "FII", "u": f"fiis/{f['ticker']}/index.html"} for f in fundos]
+    (SAIDA / "busca.json").write_text(json.dumps(indice, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    shutil.copy(BASE / "templates" / "busca.js", SAIDA / "busca.js")
+
     shutil.copy(BASE / "templates" / "style.css", SAIDA / "style.css")
     (SAIDA / ".nojekyll").write_text("")
-    print(f"Site gerado em {SAIDA} com {len(boletins)} boletim(ns) e {len(fundos)} FIIs.")
+    print(f"Site gerado em {SAIDA} com {len(boletins)} boletim(ns), {len(fundos)} FIIs e {len(acoes)} ações.")
 
 
 if __name__ == "__main__":
