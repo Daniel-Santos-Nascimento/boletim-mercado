@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block titulo %}Privacidade · {{ cfg.nome }}{% endblock %}
+{% block conteudo %}
+<section class="capa"><p class="sobretitulo">Privacidade</p><h1>Política de privacidade</h1></section>
+<section class="bloco texto">
+  <p>Este site não exige cadastro para leitura. Se você se inscrever na newsletter, seu e-mail é usado apenas para enviar
+  o boletim, e você pode cancelar a qualquer momento pelo link em cada e-mail.</p>
+  <p>Podemos usar ferramentas de medição de audiência e, futuramente, anúncios (como o Google AdSense), que utilizam
+  cookies. Você pode gerenciar cookies nas configurações do seu navegador.</p>
+  <p>Dúvidas sobre seus dados, nos termos da LGPD: {{ cfg.email_contato }}</p>
+</section>
+{% endblock %}
