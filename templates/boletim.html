@@ -38,7 +38,7 @@
   <div class="wrap hero-in">
     <div class="hero-texto">
       {% if b.exemplo %}<p class="aviso-exemplo">Pré-visualização com dados de exemplo</p>{% endif %}
-      <p class="hero-data">{{ b.data_boletim | data_longa | capitalize }}</p>
+      <p class="hero-data">{{ b.data_boletim | data_longa | capitalize }}{% if b.gerado_em %}, atualizado às {{ b.gerado_em | hora(b.gerado_em) }}{% endif %}</p>
       <h1 class="manchete">{{ manchete(b) }}</h1>
       <p class="hero-sub">{{ cfg.slogan }}</p>
       <div class="hero-acoes">
@@ -91,6 +91,38 @@
   <h2>A análise do dia</h2>
   <div class="leitura-texto">{{ b.comentario_html | safe }}</div>
   <p class="assinatura">{{ cfg.autor }}</p>
+</section>
+{% endif %}
+
+{% macro lista_noticias(itens, ref) %}
+  <ul class="noticias">
+    {% for n in itens %}
+    <li>
+      <a href="{{ n.link }}" target="_blank" rel="noopener">
+        <span class="noticia-titulo">{{ n.titulo }}</span>
+        <span class="noticia-meta"><strong>{{ n.fonte }}</strong> {{ n.quando | hora(ref) }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% if b.manchetes or b.oficiais %}
+<section class="wrap noticias-grade" id="noticias">
+  {% if b.manchetes %}
+  <div class="manchetes">
+    <h2>Manchetes do mercado</h2>
+    <p class="sub">O que saiu de mais recente no InfoMoney, Money Times, Seu Dinheiro e Agência Brasil. Os links abrem a matéria no site original.</p>
+    {{ lista_noticias(b.manchetes, b.gerado_em) }}
+  </div>
+  {% endif %}
+  {% if b.oficiais %}
+  <aside class="oficiais">
+    <h2>Comunicados oficiais</h2>
+    <p class="sub">Notas do Banco Central e notícias da CVM.</p>
+    {{ lista_noticias(b.oficiais, b.gerado_em) }}
+  </aside>
+  {% endif %}
 </section>
 {% endif %}
 
