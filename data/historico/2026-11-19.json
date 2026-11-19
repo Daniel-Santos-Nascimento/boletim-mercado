@@ -1,6 +1,6 @@
 {
   "data_boletim": "2026-11-19",
-  "gerado_em": "2026-11-19T10:30-03:00",
+  "gerado_em": "2026-11-19T10:33-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
@@ -225,8 +225,8 @@
   },
   "bolsa": {
     "ibov": {
-      "valor": 168090.45,
-      "var_pct": 0.33,
+      "valor": 167833.19,
+      "var_pct": 0.18,
       "data": "2026-11-19",
       "hist": [
         208296,
@@ -250,7 +250,7 @@
         169295,
         169817,
         167538,
-        167740.5469
+        167877.1875
       ]
     },
     "ifix": {
@@ -394,10 +394,10 @@
   ],
   "manchetes": [
     {
-      "titulo": "PSB e PDT oficializam federação; pedido será protocolado no TSE",
-      "link": "https://www.infomoney.com.br/politica/psb-e-pdt-oficializam-federacao-pedido-sera-protocolado-no-tse/",
+      "titulo": "Pacote fiscal depende 70% de receita incerta e não banca gastos extras, alerta IFI",
+      "link": "https://www.infomoney.com.br/economia/plp-299-2026-ifi-orcamento-2027-receitas-incertas/",
       "fonte": "InfoMoney",
-      "quando": "2026-11-19T10:29-03:00"
+      "quando": "2026-11-19T10:30-03:00"
     },
     {
       "titulo": "Moretti diz que ainda não é o momento de tratar de medidas fiscais adicionais",
@@ -412,58 +412,58 @@
       "quando": "2026-11-19T10:24-03:00"
     },
     {
-      "titulo": "Pacote fiscal e inflação elevada: cenário continua favorecendo PACC11",
-      "link": "https://www.moneytimes.com.br/pacote-fiscal-e-inflacao-elevada-cenario-continua-favorecendo-pacc11-mlem/",
-      "fonte": "Money Times",
-      "quando": "2026-11-19T10:21-03:00"
-    },
-    {
-      "titulo": "Ibovespa Hoje Ao Vivo: Bolsa sobe com ajuste fiscal no radar",
-      "link": "https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-19112026/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-19T10:19-03:00"
-    },
-    {
       "titulo": "Todo mundo decidiu abandonar o Brasil? BTG e Itaú BBA também tiram o pé da bolsa brasileira após eleições",
       "link": "https://www.seudinheiro.com/2026/bolsa-dolar/todo-mundo-decidiu-abandonar-o-brasil-btg-e-itau-bba-tambem-tiram-o-pe-da-bolsa-brasileira-apos-eleicoes-miql/",
       "fonte": "Seu Dinheiro",
       "quando": "2026-11-19T10:18-03:00"
     },
     {
-      "titulo": "Apenas 2 em cada 10 profissionais se sentem preparados para utilizar IA no trabalho; entenda como você pode sair na frente e aproveitar a tecnologia",
-      "link": "https://www.moneytimes.com.br/apenas-2-em-cada-10-profissionais-se-sentem-preparados-para-utilizar-ia-no-trabalho-entenda-como-voce-pode-sair-na-frente-e-aproveitar-a-tecnologia-lbrdjm054/",
+      "titulo": "A bolsa caiu, mas o risco ficou: BTG rebaixa Brasil para neutro e tira Itaú, XP e Assaí da carteira",
+      "link": "https://www.moneytimes.com.br/a-bolsa-caiu-mas-o-risco-ficou-btg-rebaixa-brasil-para-neutro-e-tira-itau-xp-e-assai-da-carteira-miql/",
       "fonte": "Money Times",
-      "quando": "2026-11-19T10:00-03:00"
+      "quando": "2026-11-19T09:10-03:00"
     },
     {
-      "titulo": "PSB e PDT oficializam federação; pedido será protocolado no TSE",
-      "link": "https://www.moneytimes.com.br/psb-e-pdt-oficializam-federacao-pedido-sera-protocolado-no-tse/",
+      "titulo": "Encontro de Xi Jinping, Putin e Trump domina agenda com IPO da Anthropic; Ibovespa em dólar sobe nesta quinta (19)",
+      "link": "https://www.moneytimes.com.br/encontro-de-xi-jinping-putin-e-trump-domina-agenda-com-ipo-da-anthropic-ibovespa-em-dolar-sobe-nesta-quinta-19-rens/",
       "fonte": "Money Times",
-      "quando": "2026-11-19T09:41-03:00"
+      "quando": "2026-11-19T07:07-03:00"
     },
     {
-      "titulo": "IPO bilionário da Anthropic vira termômetro do apetite por IA — e do temor de uma bolha em Wall Street",
-      "link": "https://www.moneytimes.com.br/ipo-historica-da-anthropic-colocara-a-prova-promessas-e-riscos-da-ia-em-wall-street/",
+      "titulo": "Bolsas da Ásia fecham sem direção única com estreia da Anthropic em NY no radar",
+      "link": "https://www.moneytimes.com.br/bolsas-da-asia-fecham-sem-direcao-unica-com-estreia-da-anthropic-em-ny-no-radar-fets/",
       "fonte": "Money Times",
-      "quando": "2026-11-19T09:37-03:00"
+      "quando": "2026-11-19T06:11-03:00"
     },
     {
-      "titulo": "Após colocar Ribeirão Preto no mapa do vinho global, Terras Altas agora aposta no enoturismo",
-      "link": "https://www.seudinheiro.com/2026/lifestyle/apos-colocar-vinhos-de-ribeirao-preto-no-mapa-global-terras-altas-agora-aposta-no-enoturismo-edvl/",
-      "fonte": "Seu Dinheiro",
-      "quando": "2026-11-19T09:02-03:00"
+      "titulo": "Dólar sobe para R$ 5,87 com expectativa sobre votação de ajuste fiscal",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-sobe-para-r-587-com-expectativa-sobre-votacao-de-ajuste-fiscal",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-18T19:26-03:00"
     },
     {
-      "titulo": "Investir em opções: veja como funciona e aprenda a executar operações com a classe de ativos que gerou até 368% de lucro após as eleições",
-      "link": "https://www.seudinheiro.com/2026/financas-pessoais/investir-em-opcoes-veja-como-funciona-e-aprenda-a-executar-operacoes-com-a-classe-de-ativos-que-gerou-ate-368-de-lucro-apos-as-eleicoes-lbrdis630/",
-      "fonte": "Seu Dinheiro",
-      "quando": "2026-11-19T09:00-03:00"
+      "titulo": "Senado pede explicações a TCU sobre alíquota de 11,3% da CBS",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/senado-pede-explicacoes-tcu-sobre-aliquota-de-113-da-cbs",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-18T17:07-03:00"
     },
     {
-      "titulo": "O que faz a diferença: investidores repercutem ajuste fiscal, estreia da Anthopic e encontro Xi-Trump-Putin",
-      "link": "https://www.seudinheiro.com/2026/colunistas/faz-diferenca-investidores-repercutem-ajuste-fiscal-estreia-anthopic-encontro-xi-trump-putin-rsgp/",
+      "titulo": "Goldman Sachs rebaixa ações brasileiras diante de um cenário de recuperação lenta da bolsa após as eleições",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/brasil-fica-para-tras-goldman-sachs-reduz-aposta-e-ve-oportunidades-em-outros-emergentes-lmrs/",
       "fonte": "Seu Dinheiro",
-      "quando": "2026-11-19T08:35-03:00"
+      "quando": "2026-11-18T13:00-03:00"
+    },
+    {
+      "titulo": "Número de desempregados há dois anos ou mais é o menor já registrado",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/numero-de-desempregados-ha-dois-anos-ou-mais-e-o-menor-ja-registrado",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-18T12:36-03:00"
+    },
+    {
+      "titulo": "Em meio à crise, Banco do Brasil (BBAS3) renova contratos com fundo imobiliário por mais 10 anos — e com desconto",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/crise-banco-do-brasil-bbas3-renova-contratos-fundo-imobiliario-por-mais-10-anos-mas-com-desconto-igdl/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-18T09:07-03:00"
     }
   ],
   "oficiais": [
@@ -486,10 +486,22 @@
       "quando": "2026-11-17T18:30-03:00"
     },
     {
-      "titulo": "BC divulga o IBC-Br de setembro de 2026",
-      "link": "https://www.bcb.gov.br/detalhenoticia/21319/nota",
-      "fonte": "Banco Central",
-      "quando": "2026-11-16T09:01-03:00"
+      "titulo": "CVM atualiza rol de certificações aceitas para o exercício da atividade de consultoria de valores mobiliários",
+      "link": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-atualiza-rol-de-certificacoes-aceitas-para-o-exercicio-da-atividade-de-consultoria-de-valores-mobiliarios",
+      "fonte": "CVM",
+      "quando": "2026-11-09T10:24-03:00"
+    },
+    {
+      "titulo": "CVM inicia consulta pública relacionada à Revisão de Pronunciamento Técnico CPC 31",
+      "link": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-inicia-consulta-publica-relacionada-a-revisao-de-pronunciamento-tecnico-cpc-31",
+      "fonte": "CVM",
+      "quando": "2026-11-06T16:35-03:00"
+    },
+    {
+      "titulo": "Aberta consulta pública para tornar obrigatório Pronunciamento Técnico CPC 34 - Exploração e Avaliação de Recursos Minerais",
+      "link": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/aberta-consulta-publica-para-tornar-obrigatorio-pronunciamento-tecnico-cpc-34-exploracao-e-avaliacao-de-recursos-minerais",
+      "fonte": "CVM",
+      "quando": "2026-11-06T16:34-03:00"
     }
   ],
   "erros": []
