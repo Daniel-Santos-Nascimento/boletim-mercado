@@ -129,6 +129,48 @@ def brapi(ticker, nome):
         return None
 
 
+def destaques_bolsa():
+    """Maiores altas, baixas e mais negociadas entre as 150 ações de maior volume."""
+    try:
+        params = {"sortBy": "volume", "sortOrder": "desc", "limit": 150, "type": "stock"}
+        if os.getenv("BRAPI_TOKEN"):
+            params["token"] = os.getenv("BRAPI_TOKEN")
+        lista = get("https://brapi.dev/api/quote/list", params=params).json().get("stocks", [])
+        acoes = []
+        for a in lista:
+            if a.get("close") is None or a.get("change") is None or (a.get("close") or 0) < 1:
+                continue
+            acoes.append({
+                "ticker": a["stock"],
+                "nome": " ".join(p.capitalize() if len(p) > 3 else p for p in (a.get("name") or "").replace("S.A.", "").split()).strip(" -."),
+                "preco": a["close"],
+                "var_pct": round(a["change"], 2),
+                "financeiro": a["close"] * (a.get("volume") or 0),
+            })
+        if not acoes:
+            return None
+        return {
+            "altas": sorted(acoes, key=lambda x: x["var_pct"], reverse=True)[:5],
+            "baixas": sorted(acoes, key=lambda x: x["var_pct"])[:5],
+            "negociadas": sorted(acoes, key=lambda x: x["financeiro"], reverse=True)[:5],
+        }
+    except Exception as e:
+        erros.append(f"Destaques da bolsa: {e}")
+        return None
+
+
+def cripto():
+    try:
+        ids = {"bitcoin": "Bitcoin", "ethereum": "Ethereum", "solana": "Solana"}
+        r = get("https://api.coingecko.com/api/v3/simple/price",
+                params={"ids": ",".join(ids), "vs_currencies": "brl", "include_24hr_change": "true"}).json()
+        return [{"nome": nome, "valor": r[i]["brl"], "var_pct": round(r[i].get("brl_24h_change") or 0, 2)}
+                for i, nome in ids.items() if i in r]
+    except Exception as e:
+        erros.append(f"Cripto: {e}")
+        return []
+
+
 # ---------------------------------------------------------------- CVM
 def fatos_relevantes():
     """Fatos relevantes entregues no último dia útil (e hoje, se já houver)."""
@@ -266,6 +308,8 @@ def main():
                    "euro": serie("Euro", 21619, 45, com_variacao=True, grafico=True)},
         "bolsa": {"ibov": brapi("^BVSP", "Ibovespa"), "ifix": brapi("IFIX", "IFIX")},
         "focus": focus(),
+        "destaques": destaques_bolsa(),
+        "cripto": cripto(),
         "fatos_relevantes": fatos_relevantes(),
         "manchetes": noticias(FONTES_MANCHETES, total=12, por_fonte=3, horas=36),
         "oficiais": noticias(FONTES_OFICIAIS, total=6, por_fonte=3, horas=24 * 30),
