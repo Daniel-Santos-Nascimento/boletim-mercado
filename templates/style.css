@@ -235,6 +235,24 @@ h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
 .ranking a.ticker:hover{color:var(--alta);text-decoration:underline}
 .espaco-final{height:56px}
 
+/* Fundamentos */
+.fundamentos{margin-top:48px}
+.fundamentos h2{font-size:1.45rem;letter-spacing:-.015em}
+.fundamentos .sub{margin:0}
+.painel-indicadores{margin-top:14px;grid-template-columns:repeat(5,1fr)}
+.resultados{margin-top:16px}
+.resultados h3{font-size:1.1rem;margin-bottom:10px}
+.resultados table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.94rem}
+.resultados th{text-align:right;font-size:.78rem;color:var(--suave);font-weight:600;padding:6px 8px;border-bottom:2px solid var(--tinta)}
+.resultados th:first-child,.resultados td:first-child{text-align:left}
+.resultados td{text-align:right;padding:10px 8px;border-bottom:1px solid var(--linha)}
+.resultados td.desce{color:var(--baixa)}
+.resultados .col-barra{width:32%}
+.barra-h{display:block;height:10px;border-radius:5px;background:var(--cedula);min-width:2px}
+.barra-h.ouro{background:var(--ouro)}
+.barra-h.neg{background:var(--baixa)}
+.linha-ttm td{font-weight:700;background:#F7F9FB}
+
 /* Newsletter */
 .newsletter{margin:56px 0 64px;background:var(--cedula);color:var(--branco);border-radius:20px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background-image:radial-gradient(circle at 100% 0,rgba(242,183,5,.22),transparent 45%)}
 .newsletter h2{font-size:1.7rem;letter-spacing:-.02em}
@@ -269,6 +287,7 @@ h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
   .rankings{grid-template-columns:1fr 1fr}
   .cartoes-fii{grid-template-columns:1fr 1fr}
   .painel-4{grid-template-columns:1fr 1fr}
+  .painel-indicadores{grid-template-columns:repeat(3,1fr)}
   .painel-4 .celula:nth-child(3){border-left:0}
   .painel-4 .celula:nth-child(n+3){border-top:1px solid var(--linha)}
   .leitura{grid-template-columns:1fr}
