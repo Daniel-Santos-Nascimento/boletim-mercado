@@ -1,6 +1,6 @@
 {
   "data_boletim": "2026-11-20",
-  "gerado_em": "2026-11-20T14:38-03:00",
+  "gerado_em": "2026-11-20T20:46-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
@@ -445,18 +445,18 @@
   "cripto": [
     {
       "nome": "Bitcoin",
-      "valor": 351307,
-      "var_pct": -5.62
+      "valor": 350269,
+      "var_pct": -4.67
     },
     {
       "nome": "Ethereum",
-      "valor": 9690.47,
-      "var_pct": -7.69
+      "valor": 9637.7,
+      "var_pct": -7.42
     },
     {
       "nome": "Solana",
-      "valor": 410.74,
-      "var_pct": -5.93
+      "valor": 410.46,
+      "var_pct": -5.54
     }
   ],
   "fatos_relevantes": [
@@ -541,46 +541,46 @@
   ],
   "manchetes": [
     {
-      "titulo": "Onda de caos da IA derruba bolsas no exterior: Anthropic despenca 13% e Wall entra em correção",
+      "titulo": "Bitcoin (BTC) cai a US$ 57 mil e renova mínima em mais de dois anos; qual o fundo do poço?",
+      "link": "https://www.moneytimes.com.br/bitcoin-btc-cai-a-us-57-mil-e-renova-minima-em-mais-de-dois-anos-qual-o-fundo-do-poco/",
+      "fonte": "Money Times",
+      "quando": "2026-11-20T19:27-03:00"
+    },
+    {
+      "titulo": "Moedas: dólar tem sinais díspares com incertezas sobre Fed; cautela em NY apoia iene",
+      "link": "https://www.infomoney.com.br/mercados/moedas-dolar-tem-sinais-dispares-com-incertezas-sobre-fed-cautela-em-ny-apoia-iene/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-20T19:01-03:00"
+    },
+    {
+      "titulo": "Bitcoin cai a US$ 57 mil e vai à mínima em mais de 2 anos, de olho em mercado global",
+      "link": "https://www.infomoney.com.br/mercados/bitcoin-cai-abaixo-de-us-60-mil-pela-primeira-vez-desde-julho/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-20T18:50-03:00"
+    },
+    {
+      "titulo": "Vale, Itaú, Petrobras, Bradesco: como fecharam os ADRs durante o feriado da bolsa",
+      "link": "https://www.moneytimes.com.br/vale-itau-petrobras-bradesco-como-fecharam-os-adrs-em-dia-de-bolsa-fechada/",
+      "fonte": "Money Times",
+      "quando": "2026-11-20T18:38-03:00"
+    },
+    {
+      "titulo": "Em queda livre: Ibovespa em dólar (EWZ) despenca mais de 3% — e a culpa não é só do governo",
+      "link": "https://www.moneytimes.com.br/em-queda-livre-ibovespa-em-dolar-ewz-despenca-mais-de-3-e-a-culpa-nao-e-so-do-governo/",
+      "fonte": "Money Times",
+      "quando": "2026-11-20T18:28-03:00"
+    },
+    {
+      "titulo": "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/ouro-nao-protege-ninguem-cai-a-minima-em-um-ano-e-falha-como-porto-seguro-ccgg/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-20T16:40-03:00"
+    },
+    {
+      "titulo": "Onda de caos da IA derruba bolsas no exterior: Anthropic chega a cair 13% e Wall Street entra em correção",
       "link": "https://www.seudinheiro.com/2026/bolsa-dolar/onda-de-caos-da-ia-derruba-bolsas-no-exterior-anthropic-despenca-13-e-wall-entra-em-correcao-ccgg/",
       "fonte": "Seu Dinheiro",
       "quando": "2026-11-20T14:35-03:00"
-    },
-    {
-      "titulo": "Bolsas da Europa fecham em queda com ‘sell off tech’ mesmo após estreia da Anthropic",
-      "link": "https://www.infomoney.com.br/mercados/bolsas-da-europa-fecham-em-queda-com-sell-off-tech-mesmo-apos-estreia-da-anthropic/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-20T14:08-03:00"
-    },
-    {
-      "titulo": "Os 3 principais testes do agronegócio em 2027, segundo o BTG Pactual",
-      "link": "https://www.moneytimes.com.br/os-3-principais-testes-do-agronegocio-em-2027-segundo-o-btg-pactual-pads/",
-      "fonte": "Money Times",
-      "quando": "2026-11-20T14:07-03:00"
-    },
-    {
-      "titulo": "Nasdaq cai cerca de 3% e vira para queda no ano; Dow Jones entra em “correção”",
-      "link": "https://www.infomoney.com.br/mercados/nasdaq-registra-queda-seguindo-baixa-de-acoes-da-anthropic/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-20T13:58-03:00"
-    },
-    {
-      "titulo": "Bitcoin cai abaixo de US$ 60 mil pela primeira vez desde julho",
-      "link": "https://www.infomoney.com.br/mercados/bitcoin-cai-abaixo-de-us-60-mil-pela-primeira-vez-desde-julho/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-20T13:50-03:00"
-    },
-    {
-      "titulo": "Queda das ações da Nvidia faz com que empresa fique atrás da Alphabet em termos de valor de mercado",
-      "link": "https://www.moneytimes.com.br/queda-das-acoes-da-nvidia-faz-com-que-empresa-fique-atras-da-alphabet-em-termos-de-valor-de-mercado-pads/",
-      "fonte": "Money Times",
-      "quando": "2026-11-20T13:45-03:00"
-    },
-    {
-      "titulo": "Bolsas da Europa caem com pressão sobre ações de tecnologia",
-      "link": "https://www.moneytimes.com.br/europa-bolsas-caem-com-tecnologia-apos-relatos-de-juros-de-8-em-financiamento-de-chips-de-ia-igdl/",
-      "fonte": "Money Times",
-      "quando": "2026-11-20T11:56-03:00"
     },
     {
       "titulo": "Pátria Log (HGLG11) abre a carteira e desembolsa R$ 31,28 milhões em imóvel logístico",
@@ -605,12 +605,6 @@
       "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/banco-central-amplia-acesso-de-cooperativas-ao-mercado-aberto",
       "fonte": "Agência Brasil",
       "quando": "2026-11-19T20:22-03:00"
-    },
-    {
-      "titulo": "Nem pacote fiscal acalma o mercado: o que falta para estancar a queda do Ibovespa e frear o dólar?",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/nem-pacote-fiscal-acalma-o-mercado-o-que-falta-para-interromper-a-queda-do-ibovespa-e-a-disparada-do-dolar-jcav/",
-      "fonte": "Seu Dinheiro",
-      "quando": "2026-11-19T17:30-03:00"
     }
   ],
   "oficiais": [
@@ -631,28 +625,12 @@
       "link": "https://www.bcb.gov.br/detalhenoticia/21323/nota",
       "fonte": "Banco Central",
       "quando": "2026-11-18T14:31-03:00"
-    },
-    {
-      "titulo": "CVM atualiza rol de certificações aceitas para o exercício da atividade de consultoria de valores mobiliários",
-      "link": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-atualiza-rol-de-certificacoes-aceitas-para-o-exercicio-da-atividade-de-consultoria-de-valores-mobiliarios",
-      "fonte": "CVM",
-      "quando": "2026-11-09T10:24-03:00"
-    },
-    {
-      "titulo": "CVM inicia consulta pública relacionada à Revisão de Pronunciamento Técnico CPC 31",
-      "link": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-inicia-consulta-publica-relacionada-a-revisao-de-pronunciamento-tecnico-cpc-31",
-      "fonte": "CVM",
-      "quando": "2026-11-06T16:35-03:00"
-    },
-    {
-      "titulo": "Aberta consulta pública para tornar obrigatório Pronunciamento Técnico CPC 34 - Exploração e Avaliação de Recursos Minerais",
-      "link": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/aberta-consulta-publica-para-tornar-obrigatorio-pronunciamento-tecnico-cpc-34-exploracao-e-avaliacao-de-recursos-minerais",
-      "fonte": "CVM",
-      "quando": "2026-11-06T16:34-03:00"
     }
   ],
   "fiis_total": 308,
   "acoes_total": 341,
-  "fundamentos": 466,
-  "erros": []
+  "fundamentos": "em cache",
+  "erros": [
+    "Notícias CVM: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+  ]
 }
