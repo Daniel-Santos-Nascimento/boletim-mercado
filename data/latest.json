@@ -1,11 +1,11 @@
 {
-  "data_boletim": "2026-11-20",
-  "gerado_em": "2026-11-20T20:46-03:00",
+  "data_boletim": "2026-11-23",
+  "gerado_em": "2026-11-23T17:57-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
       "valor": 13.75,
-      "data": "2026-11-20",
+      "data": "2026-11-23",
       "hist": [
         15.0,
         15.0,
@@ -150,13 +150,10 @@
   },
   "cambio": {
     "dolar": {
-      "valor": 5.8889,
-      "data": "2026-11-19",
-      "var_pct": 1.35,
+      "valor": 5.9708,
+      "data": "2026-11-23",
+      "var_pct": 1.39,
       "hist": [
-        4.9698,
-        4.9935,
-        5.0119,
         4.9892,
         5.0096,
         5.0441,
@@ -184,17 +181,15 @@
         5.7324,
         5.7851,
         5.8102,
-        5.8889
+        5.8889,
+        5.9708
       ]
     },
     "euro": {
-      "valor": 6.4672,
-      "data": "2026-11-19",
-      "var_pct": 1.49,
+      "valor": 6.5076,
+      "data": "2026-11-23",
+      "var_pct": 0.62,
       "hist": [
-        5.5975,
-        5.5867,
-        5.6093,
         5.5844,
         5.6092,
         5.6111,
@@ -222,19 +217,17 @@
         6.3102,
         6.3659,
         6.372,
-        6.4672
+        6.4672,
+        6.5076
       ]
     }
   },
   "bolsa": {
     "ibov": {
-      "valor": 166376.44,
-      "var_pct": -0.69,
-      "data": "2026-11-20",
+      "valor": 165009.94,
+      "var_pct": -0.82,
+      "data": "2026-11-23",
       "hist": [
-        206495,
-        204120,
-        205083,
         176608,
         175710,
         171006,
@@ -252,29 +245,30 @@
         169295,
         169817,
         167538,
-        166376
+        166376,
+        165004.6563
       ]
     },
     "ifix": {
-      "valor": 3485.06,
-      "var_pct": -0.8,
-      "data": "2026-11-20"
+      "valor": 3436.12,
+      "var_pct": -1.4,
+      "data": "2026-11-23"
     }
   },
   "focus": {
-    "data": "2026-11-13",
+    "data": "2026-11-19",
     "linhas": [
       {
         "indicador": "IPCA (%)",
         "ano": "2026",
-        "mediana": 5.1082,
-        "semana_anterior": 5.2195
+        "mediana": 5.1505,
+        "semana_anterior": 5.1
       },
       {
         "indicador": "IPCA (%)",
         "ano": "2027",
-        "mediana": 5.0,
-        "semana_anterior": 4.9005
+        "mediana": 5.1214,
+        "semana_anterior": 4.9562
       },
       {
         "indicador": "Selic (% a.a.)",
@@ -285,326 +279,344 @@
       {
         "indicador": "Selic (% a.a.)",
         "ano": "2027",
-        "mediana": 12.75,
+        "mediana": 13.0,
         "semana_anterior": 12.5
       },
       {
         "indicador": "Dólar (R$)",
         "ano": "2026",
-        "mediana": 5.4,
-        "semana_anterior": 5.35
+        "mediana": 5.55,
+        "semana_anterior": 5.399
       },
       {
         "indicador": "Dólar (R$)",
         "ano": "2027",
-        "mediana": 5.45,
+        "mediana": 5.5,
         "semana_anterior": 5.4
       },
       {
         "indicador": "PIB (%)",
         "ano": "2026",
-        "mediana": 1.7215,
-        "semana_anterior": 1.7546
+        "mediana": 1.7018,
+        "semana_anterior": 1.7497
       },
       {
         "indicador": "PIB (%)",
         "ano": "2027",
-        "mediana": 1.0224,
-        "semana_anterior": 1.1513
+        "mediana": 0.9995,
+        "semana_anterior": 1.1123
       }
     ]
   },
   "destaques": {
     "altas": [
       {
+        "ticker": "FIQE3",
+        "nome": "Unifique Telecomunicações",
+        "preco": 6.81,
+        "var_pct": 18.85,
+        "financeiro": 40137459.0,
+        "logo": "https://icons.brapi.dev/icons/FIQE3.svg"
+      },
+      {
+        "ticker": "AZEV3",
+        "nome": "Azevedo e Travassos",
+        "preco": 12.15,
+        "var_pct": 15.6,
+        "financeiro": 24307290.0,
+        "logo": "https://icons.brapi.dev/icons/AZEV3.svg"
+      },
+      {
+        "ticker": "BRKM5",
+        "nome": "Braskem",
+        "preco": 2.89,
+        "var_pct": 11.15,
+        "financeiro": 36888249.0,
+        "logo": "https://icons.brapi.dev/icons/BRKM5.svg"
+      },
+      {
         "ticker": "PCAR3",
         "nome": "Cia Brasileira de Distribuicao",
-        "preco": 3.23,
-        "var_pct": 8.03,
-        "financeiro": 51647054.0,
+        "preco": 3.56,
+        "var_pct": 10.22,
+        "financeiro": 61137304.0,
         "logo": "https://icons.brapi.dev/icons/PCAR3.svg"
       },
       {
-        "ticker": "LIGT3",
-        "nome": "Light",
-        "preco": 3.06,
-        "var_pct": 6.99,
-        "financeiro": 14236956.0,
-        "logo": "https://icons.brapi.dev/icons/LIGT3.svg"
-      },
-      {
-        "ticker": "POSI3",
-        "nome": "Positivo Tecnologia",
-        "preco": 3.37,
-        "var_pct": 6.31,
-        "financeiro": 4567361.0,
-        "logo": "https://icons.brapi.dev/icons/POSI3.svg"
-      },
-      {
-        "ticker": "MELK3",
-        "nome": "Melnick Desenvolvimento Imobiliário",
-        "preco": 2.05,
-        "var_pct": 4.59,
-        "financeiro": 2234705.0,
-        "logo": "https://icons.brapi.dev/icons/MELK3.svg"
-      },
-      {
-        "ticker": "QUAL3",
-        "nome": "Qualicorp Consultoria e Corretora de Seguros",
-        "preco": 1.84,
-        "var_pct": 4.55,
-        "financeiro": 13402560.0,
-        "logo": "https://icons.brapi.dev/icons/QUAL3.svg"
+        "ticker": "MGLU3",
+        "nome": "Magazine Luiza",
+        "preco": 9,
+        "var_pct": 9.76,
+        "financeiro": 471655800,
+        "logo": "https://icons.brapi.dev/icons/MGLU3.svg"
       }
     ],
     "baixas": [
       {
-        "ticker": "AZZA3",
-        "nome": "Azzas 2154",
-        "preco": 14.63,
-        "var_pct": -7.29,
-        "financeiro": 68039741.0,
-        "logo": "https://icons.brapi.dev/icons/AZZA3.svg"
+        "ticker": "INTB3",
+        "nome": "Intelbras Ind de Telec Eletronica Brasileira",
+        "preco": 14.53,
+        "var_pct": -5.47,
+        "financeiro": 33841823.0,
+        "logo": "https://icons.brapi.dev/icons/INTB3.svg"
       },
       {
-        "ticker": "HBRE3",
-        "nome": "Hbr Realty Empreendimentos Imobiliarios",
-        "preco": 1.22,
-        "var_pct": -6.87,
-        "financeiro": 2907992.0,
-        "logo": "https://icons.brapi.dev/icons/HBRE3.svg"
+        "ticker": "HAPV3",
+        "nome": "Hapvida Participacoes e Investimentos",
+        "preco": 5.87,
+        "var_pct": -4.71,
+        "financeiro": 89270373.0,
+        "logo": "https://icons.brapi.dev/icons/HAPV3.svg"
       },
       {
-        "ticker": "DASA3",
-        "nome": "Diagnosticos da America",
-        "preco": 3.26,
-        "var_pct": -6.86,
-        "financeiro": 4502712.0,
-        "logo": "https://icons.brapi.dev/icons/DASA3.svg"
+        "ticker": "JALL3",
+        "nome": "Jalles Machado",
+        "preco": 2.18,
+        "var_pct": -3.96,
+        "financeiro": 2292924.0,
+        "logo": "https://icons.brapi.dev/icons/JALL3.svg"
       },
       {
-        "ticker": "NATU3",
-        "nome": "Natura Cosmeticos",
-        "preco": 4.48,
-        "var_pct": -6.28,
-        "financeiro": 77199360.0,
-        "logo": null
+        "ticker": "OBTC3",
+        "nome": "Oranjebtc Educação e Investimento",
+        "preco": 6.09,
+        "var_pct": -3.94,
+        "financeiro": 10650192.0,
+        "logo": "https://icons.brapi.dev/icons/OBTC3.svg"
       },
       {
-        "ticker": "CSNA3",
-        "nome": "Cia Siderurgica Nacional",
-        "preco": 3.43,
-        "var_pct": -6.03,
-        "financeiro": 94756151.0,
-        "logo": "https://icons.brapi.dev/icons/CSNA3.svg"
+        "ticker": "SMTO3",
+        "nome": "Sao Martinho",
+        "preco": 16.96,
+        "var_pct": -3.91,
+        "financeiro": 29257696.0,
+        "logo": "https://icons.brapi.dev/icons/SMTO3.svg"
       }
     ],
     "negociadas": [
       {
         "ticker": "PETR4",
         "nome": "Petroleo Brasileiro Petrobras",
-        "preco": 42.67,
-        "var_pct": -1.16,
-        "financeiro": 1675582628.0,
+        "preco": 41.35,
+        "var_pct": -3.09,
+        "financeiro": 1707821160.0,
         "logo": "https://icons.brapi.dev/icons/PETR4.svg"
-      },
-      {
-        "ticker": "VALE3",
-        "nome": "Vale",
-        "preco": 58.48,
-        "var_pct": -0.88,
-        "financeiro": 1363437808.0,
-        "logo": "https://icons.brapi.dev/icons/VALE3.svg"
-      },
-      {
-        "ticker": "ITUB4",
-        "nome": "Itau Unibanco Holding",
-        "preco": 40.07,
-        "var_pct": -0.3,
-        "financeiro": 1235145729.0,
-        "logo": "https://icons.brapi.dev/icons/ITUB4.svg"
-      },
-      {
-        "ticker": "B3SA3",
-        "nome": "B3 Brasil. Bolsa. Balcão",
-        "preco": 14.28,
-        "var_pct": -0.14,
-        "financeiro": 1043079744.0,
-        "logo": "https://icons.brapi.dev/icons/B3SA3.svg"
       },
       {
         "ticker": "BPAC11",
         "nome": "Bco Btg Pactual",
-        "preco": 49.69,
-        "var_pct": -0.84,
-        "financeiro": 986714206.0,
+        "preco": 49.7,
+        "var_pct": 0.02,
+        "financeiro": 1006767930.0,
         "logo": "https://icons.brapi.dev/icons/BPAC11.svg"
+      },
+      {
+        "ticker": "ITUB4",
+        "nome": "Itau Unibanco Holding",
+        "preco": 39.71,
+        "var_pct": -0.9,
+        "financeiro": 907663383.0,
+        "logo": "https://icons.brapi.dev/icons/ITUB4.svg"
+      },
+      {
+        "ticker": "VALE3",
+        "nome": "Vale",
+        "preco": 58.64,
+        "var_pct": 0.27,
+        "financeiro": 814855576.0,
+        "logo": "https://icons.brapi.dev/icons/VALE3.svg"
+      },
+      {
+        "ticker": "AXIA3",
+        "nome": "Axia Energia",
+        "preco": 45.63,
+        "var_pct": -0.8,
+        "financeiro": 805999194.0,
+        "logo": "https://icons.brapi.dev/icons/AXIA3.svg"
       }
     ]
   },
   "cripto": [
     {
       "nome": "Bitcoin",
-      "valor": 350269,
-      "var_pct": -4.67
+      "valor": 362376,
+      "var_pct": 0.11
     },
     {
       "nome": "Ethereum",
-      "valor": 9637.7,
-      "var_pct": -7.42
+      "valor": 10209.93,
+      "var_pct": -0.12
     },
     {
       "nome": "Solana",
-      "valor": 410.46,
-      "var_pct": -5.54
+      "valor": 431.07,
+      "var_pct": 3.37
     }
   ],
   "fatos_relevantes": [
     {
-      "empresa": "Banco Abc Brasil S/A",
-      "assunto": "Associação com Angá Asset Management",
-      "data": "2026-11-14",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589681&numSequencia=1114387&numVersao=1"
+      "empresa": "Rio Alto Energias Renováveis S.A. - Em Recuperação Judicial",
+      "assunto": "Liberação de valores em escrow relativos ao FIP Rio Alto, do Grupo da Companhia.",
+      "data": "2026-11-20",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1592150&numSequencia=1116856&numVersao=1"
     },
     {
-      "empresa": "Telec. Brasileiras S.A. - Telebrás",
-      "assunto": "Publicação de Decreto que autoriza aumento de capital",
-      "data": "2026-11-13",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589338&numSequencia=1114044&numVersao=1"
+      "empresa": "Unifique Telecomunicações S.A.",
+      "assunto": "Nova Suspensão dos Trabalhos da Assembleia Especial",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591976&numSequencia=1116682&numVersao=1"
     },
     {
-      "empresa": "Rni Negócios Imobiliários S.A.",
-      "assunto": "Cancelamento de Registro de Companhia Aberta",
-      "data": "2026-11-13",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589346&numSequencia=1114052&numVersao=1"
+      "empresa": "Simpar S.A.",
+      "assunto": "Descontinuidade de guidance de controladas",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591915&numSequencia=1116621&numVersao=1"
     },
     {
       "empresa": "Nova Transportadora Do Sudeste S.A. - Nts",
-      "assunto": "Fato Relevante sobre revisão tarifária em complemento ao FR divulgado em 05/11/2026.",
-      "data": "2026-11-13",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589370&numSequencia=1114076&numVersao=1"
+      "assunto": "Rating",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1592039&numSequencia=1116745&numVersao=1"
     },
     {
-      "empresa": "Grupo Casas Bahia S.A. - Em Recuperação Judicial",
-      "assunto": "Celebração de acordo com a CBD - GPA para encerramento do Acordo de Associação",
-      "data": "2026-11-13",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589330&numSequencia=1114036&numVersao=1"
+      "empresa": "Jbs N.V.",
+      "assunto": "Conclusão Omã",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591905&numSequencia=1116611&numVersao=1"
     },
     {
-      "empresa": "Cosan S.A.",
-      "assunto": "Alterações da Diretoria Executiva",
-      "data": "2026-11-13",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589612&numSequencia=1114318&numVersao=1"
+      "empresa": "Fasa S.A. - Em Recuperação Judicial",
+      "assunto": "Apresentação de Modificativo ao Plano de Recuperação Judicial",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591958&numSequencia=1116664&numVersao=1"
+    },
+    {
+      "empresa": "Eletropaulo Metrop. Elet. Sao Paulo S.A.",
+      "assunto": "Revisão de Rating da Enel Brasil e Subsidiárias",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1592074&numSequencia=1116780&numVersao=1"
+    },
+    {
+      "empresa": "Companhia Paranaense De Energia Copel",
+      "assunto": "CAPEX de R$ 21,1 bilhões para o ciclo 2027 - 2030",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591309&numSequencia=1116015&numVersao=1"
     },
     {
       "empresa": "Companhia Brasileira De Distribuição",
-      "assunto": "Celebração de Acordo com Grupo Casas Bahia",
-      "data": "2026-11-13",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589339&numSequencia=1114045&numVersao=1"
+      "assunto": "Plano Especial de Pagamento Trabalhista - PEPT",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591971&numSequencia=1116677&numVersao=1"
     },
     {
-      "empresa": "Companhia Brasileira De Distribuição",
-      "assunto": "Protocolo de Oferta Publica - Emissão de Debêntures",
-      "data": "2026-11-13",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589574&numSequencia=1114280&numVersao=1"
+      "empresa": "Cia Energ Ceara - Coelce",
+      "assunto": "Revisão de Rating da Enel Brasil e Subsidiárias",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1592055&numSequencia=1116761&numVersao=1"
     },
     {
-      "empresa": "Brk Ambiental Participações S.A.",
-      "assunto": "16ª Emissão de Debêntures Simples",
-      "data": "2026-11-13",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589602&numSequencia=1114308&numVersao=1"
+      "empresa": "Brava Energia S.A.",
+      "assunto": "Conclusão da Aquisição de Parcela Complementar do Polo Pescada",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591966&numSequencia=1116672&numVersao=1"
     },
     {
-      "empresa": "Brisanet Serviços De Telecomunicações S.A.",
-      "assunto": "Pagamento de Juros sobre Capital Próprio",
-      "data": "2026-11-13",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589383&numSequencia=1114089&numVersao=1"
+      "empresa": "Bndes Participações S.A. - Bndespar",
+      "assunto": "Recondução de conselheiro no COPE",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591848&numSequencia=1116554&numVersao=1"
     },
     {
-      "empresa": "Banco Do Estado Do Pará S/A.",
-      "assunto": "PAGAMENTO DE JUROS SOBRE O CAPITAL PRÓPRIO REFERENTE AO 3º TRIMESTRE DE 2026",
-      "data": "2026-11-13",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589372&numSequencia=1114078&numVersao=1"
+      "empresa": "Bndes Participações S.A. - Bndespar",
+      "assunto": "Manifestação sobre eleição de conselheira no CA||Recondução de conselheiro no COPE",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591849&numSequencia=1116555&numVersao=1"
     },
     {
-      "empresa": "B100 S.A.",
-      "assunto": "Levantamento da Indisponibilidade de bens",
-      "data": "2026-11-13",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589470&numSequencia=1114176&numVersao=1"
+      "empresa": "Arandu Investimentos S.A.",
+      "assunto": "FR Aprovação Squeeze Out",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591961&numSequencia=1116667&numVersao=1"
     },
     {
-      "empresa": "B100 S.A.",
-      "assunto": "Saída do Novo Mercado e migração para o N2",
-      "data": "2026-11-13",
-      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1589472&numSequencia=1114178&numVersao=1"
+      "empresa": "Ampla Energia E Serviços S.A.",
+      "assunto": "Revisão de Rating da Enel Brasil e Subsidiárias",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1592072&numSequencia=1116778&numVersao=1"
     }
   ],
   "manchetes": [
     {
-      "titulo": "Bitcoin (BTC) cai a US$ 57 mil e renova mínima em mais de dois anos; qual o fundo do poço?",
-      "link": "https://www.moneytimes.com.br/bitcoin-btc-cai-a-us-57-mil-e-renova-minima-em-mais-de-dois-anos-qual-o-fundo-do-poco/",
-      "fonte": "Money Times",
-      "quando": "2026-11-20T19:27-03:00"
-    },
-    {
-      "titulo": "Moedas: dólar tem sinais díspares com incertezas sobre Fed; cautela em NY apoia iene",
-      "link": "https://www.infomoney.com.br/mercados/moedas-dolar-tem-sinais-dispares-com-incertezas-sobre-fed-cautela-em-ny-apoia-iene/",
+      "titulo": "Black Friday: 38% das PMEs esperam vender mais, aponta Serasa Experian",
+      "link": "https://www.infomoney.com.br/minhas-financas/black-friday-38-das-pmes-esperam-vender-mais-aponta-serasa-experian/",
       "fonte": "InfoMoney",
-      "quando": "2026-11-20T19:01-03:00"
+      "quando": "2026-11-23T17:53-03:00"
     },
     {
-      "titulo": "Bitcoin cai a US$ 57 mil e vai à mínima em mais de 2 anos, de olho em mercado global",
-      "link": "https://www.infomoney.com.br/mercados/bitcoin-cai-abaixo-de-us-60-mil-pela-primeira-vez-desde-julho/",
+      "titulo": "Atrasados do INSS: Justiça libera mais de R$ 2,7 bilhões a aposentados e pensionistas",
+      "link": "https://www.infomoney.com.br/minhas-financas/atrasados-do-inss-justica-libera-mais-de-r-27-bilhoes-a-aposentados-e-pensionistas/",
       "fonte": "InfoMoney",
-      "quando": "2026-11-20T18:50-03:00"
+      "quando": "2026-11-23T17:31-03:00"
     },
     {
-      "titulo": "Vale, Itaú, Petrobras, Bradesco: como fecharam os ADRs durante o feriado da bolsa",
-      "link": "https://www.moneytimes.com.br/vale-itau-petrobras-bradesco-como-fecharam-os-adrs-em-dia-de-bolsa-fechada/",
+      "titulo": "Criptomoedas: bitcoin sobe do menor nível em 2 anos com volta de Huang à Nvidia",
+      "link": "https://www.infomoney.com.br/mercados/criptomoedas-bitcoin-sobe-do-menor-nivel-em-2-anos-com-volta-de-huang-a-nvidia/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-23T17:26-03:00"
+    },
+    {
+      "titulo": "Petróleo fecha em queda de mais de 3% com aumento do fluxo no Oriente Médio",
+      "link": "https://www.moneytimes.com.br/petroleo-23-11-2026-davs/",
       "fonte": "Money Times",
-      "quando": "2026-11-20T18:38-03:00"
+      "quando": "2026-11-23T17:20-03:00"
     },
     {
-      "titulo": "Em queda livre: Ibovespa em dólar (EWZ) despenca mais de 3% — e a culpa não é só do governo",
-      "link": "https://www.moneytimes.com.br/em-queda-livre-ibovespa-em-dolar-ewz-despenca-mais-de-3-e-a-culpa-nao-e-so-do-governo/",
+      "titulo": "Dólar fecha em leve queda após ultrapassar os R$ 6 com tensão fiscal",
+      "link": "https://www.moneytimes.com.br/dolar-23-22-2026-davs/",
       "fonte": "Money Times",
-      "quando": "2026-11-20T18:28-03:00"
+      "quando": "2026-11-23T17:07-03:00"
     },
     {
-      "titulo": "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/ouro-nao-protege-ninguem-cai-a-minima-em-um-ano-e-falha-como-porto-seguro-ccgg/",
+      "titulo": "Depois de ‘arrumar a casa’, fundo imobiliário entra no radar do BTG com recomendação de compra; veja potencial de alta",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/depois-de-arrumar-a-casa-fundo-imobiliario-entra-no-radar-do-btg-com-recomendacao-de-compra-veja-potencial-de-alta-igdl/",
       "fonte": "Seu Dinheiro",
-      "quando": "2026-11-20T16:40-03:00"
+      "quando": "2026-11-23T17:00-03:00"
     },
     {
-      "titulo": "Onda de caos da IA derruba bolsas no exterior: Anthropic chega a cair 13% e Wall Street entra em correção",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/onda-de-caos-da-ia-derruba-bolsas-no-exterior-anthropic-despenca-13-e-wall-entra-em-correcao-ccgg/",
+      "titulo": "Câmara pode votar ajuste fiscal nesta segunda-feira",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/camara-pode-votar-ajuste-fiscal-nesta-segunda-feira",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-23T16:57-03:00"
+    },
+    {
+      "titulo": "Fazenda reduz previsão do PIB e eleva inflação para 2027",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/fazenda-reduz-previsao-do-pib-e-eleva-inflacao-para-2027",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-23T16:48-03:00"
+    },
+    {
+      "titulo": "Ouro fecha em alta com recuperação dos mercados globais",
+      "link": "https://www.moneytimes.com.br/ouro-23-11-2026-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-23T16:04-03:00"
+    },
+    {
+      "titulo": "Mercado vive dias de incerteza, mas Galípolo vê uma vantagem para o BC: o tempo",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/mercado-vive-dias-de-incerteza-mas-galipolo-ve-uma-vantagem-para-o-bc-tempo-jcav/",
       "fonte": "Seu Dinheiro",
-      "quando": "2026-11-20T14:35-03:00"
+      "quando": "2026-11-23T14:03-03:00"
     },
     {
-      "titulo": "Pátria Log (HGLG11) abre a carteira e desembolsa R$ 31,28 milhões em imóvel logístico",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/patria-log-hglg11-abre-a-carteira-e-desembolsa-r-3128-milhoes-em-imovel-logistico-cbcb/",
+      "titulo": "Dólar rompe os R$ 6 pela primeira vez em mais de um ano; entenda o que está por trás da alta",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/dolar-rompe-os-r-6-pela-primeira-vez-em-mais-de-um-ano-com-cautela-fiscal-davs/",
       "fonte": "Seu Dinheiro",
-      "quando": "2026-11-20T09:57-03:00"
+      "quando": "2026-11-23T11:42-03:00"
     },
     {
-      "titulo": "Mega-Sena acumula e prêmio vai para R$ 45 milhões",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/mega-sena-acumula-e-premio-vai-para-r-45-milhoes",
+      "titulo": "Mercado eleva projeção do dólar para R$ 5,55 em 2026",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/mercado-eleva-projecao-do-dolar-para-r-555-em-2026",
       "fonte": "Agência Brasil",
-      "quando": "2026-11-19T22:20-03:00"
-    },
-    {
-      "titulo": "CMN amplia controle sobre recolhimentos de tributos dos bancos",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/cmn-amplia-controle-sobre-recolhimentos-de-tributos-dos-bancos",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-19T20:33-03:00"
-    },
-    {
-      "titulo": "Banco Central amplia acesso de cooperativas ao mercado aberto",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/banco-central-amplia-acesso-de-cooperativas-ao-mercado-aberto",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-19T20:22-03:00"
+      "quando": "2026-11-23T10:11-03:00"
     }
   ],
   "oficiais": [
@@ -627,9 +639,9 @@
       "quando": "2026-11-18T14:31-03:00"
     }
   ],
-  "fiis_total": 308,
+  "fiis_total": 307,
   "acoes_total": 341,
-  "fundamentos": "em cache",
+  "fundamentos": 467,
   "erros": [
     "Notícias CVM: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   ]

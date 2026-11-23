@@ -1,0 +1,648 @@
+{
+  "data_boletim": "2026-11-23",
+  "gerado_em": "2026-11-23T17:57-03:00",
+  "exemplo": false,
+  "juros": {
+    "selic": {
+      "valor": 13.75,
+      "data": "2026-11-23",
+      "hist": [
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        14.75,
+        14.75,
+        14.75,
+        14.75,
+        14.75,
+        14.75,
+        14.5,
+        14.5,
+        14.5,
+        14.5,
+        14.5,
+        14.5,
+        14.5,
+        14.25,
+        14.25,
+        14.25,
+        14.25,
+        14.25,
+        14.25,
+        14.25,
+        14.0,
+        14.0,
+        14.0,
+        14.0,
+        14.0,
+        14.0,
+        13.75,
+        13.75,
+        13.75,
+        13.75,
+        13.75,
+        13.75,
+        13.75,
+        13.75,
+        13.75,
+        13.75,
+        13.75,
+        13.75
+      ]
+    },
+    "cdi": {
+      "valor": 13.65,
+      "data": "2026-11-19",
+      "hist": [
+        14.9,
+        14.9,
+        14.9,
+        14.9,
+        14.9,
+        14.9,
+        14.9,
+        14.9,
+        14.9,
+        14.9,
+        14.9,
+        14.65,
+        14.65,
+        14.65,
+        14.65,
+        14.4,
+        14.4,
+        14.4,
+        14.4,
+        14.4,
+        14.15,
+        14.15,
+        14.15,
+        14.15,
+        14.15,
+        13.9,
+        13.9,
+        13.9,
+        13.9,
+        13.65,
+        13.65,
+        13.65,
+        13.65,
+        13.65,
+        13.65,
+        13.65
+      ]
+    },
+    "poupanca": {
+      "valor": 0.6202,
+      "data": "2026-11-01"
+    }
+  },
+  "inflacao": {
+    "ipca_mes": {
+      "valor": 0.14,
+      "data": "2026-10-01"
+    },
+    "ipca_12m": {
+      "valor": 4.63,
+      "data": "2026-10-01",
+      "hist": [
+        4.76,
+        4.87,
+        4.83,
+        4.56,
+        5.06,
+        5.48,
+        5.53,
+        5.32,
+        5.35,
+        5.23,
+        5.13,
+        5.17,
+        4.68,
+        4.46,
+        4.26,
+        4.44,
+        3.81,
+        4.14,
+        4.39,
+        4.72,
+        4.64,
+        4.44,
+        4.22,
+        4.58,
+        4.63
+      ]
+    }
+  },
+  "cambio": {
+    "dolar": {
+      "valor": 5.9708,
+      "data": "2026-11-23",
+      "var_pct": 1.39,
+      "hist": [
+        4.9892,
+        5.0096,
+        5.0441,
+        5.0521,
+        5.0826,
+        5.0564,
+        5.014,
+        5.0277,
+        5.0383,
+        5.0377,
+        5.5007,
+        5.3346,
+        5.342,
+        5.3744,
+        5.4212,
+        5.4935,
+        5.4778,
+        5.4621,
+        5.5013,
+        5.5146,
+        5.584,
+        5.5606,
+        5.6143,
+        5.6518,
+        5.7324,
+        5.7851,
+        5.8102,
+        5.8889,
+        5.9708
+      ]
+    },
+    "euro": {
+      "valor": 6.5076,
+      "data": "2026-11-23",
+      "var_pct": 0.62,
+      "hist": [
+        5.5844,
+        5.6092,
+        5.6111,
+        5.6609,
+        5.7088,
+        5.6682,
+        5.6317,
+        5.6411,
+        5.6494,
+        5.6422,
+        6.1487,
+        5.9449,
+        5.9515,
+        6.0,
+        6.0522,
+        6.15,
+        6.1549,
+        6.1323,
+        6.1317,
+        6.1741,
+        6.2317,
+        6.1706,
+        6.2133,
+        6.2334,
+        6.3102,
+        6.3659,
+        6.372,
+        6.4672,
+        6.5076
+      ]
+    }
+  },
+  "bolsa": {
+    "ibov": {
+      "valor": 165009.94,
+      "var_pct": -0.82,
+      "data": "2026-11-23",
+      "hist": [
+        176608,
+        175710,
+        171006,
+        169186,
+        167922,
+        165529,
+        167564,
+        166192,
+        168499,
+        172236,
+        171337,
+        172060,
+        171324,
+        172458,
+        169295,
+        169817,
+        167538,
+        166376,
+        165004.6563
+      ]
+    },
+    "ifix": {
+      "valor": 3436.12,
+      "var_pct": -1.4,
+      "data": "2026-11-23"
+    }
+  },
+  "focus": {
+    "data": "2026-11-19",
+    "linhas": [
+      {
+        "indicador": "IPCA (%)",
+        "ano": "2026",
+        "mediana": 5.1505,
+        "semana_anterior": 5.1
+      },
+      {
+        "indicador": "IPCA (%)",
+        "ano": "2027",
+        "mediana": 5.1214,
+        "semana_anterior": 4.9562
+      },
+      {
+        "indicador": "Selic (% a.a.)",
+        "ano": "2026",
+        "mediana": 13.75,
+        "semana_anterior": 13.75
+      },
+      {
+        "indicador": "Selic (% a.a.)",
+        "ano": "2027",
+        "mediana": 13.0,
+        "semana_anterior": 12.5
+      },
+      {
+        "indicador": "Dólar (R$)",
+        "ano": "2026",
+        "mediana": 5.55,
+        "semana_anterior": 5.399
+      },
+      {
+        "indicador": "Dólar (R$)",
+        "ano": "2027",
+        "mediana": 5.5,
+        "semana_anterior": 5.4
+      },
+      {
+        "indicador": "PIB (%)",
+        "ano": "2026",
+        "mediana": 1.7018,
+        "semana_anterior": 1.7497
+      },
+      {
+        "indicador": "PIB (%)",
+        "ano": "2027",
+        "mediana": 0.9995,
+        "semana_anterior": 1.1123
+      }
+    ]
+  },
+  "destaques": {
+    "altas": [
+      {
+        "ticker": "FIQE3",
+        "nome": "Unifique Telecomunicações",
+        "preco": 6.81,
+        "var_pct": 18.85,
+        "financeiro": 40137459.0,
+        "logo": "https://icons.brapi.dev/icons/FIQE3.svg"
+      },
+      {
+        "ticker": "AZEV3",
+        "nome": "Azevedo e Travassos",
+        "preco": 12.15,
+        "var_pct": 15.6,
+        "financeiro": 24307290.0,
+        "logo": "https://icons.brapi.dev/icons/AZEV3.svg"
+      },
+      {
+        "ticker": "BRKM5",
+        "nome": "Braskem",
+        "preco": 2.89,
+        "var_pct": 11.15,
+        "financeiro": 36888249.0,
+        "logo": "https://icons.brapi.dev/icons/BRKM5.svg"
+      },
+      {
+        "ticker": "PCAR3",
+        "nome": "Cia Brasileira de Distribuicao",
+        "preco": 3.56,
+        "var_pct": 10.22,
+        "financeiro": 61137304.0,
+        "logo": "https://icons.brapi.dev/icons/PCAR3.svg"
+      },
+      {
+        "ticker": "MGLU3",
+        "nome": "Magazine Luiza",
+        "preco": 9,
+        "var_pct": 9.76,
+        "financeiro": 471655800,
+        "logo": "https://icons.brapi.dev/icons/MGLU3.svg"
+      }
+    ],
+    "baixas": [
+      {
+        "ticker": "INTB3",
+        "nome": "Intelbras Ind de Telec Eletronica Brasileira",
+        "preco": 14.53,
+        "var_pct": -5.47,
+        "financeiro": 33841823.0,
+        "logo": "https://icons.brapi.dev/icons/INTB3.svg"
+      },
+      {
+        "ticker": "HAPV3",
+        "nome": "Hapvida Participacoes e Investimentos",
+        "preco": 5.87,
+        "var_pct": -4.71,
+        "financeiro": 89270373.0,
+        "logo": "https://icons.brapi.dev/icons/HAPV3.svg"
+      },
+      {
+        "ticker": "JALL3",
+        "nome": "Jalles Machado",
+        "preco": 2.18,
+        "var_pct": -3.96,
+        "financeiro": 2292924.0,
+        "logo": "https://icons.brapi.dev/icons/JALL3.svg"
+      },
+      {
+        "ticker": "OBTC3",
+        "nome": "Oranjebtc Educação e Investimento",
+        "preco": 6.09,
+        "var_pct": -3.94,
+        "financeiro": 10650192.0,
+        "logo": "https://icons.brapi.dev/icons/OBTC3.svg"
+      },
+      {
+        "ticker": "SMTO3",
+        "nome": "Sao Martinho",
+        "preco": 16.96,
+        "var_pct": -3.91,
+        "financeiro": 29257696.0,
+        "logo": "https://icons.brapi.dev/icons/SMTO3.svg"
+      }
+    ],
+    "negociadas": [
+      {
+        "ticker": "PETR4",
+        "nome": "Petroleo Brasileiro Petrobras",
+        "preco": 41.35,
+        "var_pct": -3.09,
+        "financeiro": 1707821160.0,
+        "logo": "https://icons.brapi.dev/icons/PETR4.svg"
+      },
+      {
+        "ticker": "BPAC11",
+        "nome": "Bco Btg Pactual",
+        "preco": 49.7,
+        "var_pct": 0.02,
+        "financeiro": 1006767930.0,
+        "logo": "https://icons.brapi.dev/icons/BPAC11.svg"
+      },
+      {
+        "ticker": "ITUB4",
+        "nome": "Itau Unibanco Holding",
+        "preco": 39.71,
+        "var_pct": -0.9,
+        "financeiro": 907663383.0,
+        "logo": "https://icons.brapi.dev/icons/ITUB4.svg"
+      },
+      {
+        "ticker": "VALE3",
+        "nome": "Vale",
+        "preco": 58.64,
+        "var_pct": 0.27,
+        "financeiro": 814855576.0,
+        "logo": "https://icons.brapi.dev/icons/VALE3.svg"
+      },
+      {
+        "ticker": "AXIA3",
+        "nome": "Axia Energia",
+        "preco": 45.63,
+        "var_pct": -0.8,
+        "financeiro": 805999194.0,
+        "logo": "https://icons.brapi.dev/icons/AXIA3.svg"
+      }
+    ]
+  },
+  "cripto": [
+    {
+      "nome": "Bitcoin",
+      "valor": 362376,
+      "var_pct": 0.11
+    },
+    {
+      "nome": "Ethereum",
+      "valor": 10209.93,
+      "var_pct": -0.12
+    },
+    {
+      "nome": "Solana",
+      "valor": 431.07,
+      "var_pct": 3.37
+    }
+  ],
+  "fatos_relevantes": [
+    {
+      "empresa": "Rio Alto Energias Renováveis S.A. - Em Recuperação Judicial",
+      "assunto": "Liberação de valores em escrow relativos ao FIP Rio Alto, do Grupo da Companhia.",
+      "data": "2026-11-20",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1592150&numSequencia=1116856&numVersao=1"
+    },
+    {
+      "empresa": "Unifique Telecomunicações S.A.",
+      "assunto": "Nova Suspensão dos Trabalhos da Assembleia Especial",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591976&numSequencia=1116682&numVersao=1"
+    },
+    {
+      "empresa": "Simpar S.A.",
+      "assunto": "Descontinuidade de guidance de controladas",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591915&numSequencia=1116621&numVersao=1"
+    },
+    {
+      "empresa": "Nova Transportadora Do Sudeste S.A. - Nts",
+      "assunto": "Rating",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1592039&numSequencia=1116745&numVersao=1"
+    },
+    {
+      "empresa": "Jbs N.V.",
+      "assunto": "Conclusão Omã",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591905&numSequencia=1116611&numVersao=1"
+    },
+    {
+      "empresa": "Fasa S.A. - Em Recuperação Judicial",
+      "assunto": "Apresentação de Modificativo ao Plano de Recuperação Judicial",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591958&numSequencia=1116664&numVersao=1"
+    },
+    {
+      "empresa": "Eletropaulo Metrop. Elet. Sao Paulo S.A.",
+      "assunto": "Revisão de Rating da Enel Brasil e Subsidiárias",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1592074&numSequencia=1116780&numVersao=1"
+    },
+    {
+      "empresa": "Companhia Paranaense De Energia Copel",
+      "assunto": "CAPEX de R$ 21,1 bilhões para o ciclo 2027 - 2030",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591309&numSequencia=1116015&numVersao=1"
+    },
+    {
+      "empresa": "Companhia Brasileira De Distribuição",
+      "assunto": "Plano Especial de Pagamento Trabalhista - PEPT",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591971&numSequencia=1116677&numVersao=1"
+    },
+    {
+      "empresa": "Cia Energ Ceara - Coelce",
+      "assunto": "Revisão de Rating da Enel Brasil e Subsidiárias",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1592055&numSequencia=1116761&numVersao=1"
+    },
+    {
+      "empresa": "Brava Energia S.A.",
+      "assunto": "Conclusão da Aquisição de Parcela Complementar do Polo Pescada",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591966&numSequencia=1116672&numVersao=1"
+    },
+    {
+      "empresa": "Bndes Participações S.A. - Bndespar",
+      "assunto": "Recondução de conselheiro no COPE",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591848&numSequencia=1116554&numVersao=1"
+    },
+    {
+      "empresa": "Bndes Participações S.A. - Bndespar",
+      "assunto": "Manifestação sobre eleição de conselheira no CA||Recondução de conselheiro no COPE",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591849&numSequencia=1116555&numVersao=1"
+    },
+    {
+      "empresa": "Arandu Investimentos S.A.",
+      "assunto": "FR Aprovação Squeeze Out",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1591961&numSequencia=1116667&numVersao=1"
+    },
+    {
+      "empresa": "Ampla Energia E Serviços S.A.",
+      "assunto": "Revisão de Rating da Enel Brasil e Subsidiárias",
+      "data": "2026-11-19",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1592072&numSequencia=1116778&numVersao=1"
+    }
+  ],
+  "manchetes": [
+    {
+      "titulo": "Black Friday: 38% das PMEs esperam vender mais, aponta Serasa Experian",
+      "link": "https://www.infomoney.com.br/minhas-financas/black-friday-38-das-pmes-esperam-vender-mais-aponta-serasa-experian/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-23T17:53-03:00"
+    },
+    {
+      "titulo": "Atrasados do INSS: Justiça libera mais de R$ 2,7 bilhões a aposentados e pensionistas",
+      "link": "https://www.infomoney.com.br/minhas-financas/atrasados-do-inss-justica-libera-mais-de-r-27-bilhoes-a-aposentados-e-pensionistas/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-23T17:31-03:00"
+    },
+    {
+      "titulo": "Criptomoedas: bitcoin sobe do menor nível em 2 anos com volta de Huang à Nvidia",
+      "link": "https://www.infomoney.com.br/mercados/criptomoedas-bitcoin-sobe-do-menor-nivel-em-2-anos-com-volta-de-huang-a-nvidia/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-23T17:26-03:00"
+    },
+    {
+      "titulo": "Petróleo fecha em queda de mais de 3% com aumento do fluxo no Oriente Médio",
+      "link": "https://www.moneytimes.com.br/petroleo-23-11-2026-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-23T17:20-03:00"
+    },
+    {
+      "titulo": "Dólar fecha em leve queda após ultrapassar os R$ 6 com tensão fiscal",
+      "link": "https://www.moneytimes.com.br/dolar-23-22-2026-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-23T17:07-03:00"
+    },
+    {
+      "titulo": "Depois de ‘arrumar a casa’, fundo imobiliário entra no radar do BTG com recomendação de compra; veja potencial de alta",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/depois-de-arrumar-a-casa-fundo-imobiliario-entra-no-radar-do-btg-com-recomendacao-de-compra-veja-potencial-de-alta-igdl/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-23T17:00-03:00"
+    },
+    {
+      "titulo": "Câmara pode votar ajuste fiscal nesta segunda-feira",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/camara-pode-votar-ajuste-fiscal-nesta-segunda-feira",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-23T16:57-03:00"
+    },
+    {
+      "titulo": "Fazenda reduz previsão do PIB e eleva inflação para 2027",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/fazenda-reduz-previsao-do-pib-e-eleva-inflacao-para-2027",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-23T16:48-03:00"
+    },
+    {
+      "titulo": "Ouro fecha em alta com recuperação dos mercados globais",
+      "link": "https://www.moneytimes.com.br/ouro-23-11-2026-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-23T16:04-03:00"
+    },
+    {
+      "titulo": "Mercado vive dias de incerteza, mas Galípolo vê uma vantagem para o BC: o tempo",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/mercado-vive-dias-de-incerteza-mas-galipolo-ve-uma-vantagem-para-o-bc-tempo-jcav/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-23T14:03-03:00"
+    },
+    {
+      "titulo": "Dólar rompe os R$ 6 pela primeira vez em mais de um ano; entenda o que está por trás da alta",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/dolar-rompe-os-r-6-pela-primeira-vez-em-mais-de-um-ano-com-cautela-fiscal-davs/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-23T11:42-03:00"
+    },
+    {
+      "titulo": "Mercado eleva projeção do dólar para R$ 5,55 em 2026",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/mercado-eleva-projecao-do-dolar-para-r-555-em-2026",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-23T10:11-03:00"
+    }
+  ],
+  "oficiais": [
+    {
+      "titulo": "BC aperfeiçoa norma sobre a participação em operações no mercado aberto",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21326/nota",
+      "fonte": "Banco Central",
+      "quando": "2026-11-19T18:14-03:00"
+    },
+    {
+      "titulo": "BC publica Pesquisa Trimestral de Condições de Crédito (PTC)",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21324/nota",
+      "fonte": "Banco Central",
+      "quando": "2026-11-19T14:31-03:00"
+    },
+    {
+      "titulo": "BC divulga Fluxo cambial mensal",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21323/nota",
+      "fonte": "Banco Central",
+      "quando": "2026-11-18T14:31-03:00"
+    }
+  ],
+  "fiis_total": 307,
+  "acoes_total": 341,
+  "fundamentos": 467,
+  "erros": [
+    "Notícias CVM: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+  ]
+}
