@@ -1,6 +1,6 @@
 {
   "data_boletim": "2026-11-24",
-  "gerado_em": "2026-11-24T02:14-03:00",
+  "gerado_em": "2026-11-24T17:00-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
@@ -66,7 +66,7 @@
     },
     "cdi": {
       "valor": 13.65,
-      "data": "2026-11-19",
+      "data": "2026-11-23",
       "hist": [
         14.9,
         14.9,
@@ -150,9 +150,9 @@
   },
   "cambio": {
     "dolar": {
-      "valor": 5.9708,
-      "data": "2026-11-23",
-      "var_pct": 1.39,
+      "valor": 5.8573,
+      "data": "2026-11-24",
+      "var_pct": -1.9,
       "hist": [
         5.0096,
         5.0441,
@@ -181,13 +181,14 @@
         5.7851,
         5.8102,
         5.8889,
-        5.9708
+        5.9708,
+        5.8573
       ]
     },
     "euro": {
-      "valor": 6.5076,
-      "data": "2026-11-23",
-      "var_pct": 0.62,
+      "valor": 6.426,
+      "data": "2026-11-24",
+      "var_pct": -1.25,
       "hist": [
         5.6092,
         5.6111,
@@ -216,14 +217,15 @@
         6.3659,
         6.372,
         6.4672,
-        6.5076
+        6.5076,
+        6.426
       ]
     }
   },
   "bolsa": {
     "ibov": {
-      "valor": 164796.05,
-      "var_pct": -0.95,
+      "valor": 164995.62,
+      "var_pct": 0.12,
       "data": "2026-11-24",
       "hist": [
         176608,
@@ -244,12 +246,13 @@
         169817,
         167538,
         166376,
-        164796
+        164796,
+        164958.3125
       ]
     },
     "ifix": {
-      "valor": 3440.08,
-      "var_pct": -1.29,
+      "valor": 3470.57,
+      "var_pct": 0.89,
       "data": "2026-11-24"
     }
   },
@@ -309,146 +312,146 @@
   "destaques": {
     "altas": [
       {
-        "ticker": "FIQE3",
-        "nome": "Unifique Telecomunicações",
-        "preco": 6.85,
-        "var_pct": 19.55,
-        "financeiro": 41353450.0,
-        "logo": "https://icons.brapi.dev/icons/FIQE3.svg"
-      },
-      {
         "ticker": "AZEV3",
         "nome": "Azevedo e Travassos",
-        "preco": 11.95,
-        "var_pct": 13.7,
-        "financeiro": 25366265.0,
+        "preco": 14.84,
+        "var_pct": 24.18,
+        "financeiro": 22734880.0,
         "logo": "https://icons.brapi.dev/icons/AZEV3.svg"
       },
       {
-        "ticker": "BRKM5",
-        "nome": "Braskem",
-        "preco": 2.91,
-        "var_pct": 11.92,
-        "financeiro": 38097720.0,
-        "logo": "https://icons.brapi.dev/icons/BRKM5.svg"
+        "ticker": "DASA3",
+        "nome": "Diagnosticos da America",
+        "preco": 3.44,
+        "var_pct": 7.5,
+        "financeiro": 5907168.0,
+        "logo": "https://icons.brapi.dev/icons/DASA3.svg"
       },
       {
-        "ticker": "PCAR3",
-        "nome": "Cia Brasileira de Distribuicao",
-        "preco": 3.6,
-        "var_pct": 11.46,
-        "financeiro": 63813240.0,
-        "logo": "https://icons.brapi.dev/icons/PCAR3.svg"
-      },
-      {
-        "ticker": "MGLU3",
-        "nome": "Magazine Luiza",
-        "preco": 8.99,
-        "var_pct": 9.63,
-        "financeiro": 489672714.0,
-        "logo": "https://icons.brapi.dev/icons/MGLU3.svg"
-      }
-    ],
-    "baixas": [
-      {
-        "ticker": "INTB3",
-        "nome": "Intelbras Ind de Telec Eletronica Brasileira",
-        "preco": 14.46,
-        "var_pct": -5.92,
-        "financeiro": 39055014.0,
-        "logo": "https://icons.brapi.dev/icons/INTB3.svg"
+        "ticker": "COGN3",
+        "nome": "Cogna Educação",
+        "preco": 1.66,
+        "var_pct": 6.41,
+        "financeiro": 99307840.0,
+        "logo": "https://icons.brapi.dev/icons/COGN3.svg"
       },
       {
         "ticker": "HAPV3",
         "nome": "Hapvida Participacoes e Investimentos",
-        "preco": 5.8,
-        "var_pct": -5.84,
-        "financeiro": 95074180.0,
+        "preco": 6.13,
+        "var_pct": 5.69,
+        "financeiro": 82297702.0,
         "logo": "https://icons.brapi.dev/icons/HAPV3.svg"
       },
       {
-        "ticker": "JALL3",
-        "nome": "Jalles Machado",
-        "preco": 2.16,
-        "var_pct": -4.85,
-        "financeiro": 2376432.0,
-        "logo": "https://icons.brapi.dev/icons/JALL3.svg"
+        "ticker": "LJQQ3",
+        "nome": "Lojas Quero-quero",
+        "preco": 1.08,
+        "var_pct": 4.85,
+        "financeiro": 3256308.0,
+        "logo": "https://icons.brapi.dev/icons/LJQQ3.svg"
+      }
+    ],
+    "baixas": [
+      {
+        "ticker": "BRKM5",
+        "nome": "Braskem",
+        "preco": 2.6,
+        "var_pct": -10.65,
+        "financeiro": 26409760.0,
+        "logo": "https://icons.brapi.dev/icons/BRKM5.svg"
       },
       {
-        "ticker": "OBTC3",
-        "nome": "Oranjebtc Educação e Investimento",
-        "preco": 6.06,
-        "var_pct": -4.42,
-        "financeiro": 10806192.0,
-        "logo": "https://icons.brapi.dev/icons/OBTC3.svg"
+        "ticker": "MDIA3",
+        "nome": "M.dias Branco Ind Com de Alimentos",
+        "preco": 14.98,
+        "var_pct": -9.76,
+        "financeiro": 48753908.0,
+        "logo": "https://icons.brapi.dev/icons/MDIA3.svg"
       },
       {
-        "ticker": "SMTO3",
-        "nome": "Sao Martinho",
-        "preco": 16.91,
-        "var_pct": -4.19,
-        "financeiro": 33021848.0,
-        "logo": "https://icons.brapi.dev/icons/SMTO3.svg"
+        "ticker": "EVEN3",
+        "nome": "Even Construtora e Incorporadora",
+        "preco": 3.3,
+        "var_pct": -6.52,
+        "financeiro": 4898190.0,
+        "logo": "https://icons.brapi.dev/icons/EVEN3.svg"
+      },
+      {
+        "ticker": "POMO4",
+        "nome": "Marcopolo",
+        "preco": 3.38,
+        "var_pct": -6.11,
+        "financeiro": 90768886.0,
+        "logo": "https://icons.brapi.dev/icons/POMO4.svg"
+      },
+      {
+        "ticker": "POSI3",
+        "nome": "Positivo Tecnologia",
+        "preco": 3.2,
+        "var_pct": -5.33,
+        "financeiro": 5551680.0,
+        "logo": "https://icons.brapi.dev/icons/POSI3.svg"
       }
     ],
     "negociadas": [
       {
         "ticker": "PETR4",
         "nome": "Petroleo Brasileiro Petrobras",
-        "preco": 41.3,
-        "var_pct": -3.21,
-        "financeiro": 1925938769.9999998,
+        "preco": 40.8,
+        "var_pct": -1.21,
+        "financeiro": 2803070160.0,
         "logo": "https://icons.brapi.dev/icons/PETR4.svg"
-      },
-      {
-        "ticker": "ITUB4",
-        "nome": "Itau Unibanco Holding",
-        "preco": 39.73,
-        "var_pct": -0.85,
-        "financeiro": 1145999931.0,
-        "logo": "https://icons.brapi.dev/icons/ITUB4.svg"
-      },
-      {
-        "ticker": "BPAC11",
-        "nome": "Bco Btg Pactual",
-        "preco": 49.76,
-        "var_pct": 0.14,
-        "financeiro": 1074059648.0,
-        "logo": "https://icons.brapi.dev/icons/BPAC11.svg"
-      },
-      {
-        "ticker": "AXIA3",
-        "nome": "Axia Energia",
-        "preco": 45.52,
-        "var_pct": -1.04,
-        "financeiro": 943188056.0000001,
-        "logo": "https://icons.brapi.dev/icons/AXIA3.svg"
       },
       {
         "ticker": "VALE3",
         "nome": "Vale",
-        "preco": 58.41,
-        "var_pct": -0.12,
-        "financeiro": 918164313.0,
+        "preco": 55.66,
+        "var_pct": -4.71,
+        "financeiro": 2250283706.0,
         "logo": "https://icons.brapi.dev/icons/VALE3.svg"
+      },
+      {
+        "ticker": "BPAC11",
+        "nome": "Bco Btg Pactual",
+        "preco": 50.54,
+        "var_pct": 1.57,
+        "financeiro": 644349622.0,
+        "logo": "https://icons.brapi.dev/icons/BPAC11.svg"
+      },
+      {
+        "ticker": "SBSP3",
+        "nome": "Cia Saneamento Basico Est Sao Paulo",
+        "preco": 27.97,
+        "var_pct": 0.97,
+        "financeiro": 633528891.0,
+        "logo": "https://icons.brapi.dev/icons/SBSP3.svg"
+      },
+      {
+        "ticker": "BBAS3",
+        "nome": "Bco Brasil",
+        "preco": 14.54,
+        "var_pct": 2.39,
+        "financeiro": 630913864.0,
+        "logo": "https://icons.brapi.dev/icons/BBAS3.svg"
       }
     ]
   },
   "cripto": [
     {
       "nome": "Bitcoin",
-      "valor": 358886,
-      "var_pct": -1.32
+      "valor": 351958,
+      "var_pct": -3.04
     },
     {
       "nome": "Ethereum",
-      "valor": 10099.29,
-      "var_pct": -1.52
+      "valor": 9870.6,
+      "var_pct": -3.77
     },
     {
       "nome": "Solana",
-      "valor": 425.43,
-      "var_pct": 0.33
+      "valor": 407.14,
+      "var_pct": -5.97
     }
   ],
   "fatos_relevantes": [
@@ -545,76 +548,76 @@
   ],
   "manchetes": [
     {
-      "titulo": "BRB diz que banco segue funcionando após suspensão da CVM",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brb-diz-que-banco-segue-funcionando-apos-suspensao-da-cvm",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-23T21:29-03:00"
-    },
-    {
-      "titulo": "Petrobras aprova pagamento de R$ 15,6 bilhões a acionistas",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/petrobras-aprova-pagamento-de-r-156-bilhoes-acionistas",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-23T21:03-03:00"
-    },
-    {
-      "titulo": "Jornada 5x2: veja como ficam regras de salário, folgas e horas extras",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/jornada-5x2-veja-como-ficam-regras-de-salario-folgas-e-horas-extras",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-23T20:40-03:00"
-    },
-    {
-      "titulo": "Meta suspende ações sem direito a voto com Zuckerberg diante de disputa judicial",
-      "link": "https://www.infomoney.com.br/mercados/meta-suspende-acoes-sem-direito-a-voto-com-zuckerberg-diante-de-disputa-judicial/",
+      "titulo": "Veja os países preferidos dos nômades digitais e a posição do Brasil na lista",
+      "link": "https://www.infomoney.com.br/mercados/veja-os-paises-preferidos-dos-nomades-digitais-e-a-posicao-do-brasil-na-lista/",
       "fonte": "InfoMoney",
-      "quando": "2026-11-23T20:10-03:00"
+      "quando": "2026-11-24T16:54-03:00"
     },
     {
-      "titulo": "Petrobras vai aportar R$1,8 bi em produtora de etanol de milho, diz CerradinhoBio",
-      "link": "https://www.infomoney.com.br/mercados/petrobras-vai-aportar-r18-bi-em-produtora-de-etanol-de-milho-diz-cerradinhobio/",
+      "titulo": "Mercado após as eleições: como foi o primeiro mês pós-segundo turno?",
+      "link": "https://www.infomoney.com.br/mercados/mercado-apos-as-eleicoes-como-foi-o-primeiro-mes-pos-segundo-turno/",
       "fonte": "InfoMoney",
-      "quando": "2026-11-23T19:54-03:00"
+      "quando": "2026-11-24T16:49-03:00"
     },
     {
-      "titulo": "Petrobras (PETR4) aprova investimentos de US$ 122 bi em plano de negócios 2027-2031",
-      "link": "https://www.infomoney.com.br/mercados/petrobras-petr3-petr4-aprova-investimentos-de-us-122-bi-em-plano-de-negocios-2027-2031/",
+      "titulo": "Ibovespa Hoje Ao Vivo: Bolsa diminui ritmo de alta; dólar segue em baixa",
+      "link": "https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-24112026/",
       "fonte": "InfoMoney",
-      "quando": "2026-11-23T19:41-03:00"
+      "quando": "2026-11-24T16:25-03:00"
     },
     {
-      "titulo": "Wall Street fecha em forte alta com retorno de Huang à Nvidia",
-      "link": "https://www.moneytimes.com.br/wall-street-23-11-2026-davs/",
+      "titulo": "Ouro fecha em queda com perspectiva de alta dos juros nos EUA",
+      "link": "https://www.moneytimes.com.br/ouro-fecha-em-queda-com-perspectiva-de-alta-dos-juros-nos-eua-davs/",
       "fonte": "Money Times",
-      "quando": "2026-11-23T18:42-03:00"
+      "quando": "2026-11-24T16:10-03:00"
     },
     {
-      "titulo": "Ibovespa perde os 165 mil pontos e fecha no vermelho com incertezas fiscais",
-      "link": "https://www.moneytimes.com.br/ibovespa-23-11-2026-davs/",
-      "fonte": "Money Times",
-      "quando": "2026-11-23T18:29-03:00"
+      "titulo": "Petrobras prevê investimentos de US$ 122 bilhões entre 2027 e 2031",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/petrobras-preve-investimentos-de-us-122-bilhoes-entre-2027-e-2031",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-24T14:31-03:00"
     },
     {
-      "titulo": "CSN Mineração (CMIN3): dívidas podem bater nos dividendos, vê BB Investimentos; ‘melhor vender’",
-      "link": "https://www.moneytimes.com.br/csn-mineracao-cmin3-dividas-podem-bater-nos-dividendos-ve-bb-investimentos-melhor-vender-rnda/",
+      "titulo": "Bolsas da Europa fecham em queda com pressão do setor de tecnologia",
+      "link": "https://www.moneytimes.com.br/bolsas-da-europa-fecham-em-queda-com-pressao-do-setor-de-tecnologia-davs/",
       "fonte": "Money Times",
-      "quando": "2026-11-23T18:20-03:00"
+      "quando": "2026-11-24T13:52-03:00"
+    },
+    {
+      "titulo": "BCs de países de língua portuguesa criam rede de cooperação",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bcs-de-paises-de-lingua-portuguesa-criam-rede-de-cooperacao",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-24T13:22-03:00"
+    },
+    {
+      "titulo": "Arrecadação federal atinge R$ 294 bilhões e bate recorde para outubro",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/arrecadacao-federal-atinge-r-294-bilhoes-e-bate-recorde-para-outubro",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-24T12:57-03:00"
+    },
+    {
+      "titulo": "Wall Street abre no vermelho com pressão da Nvidia",
+      "link": "https://www.moneytimes.com.br/wall-street-abre-no-vermelho-com-pressao-da-nvidia-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-24T11:56-03:00"
+    },
+    {
+      "titulo": "De olho nas ‘luzes acesas’, FII desembolsa R$ 73,5 milhões por escritórios em SP; veja quanto pode render por cota",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/de-olho-nas-luzes-acesas-fii-desembolsa-r-735-milhoes-por-escritorios-em-sp-veja-quanto-pode-render-por-cota-igdl/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-24T10:52-03:00"
+    },
+    {
+      "titulo": "FIIs 3.0: CEO da Inter Asset revela como a gestora se prepara para a fase dos “fundos imobiliários de tudo”",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/fiis-3-0-ceo-da-inter-asset-revela-como-a-gestora-se-prepara-para-a-fase-dos-fundos-imobiliarios-de-tudo-igdl/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-24T06:10-03:00"
     },
     {
       "titulo": "Depois de ‘arrumar a casa’, fundo imobiliário entra no radar do BTG com recomendação de compra; veja potencial de alta",
       "link": "https://www.seudinheiro.com/2026/bolsa-dolar/depois-de-arrumar-a-casa-fundo-imobiliario-entra-no-radar-do-btg-com-recomendacao-de-compra-veja-potencial-de-alta-igdl/",
       "fonte": "Seu Dinheiro",
       "quando": "2026-11-23T17:00-03:00"
-    },
-    {
-      "titulo": "Mercado vive dias de incerteza, mas Galípolo vê uma vantagem para o BC: o tempo",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/mercado-vive-dias-de-incerteza-mas-galipolo-ve-uma-vantagem-para-o-bc-tempo-jcav/",
-      "fonte": "Seu Dinheiro",
-      "quando": "2026-11-23T14:03-03:00"
-    },
-    {
-      "titulo": "Dólar rompe os R$ 6 pela primeira vez em mais de um ano; entenda o que está por trás da alta",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/dolar-rompe-os-r-6-pela-primeira-vez-em-mais-de-um-ano-com-cautela-fiscal-davs/",
-      "fonte": "Seu Dinheiro",
-      "quando": "2026-11-23T11:42-03:00"
     }
   ],
   "oficiais": [
@@ -638,9 +641,9 @@
     }
   ],
   "fiis_total": 307,
-  "acoes_total": 341,
-  "fundamentos": 467,
+  "acoes_total": 344,
+  "fundamentos": "em cache",
   "erros": [
-    "Notícias CVM: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+    "Notícias CVM: 404 Client Error:  for url: https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/RSS"
   ]
 }
