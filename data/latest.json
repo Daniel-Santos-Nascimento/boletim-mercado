@@ -1,11 +1,11 @@
 {
-  "data_boletim": "2026-11-23",
-  "gerado_em": "2026-11-23T17:57-03:00",
+  "data_boletim": "2026-11-24",
+  "gerado_em": "2026-11-24T02:14-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
       "valor": 13.75,
-      "data": "2026-11-23",
+      "data": "2026-11-24",
       "hist": [
         15.0,
         15.0,
@@ -154,7 +154,6 @@
       "data": "2026-11-23",
       "var_pct": 1.39,
       "hist": [
-        4.9892,
         5.0096,
         5.0441,
         5.0521,
@@ -190,7 +189,6 @@
       "data": "2026-11-23",
       "var_pct": 0.62,
       "hist": [
-        5.5844,
         5.6092,
         5.6111,
         5.6609,
@@ -224,9 +222,9 @@
   },
   "bolsa": {
     "ibov": {
-      "valor": 165009.94,
-      "var_pct": -0.82,
-      "data": "2026-11-23",
+      "valor": 164796.05,
+      "var_pct": -0.95,
+      "data": "2026-11-24",
       "hist": [
         176608,
         175710,
@@ -246,13 +244,13 @@
         169817,
         167538,
         166376,
-        165004.6563
+        164796
       ]
     },
     "ifix": {
-      "valor": 3436.12,
-      "var_pct": -1.4,
-      "data": "2026-11-23"
+      "valor": 3440.08,
+      "var_pct": -1.29,
+      "data": "2026-11-24"
     }
   },
   "focus": {
@@ -313,41 +311,41 @@
       {
         "ticker": "FIQE3",
         "nome": "Unifique Telecomunicações",
-        "preco": 6.81,
-        "var_pct": 18.85,
-        "financeiro": 40137459.0,
+        "preco": 6.85,
+        "var_pct": 19.55,
+        "financeiro": 41353450.0,
         "logo": "https://icons.brapi.dev/icons/FIQE3.svg"
       },
       {
         "ticker": "AZEV3",
         "nome": "Azevedo e Travassos",
-        "preco": 12.15,
-        "var_pct": 15.6,
-        "financeiro": 24307290.0,
+        "preco": 11.95,
+        "var_pct": 13.7,
+        "financeiro": 25366265.0,
         "logo": "https://icons.brapi.dev/icons/AZEV3.svg"
       },
       {
         "ticker": "BRKM5",
         "nome": "Braskem",
-        "preco": 2.89,
-        "var_pct": 11.15,
-        "financeiro": 36888249.0,
+        "preco": 2.91,
+        "var_pct": 11.92,
+        "financeiro": 38097720.0,
         "logo": "https://icons.brapi.dev/icons/BRKM5.svg"
       },
       {
         "ticker": "PCAR3",
         "nome": "Cia Brasileira de Distribuicao",
-        "preco": 3.56,
-        "var_pct": 10.22,
-        "financeiro": 61137304.0,
+        "preco": 3.6,
+        "var_pct": 11.46,
+        "financeiro": 63813240.0,
         "logo": "https://icons.brapi.dev/icons/PCAR3.svg"
       },
       {
         "ticker": "MGLU3",
         "nome": "Magazine Luiza",
-        "preco": 9,
-        "var_pct": 9.76,
-        "financeiro": 471655800,
+        "preco": 8.99,
+        "var_pct": 9.63,
+        "financeiro": 489672714.0,
         "logo": "https://icons.brapi.dev/icons/MGLU3.svg"
       }
     ],
@@ -355,41 +353,41 @@
       {
         "ticker": "INTB3",
         "nome": "Intelbras Ind de Telec Eletronica Brasileira",
-        "preco": 14.53,
-        "var_pct": -5.47,
-        "financeiro": 33841823.0,
+        "preco": 14.46,
+        "var_pct": -5.92,
+        "financeiro": 39055014.0,
         "logo": "https://icons.brapi.dev/icons/INTB3.svg"
       },
       {
         "ticker": "HAPV3",
         "nome": "Hapvida Participacoes e Investimentos",
-        "preco": 5.87,
-        "var_pct": -4.71,
-        "financeiro": 89270373.0,
+        "preco": 5.8,
+        "var_pct": -5.84,
+        "financeiro": 95074180.0,
         "logo": "https://icons.brapi.dev/icons/HAPV3.svg"
       },
       {
         "ticker": "JALL3",
         "nome": "Jalles Machado",
-        "preco": 2.18,
-        "var_pct": -3.96,
-        "financeiro": 2292924.0,
+        "preco": 2.16,
+        "var_pct": -4.85,
+        "financeiro": 2376432.0,
         "logo": "https://icons.brapi.dev/icons/JALL3.svg"
       },
       {
         "ticker": "OBTC3",
         "nome": "Oranjebtc Educação e Investimento",
-        "preco": 6.09,
-        "var_pct": -3.94,
-        "financeiro": 10650192.0,
+        "preco": 6.06,
+        "var_pct": -4.42,
+        "financeiro": 10806192.0,
         "logo": "https://icons.brapi.dev/icons/OBTC3.svg"
       },
       {
         "ticker": "SMTO3",
         "nome": "Sao Martinho",
-        "preco": 16.96,
-        "var_pct": -3.91,
-        "financeiro": 29257696.0,
+        "preco": 16.91,
+        "var_pct": -4.19,
+        "financeiro": 33021848.0,
         "logo": "https://icons.brapi.dev/icons/SMTO3.svg"
       }
     ],
@@ -397,60 +395,60 @@
       {
         "ticker": "PETR4",
         "nome": "Petroleo Brasileiro Petrobras",
-        "preco": 41.35,
-        "var_pct": -3.09,
-        "financeiro": 1707821160.0,
+        "preco": 41.3,
+        "var_pct": -3.21,
+        "financeiro": 1925938769.9999998,
         "logo": "https://icons.brapi.dev/icons/PETR4.svg"
-      },
-      {
-        "ticker": "BPAC11",
-        "nome": "Bco Btg Pactual",
-        "preco": 49.7,
-        "var_pct": 0.02,
-        "financeiro": 1006767930.0,
-        "logo": "https://icons.brapi.dev/icons/BPAC11.svg"
       },
       {
         "ticker": "ITUB4",
         "nome": "Itau Unibanco Holding",
-        "preco": 39.71,
-        "var_pct": -0.9,
-        "financeiro": 907663383.0,
+        "preco": 39.73,
+        "var_pct": -0.85,
+        "financeiro": 1145999931.0,
         "logo": "https://icons.brapi.dev/icons/ITUB4.svg"
       },
       {
-        "ticker": "VALE3",
-        "nome": "Vale",
-        "preco": 58.64,
-        "var_pct": 0.27,
-        "financeiro": 814855576.0,
-        "logo": "https://icons.brapi.dev/icons/VALE3.svg"
+        "ticker": "BPAC11",
+        "nome": "Bco Btg Pactual",
+        "preco": 49.76,
+        "var_pct": 0.14,
+        "financeiro": 1074059648.0,
+        "logo": "https://icons.brapi.dev/icons/BPAC11.svg"
       },
       {
         "ticker": "AXIA3",
         "nome": "Axia Energia",
-        "preco": 45.63,
-        "var_pct": -0.8,
-        "financeiro": 805999194.0,
+        "preco": 45.52,
+        "var_pct": -1.04,
+        "financeiro": 943188056.0000001,
         "logo": "https://icons.brapi.dev/icons/AXIA3.svg"
+      },
+      {
+        "ticker": "VALE3",
+        "nome": "Vale",
+        "preco": 58.41,
+        "var_pct": -0.12,
+        "financeiro": 918164313.0,
+        "logo": "https://icons.brapi.dev/icons/VALE3.svg"
       }
     ]
   },
   "cripto": [
     {
       "nome": "Bitcoin",
-      "valor": 362376,
-      "var_pct": 0.11
+      "valor": 358886,
+      "var_pct": -1.32
     },
     {
       "nome": "Ethereum",
-      "valor": 10209.93,
-      "var_pct": -0.12
+      "valor": 10099.29,
+      "var_pct": -1.52
     },
     {
       "nome": "Solana",
-      "valor": 431.07,
-      "var_pct": 3.37
+      "valor": 425.43,
+      "var_pct": 0.33
     }
   ],
   "fatos_relevantes": [
@@ -547,58 +545,64 @@
   ],
   "manchetes": [
     {
-      "titulo": "Black Friday: 38% das PMEs esperam vender mais, aponta Serasa Experian",
-      "link": "https://www.infomoney.com.br/minhas-financas/black-friday-38-das-pmes-esperam-vender-mais-aponta-serasa-experian/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-23T17:53-03:00"
+      "titulo": "BRB diz que banco segue funcionando após suspensão da CVM",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brb-diz-que-banco-segue-funcionando-apos-suspensao-da-cvm",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-23T21:29-03:00"
     },
     {
-      "titulo": "Atrasados do INSS: Justiça libera mais de R$ 2,7 bilhões a aposentados e pensionistas",
-      "link": "https://www.infomoney.com.br/minhas-financas/atrasados-do-inss-justica-libera-mais-de-r-27-bilhoes-a-aposentados-e-pensionistas/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-23T17:31-03:00"
+      "titulo": "Petrobras aprova pagamento de R$ 15,6 bilhões a acionistas",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/petrobras-aprova-pagamento-de-r-156-bilhoes-acionistas",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-23T21:03-03:00"
     },
     {
-      "titulo": "Criptomoedas: bitcoin sobe do menor nível em 2 anos com volta de Huang à Nvidia",
-      "link": "https://www.infomoney.com.br/mercados/criptomoedas-bitcoin-sobe-do-menor-nivel-em-2-anos-com-volta-de-huang-a-nvidia/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-23T17:26-03:00"
+      "titulo": "Jornada 5x2: veja como ficam regras de salário, folgas e horas extras",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/jornada-5x2-veja-como-ficam-regras-de-salario-folgas-e-horas-extras",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-23T20:40-03:00"
     },
     {
-      "titulo": "Petróleo fecha em queda de mais de 3% com aumento do fluxo no Oriente Médio",
-      "link": "https://www.moneytimes.com.br/petroleo-23-11-2026-davs/",
+      "titulo": "Meta suspende ações sem direito a voto com Zuckerberg diante de disputa judicial",
+      "link": "https://www.infomoney.com.br/mercados/meta-suspende-acoes-sem-direito-a-voto-com-zuckerberg-diante-de-disputa-judicial/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-23T20:10-03:00"
+    },
+    {
+      "titulo": "Petrobras vai aportar R$1,8 bi em produtora de etanol de milho, diz CerradinhoBio",
+      "link": "https://www.infomoney.com.br/mercados/petrobras-vai-aportar-r18-bi-em-produtora-de-etanol-de-milho-diz-cerradinhobio/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-23T19:54-03:00"
+    },
+    {
+      "titulo": "Petrobras (PETR4) aprova investimentos de US$ 122 bi em plano de negócios 2027-2031",
+      "link": "https://www.infomoney.com.br/mercados/petrobras-petr3-petr4-aprova-investimentos-de-us-122-bi-em-plano-de-negocios-2027-2031/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-23T19:41-03:00"
+    },
+    {
+      "titulo": "Wall Street fecha em forte alta com retorno de Huang à Nvidia",
+      "link": "https://www.moneytimes.com.br/wall-street-23-11-2026-davs/",
       "fonte": "Money Times",
-      "quando": "2026-11-23T17:20-03:00"
+      "quando": "2026-11-23T18:42-03:00"
     },
     {
-      "titulo": "Dólar fecha em leve queda após ultrapassar os R$ 6 com tensão fiscal",
-      "link": "https://www.moneytimes.com.br/dolar-23-22-2026-davs/",
+      "titulo": "Ibovespa perde os 165 mil pontos e fecha no vermelho com incertezas fiscais",
+      "link": "https://www.moneytimes.com.br/ibovespa-23-11-2026-davs/",
       "fonte": "Money Times",
-      "quando": "2026-11-23T17:07-03:00"
+      "quando": "2026-11-23T18:29-03:00"
+    },
+    {
+      "titulo": "CSN Mineração (CMIN3): dívidas podem bater nos dividendos, vê BB Investimentos; ‘melhor vender’",
+      "link": "https://www.moneytimes.com.br/csn-mineracao-cmin3-dividas-podem-bater-nos-dividendos-ve-bb-investimentos-melhor-vender-rnda/",
+      "fonte": "Money Times",
+      "quando": "2026-11-23T18:20-03:00"
     },
     {
       "titulo": "Depois de ‘arrumar a casa’, fundo imobiliário entra no radar do BTG com recomendação de compra; veja potencial de alta",
       "link": "https://www.seudinheiro.com/2026/bolsa-dolar/depois-de-arrumar-a-casa-fundo-imobiliario-entra-no-radar-do-btg-com-recomendacao-de-compra-veja-potencial-de-alta-igdl/",
       "fonte": "Seu Dinheiro",
       "quando": "2026-11-23T17:00-03:00"
-    },
-    {
-      "titulo": "Câmara pode votar ajuste fiscal nesta segunda-feira",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/camara-pode-votar-ajuste-fiscal-nesta-segunda-feira",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-23T16:57-03:00"
-    },
-    {
-      "titulo": "Fazenda reduz previsão do PIB e eleva inflação para 2027",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/fazenda-reduz-previsao-do-pib-e-eleva-inflacao-para-2027",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-23T16:48-03:00"
-    },
-    {
-      "titulo": "Ouro fecha em alta com recuperação dos mercados globais",
-      "link": "https://www.moneytimes.com.br/ouro-23-11-2026-davs/",
-      "fonte": "Money Times",
-      "quando": "2026-11-23T16:04-03:00"
     },
     {
       "titulo": "Mercado vive dias de incerteza, mas Galípolo vê uma vantagem para o BC: o tempo",
@@ -611,12 +615,6 @@
       "link": "https://www.seudinheiro.com/2026/bolsa-dolar/dolar-rompe-os-r-6-pela-primeira-vez-em-mais-de-um-ano-com-cautela-fiscal-davs/",
       "fonte": "Seu Dinheiro",
       "quando": "2026-11-23T11:42-03:00"
-    },
-    {
-      "titulo": "Mercado eleva projeção do dólar para R$ 5,55 em 2026",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/mercado-eleva-projecao-do-dolar-para-r-555-em-2026",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-23T10:11-03:00"
     }
   ],
   "oficiais": [
