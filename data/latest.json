@@ -1,11 +1,11 @@
 {
-  "data_boletim": "2026-11-24",
-  "gerado_em": "2026-11-24T17:00-03:00",
+  "data_boletim": "2026-11-25",
+  "gerado_em": "2026-11-25T00:59-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
       "valor": 13.75,
-      "data": "2026-11-24",
+      "data": "2026-11-25",
       "hist": [
         15.0,
         15.0,
@@ -224,9 +224,9 @@
   },
   "bolsa": {
     "ibov": {
-      "valor": 164995.62,
-      "var_pct": 0.12,
-      "data": "2026-11-24",
+      "valor": 164089.81,
+      "var_pct": -0.43,
+      "data": "2026-11-25",
       "hist": [
         176608,
         175710,
@@ -247,13 +247,13 @@
         167538,
         166376,
         164796,
-        164958.3125
+        164090
       ]
     },
     "ifix": {
-      "valor": 3470.57,
-      "var_pct": 0.89,
-      "data": "2026-11-24"
+      "valor": 3467.64,
+      "var_pct": 0.8,
+      "data": "2026-11-25"
     }
   },
   "focus": {
@@ -314,41 +314,41 @@
       {
         "ticker": "AZEV3",
         "nome": "Azevedo e Travassos",
-        "preco": 14.84,
-        "var_pct": 24.18,
-        "financeiro": 22734880.0,
+        "preco": 14.01,
+        "var_pct": 17.24,
+        "financeiro": 28359042.0,
         "logo": "https://icons.brapi.dev/icons/AZEV3.svg"
       },
       {
         "ticker": "DASA3",
         "nome": "Diagnosticos da America",
-        "preco": 3.44,
-        "var_pct": 7.5,
-        "financeiro": 5907168.0,
+        "preco": 3.41,
+        "var_pct": 6.56,
+        "financeiro": 7133379.0,
         "logo": "https://icons.brapi.dev/icons/DASA3.svg"
       },
       {
         "ticker": "COGN3",
         "nome": "Cogna Educação",
-        "preco": 1.66,
-        "var_pct": 6.41,
-        "financeiro": 99307840.0,
+        "preco": 1.65,
+        "var_pct": 5.77,
+        "financeiro": 112426545.0,
         "logo": "https://icons.brapi.dev/icons/COGN3.svg"
       },
       {
         "ticker": "HAPV3",
         "nome": "Hapvida Participacoes e Investimentos",
-        "preco": 6.13,
-        "var_pct": 5.69,
-        "financeiro": 82297702.0,
+        "preco": 6.1,
+        "var_pct": 5.17,
+        "financeiro": 94815350.0,
         "logo": "https://icons.brapi.dev/icons/HAPV3.svg"
       },
       {
         "ticker": "LJQQ3",
         "nome": "Lojas Quero-quero",
-        "preco": 1.08,
-        "var_pct": 4.85,
-        "financeiro": 3256308.0,
+        "preco": 1.07,
+        "var_pct": 3.88,
+        "financeiro": 3696529.0,
         "logo": "https://icons.brapi.dev/icons/LJQQ3.svg"
       }
     ],
@@ -356,41 +356,41 @@
       {
         "ticker": "BRKM5",
         "nome": "Braskem",
-        "preco": 2.6,
-        "var_pct": -10.65,
-        "financeiro": 26409760.0,
+        "preco": 2.5,
+        "var_pct": -14.09,
+        "financeiro": 31211750.0,
         "logo": "https://icons.brapi.dev/icons/BRKM5.svg"
       },
       {
         "ticker": "MDIA3",
         "nome": "M.dias Branco Ind Com de Alimentos",
-        "preco": 14.98,
-        "var_pct": -9.76,
-        "financeiro": 48753908.0,
+        "preco": 15.05,
+        "var_pct": -9.34,
+        "financeiro": 65857295.0,
         "logo": "https://icons.brapi.dev/icons/MDIA3.svg"
+      },
+      {
+        "ticker": "PCAR3",
+        "nome": "Cia Brasileira de Distribuicao",
+        "preco": 3.27,
+        "var_pct": -9.17,
+        "financeiro": 47860701.0,
+        "logo": "https://icons.brapi.dev/icons/PCAR3.svg"
       },
       {
         "ticker": "EVEN3",
         "nome": "Even Construtora e Incorporadora",
-        "preco": 3.3,
-        "var_pct": -6.52,
-        "financeiro": 4898190.0,
+        "preco": 3.23,
+        "var_pct": -8.5,
+        "financeiro": 6372467.0,
         "logo": "https://icons.brapi.dev/icons/EVEN3.svg"
-      },
-      {
-        "ticker": "POMO4",
-        "nome": "Marcopolo",
-        "preco": 3.38,
-        "var_pct": -6.11,
-        "financeiro": 90768886.0,
-        "logo": "https://icons.brapi.dev/icons/POMO4.svg"
       },
       {
         "ticker": "POSI3",
         "nome": "Positivo Tecnologia",
-        "preco": 3.2,
-        "var_pct": -5.33,
-        "financeiro": 5551680.0,
+        "preco": 3.14,
+        "var_pct": -7.1,
+        "financeiro": 7378058.0,
         "logo": "https://icons.brapi.dev/icons/POSI3.svg"
       }
     ],
@@ -398,60 +398,60 @@
       {
         "ticker": "PETR4",
         "nome": "Petroleo Brasileiro Petrobras",
-        "preco": 40.8,
-        "var_pct": -1.21,
-        "financeiro": 2803070160.0,
+        "preco": 40.55,
+        "var_pct": -1.82,
+        "financeiro": 3620924414.9999995,
         "logo": "https://icons.brapi.dev/icons/PETR4.svg"
       },
       {
         "ticker": "VALE3",
         "nome": "Vale",
-        "preco": 55.66,
-        "var_pct": -4.71,
-        "financeiro": 2250283706.0,
+        "preco": 55.19,
+        "var_pct": -5.51,
+        "financeiro": 2587158187.0,
         "logo": "https://icons.brapi.dev/icons/VALE3.svg"
-      },
-      {
-        "ticker": "BPAC11",
-        "nome": "Bco Btg Pactual",
-        "preco": 50.54,
-        "var_pct": 1.57,
-        "financeiro": 644349622.0,
-        "logo": "https://icons.brapi.dev/icons/BPAC11.svg"
       },
       {
         "ticker": "SBSP3",
         "nome": "Cia Saneamento Basico Est Sao Paulo",
-        "preco": 27.97,
-        "var_pct": 0.97,
-        "financeiro": 633528891.0,
+        "preco": 27.87,
+        "var_pct": 0.61,
+        "financeiro": 941707791.0,
         "logo": "https://icons.brapi.dev/icons/SBSP3.svg"
       },
       {
-        "ticker": "BBAS3",
-        "nome": "Bco Brasil",
-        "preco": 14.54,
-        "var_pct": 2.39,
-        "financeiro": 630913864.0,
-        "logo": "https://icons.brapi.dev/icons/BBAS3.svg"
+        "ticker": "BPAC11",
+        "nome": "Bco Btg Pactual",
+        "preco": 50,
+        "var_pct": 0.48,
+        "financeiro": 832380000,
+        "logo": "https://icons.brapi.dev/icons/BPAC11.svg"
+      },
+      {
+        "ticker": "PETR3",
+        "nome": "Petroleo Brasileiro Petrobras",
+        "preco": 46.31,
+        "var_pct": -1.51,
+        "financeiro": 806882285.0,
+        "logo": "https://icons.brapi.dev/icons/PETR3.svg"
       }
     ]
   },
   "cripto": [
     {
       "nome": "Bitcoin",
-      "valor": 351958,
-      "var_pct": -3.04
+      "valor": 350218,
+      "var_pct": -2.03
     },
     {
       "nome": "Ethereum",
-      "valor": 9870.6,
-      "var_pct": -3.77
+      "valor": 9808.03,
+      "var_pct": -2.39
     },
     {
       "nome": "Solana",
-      "valor": 407.14,
-      "var_pct": -5.97
+      "valor": 408.43,
+      "var_pct": -3.41
     }
   ],
   "fatos_relevantes": [
@@ -548,58 +548,52 @@
   ],
   "manchetes": [
     {
-      "titulo": "Veja os países preferidos dos nômades digitais e a posição do Brasil na lista",
-      "link": "https://www.infomoney.com.br/mercados/veja-os-paises-preferidos-dos-nomades-digitais-e-a-posicao-do-brasil-na-lista/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-24T16:54-03:00"
-    },
-    {
-      "titulo": "Mercado após as eleições: como foi o primeiro mês pós-segundo turno?",
-      "link": "https://www.infomoney.com.br/mercados/mercado-apos-as-eleicoes-como-foi-o-primeiro-mes-pos-segundo-turno/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-24T16:49-03:00"
-    },
-    {
-      "titulo": "Ibovespa Hoje Ao Vivo: Bolsa diminui ritmo de alta; dólar segue em baixa",
-      "link": "https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-24112026/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-24T16:25-03:00"
-    },
-    {
-      "titulo": "Ouro fecha em queda com perspectiva de alta dos juros nos EUA",
-      "link": "https://www.moneytimes.com.br/ouro-fecha-em-queda-com-perspectiva-de-alta-dos-juros-nos-eua-davs/",
-      "fonte": "Money Times",
-      "quando": "2026-11-24T16:10-03:00"
-    },
-    {
-      "titulo": "Petrobras prevê investimentos de US$ 122 bilhões entre 2027 e 2031",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/petrobras-preve-investimentos-de-us-122-bilhoes-entre-2027-e-2031",
+      "titulo": "Plano busca fortalecer protagonismo das mulheres no agronegócio",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/plano-busca-fortalecer-protagonismo-das-mulheres-no-agronegocio",
       "fonte": "Agência Brasil",
-      "quando": "2026-11-24T14:31-03:00"
+      "quando": "2026-11-24T20:00-03:00"
     },
     {
-      "titulo": "Bolsas da Europa fecham em queda com pressão do setor de tecnologia",
-      "link": "https://www.moneytimes.com.br/bolsas-da-europa-fecham-em-queda-com-pressao-do-setor-de-tecnologia-davs/",
-      "fonte": "Money Times",
-      "quando": "2026-11-24T13:52-03:00"
+      "titulo": "BC anuncia leilões de linha no total de até US$ 2 bilhões para quarta-feira",
+      "link": "https://www.infomoney.com.br/mercados/bc-anuncia-leiloes-de-linha-no-total-de-ate-us-2-bilhoes-para-quarta-feira/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-24T19:08-03:00"
     },
     {
-      "titulo": "BCs de países de língua portuguesa criam rede de cooperação",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bcs-de-paises-de-lingua-portuguesa-criam-rede-de-cooperacao",
+      "titulo": "Dólar cai para R$ 5,91 com expectativa de ajuste fiscal",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-cai-para-r-591-com-expectativa-de-ajuste-fiscal",
       "fonte": "Agência Brasil",
-      "quando": "2026-11-24T13:22-03:00"
+      "quando": "2026-11-24T19:01-03:00"
     },
     {
-      "titulo": "Arrecadação federal atinge R$ 294 bilhões e bate recorde para outubro",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/arrecadacao-federal-atinge-r-294-bilhoes-e-bate-recorde-para-outubro",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-24T12:57-03:00"
+      "titulo": "Por que o Ibovespa fechou em queda após subir 1,7% com notícia sobre PEC?",
+      "link": "https://www.infomoney.com.br/mercados/ibovespa-sobe-com-expectativa-de-novas-medidas-de-contencao-de-gastos/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-24T18:48-03:00"
     },
     {
-      "titulo": "Wall Street abre no vermelho com pressão da Nvidia",
-      "link": "https://www.moneytimes.com.br/wall-street-abre-no-vermelho-com-pressao-da-nvidia-davs/",
+      "titulo": "‘Não dá para aceitar esse tratamento’, diz ministro sobre adiamento da UE ao retorno de frango e mel brasileiros",
+      "link": "https://www.moneytimes.com.br/nao-da-para-aceitar-esse-tratamento-diz-ministro-sobre-adiamento-da-ue-ao-retorno-de-frango-e-mel-brasileiros/",
       "fonte": "Money Times",
-      "quando": "2026-11-24T11:56-03:00"
+      "quando": "2026-11-24T18:48-03:00"
+    },
+    {
+      "titulo": "Bolsas de NY fecham sem direção única com pressão do setor de tecnologia",
+      "link": "https://www.moneytimes.com.br/bolsas-de-ny-fecham-sem-direcao-unica-com-pressao-do-setor-de-tecnologia-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-24T18:42-03:00"
+    },
+    {
+      "titulo": "Ibovespa fecha no vermelho após presidente da Petrobras não garantir dividendos extraordinários",
+      "link": "https://www.moneytimes.com.br/ibovespa-fecha-no-vermelho-apos-presidente-da-petrobras-nao-garantir-dividendos-extraordinarios-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-24T18:27-03:00"
+    },
+    {
+      "titulo": "Entenda o pacote fiscal que prevê ajuste de até R$ 56 bilhões",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/entenda-o-pacote-fiscal-que-preve-ajuste-de-ate-r-56-bilhoes",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-24T17:54-03:00"
     },
     {
       "titulo": "De olho nas ‘luzes acesas’, FII desembolsa R$ 73,5 milhões por escritórios em SP; veja quanto pode render por cota",
@@ -640,9 +634,9 @@
       "quando": "2026-11-18T14:31-03:00"
     }
   ],
-  "fiis_total": 307,
+  "fiis_total": 308,
   "acoes_total": 344,
-  "fundamentos": "em cache",
+  "fundamentos": 467,
   "erros": [
     "Notícias CVM: 404 Client Error:  for url: https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/RSS"
   ]
