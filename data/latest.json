@@ -1,11 +1,11 @@
 {
-  "data_boletim": "2026-11-25",
-  "gerado_em": "2026-11-25T16:00-03:00",
+  "data_boletim": "2026-11-26",
+  "gerado_em": "2026-11-26T00:25-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
       "valor": 13.75,
-      "data": "2026-11-25",
+      "data": "2026-11-26",
       "hist": [
         15.0,
         15.0,
@@ -226,11 +226,10 @@
   },
   "bolsa": {
     "ibov": {
-      "valor": 166939.45,
-      "var_pct": 1.74,
-      "data": "2026-11-25",
+      "valor": 166684.61,
+      "var_pct": 1.58,
+      "data": "2026-11-26",
       "hist": [
-        176608,
         175710,
         171006,
         169186,
@@ -250,13 +249,13 @@
         166376,
         164796,
         164090,
-        166909.5938
+        166685
       ]
     },
     "ifix": {
-      "valor": 3521.9,
-      "var_pct": 1.56,
-      "data": "2026-11-25"
+      "valor": 3541.11,
+      "var_pct": 2.12,
+      "data": "2026-11-26"
     }
   },
   "focus": {
@@ -315,127 +314,127 @@
   "destaques": {
     "altas": [
       {
-        "ticker": "MGLU3",
-        "nome": "Magazine Luiza",
-        "preco": 9.42,
-        "var_pct": 7.66,
-        "financeiro": 425244234.0,
-        "logo": "https://icons.brapi.dev/icons/MGLU3.svg"
+        "ticker": "NATU3",
+        "nome": "Natura Cosmeticos",
+        "preco": 4.71,
+        "var_pct": 10.56,
+        "financeiro": 95202759.0,
+        "logo": null
       },
       {
-        "ticker": "PGMN3",
-        "nome": "Empreendimentos Pague Menos",
-        "preco": 2.47,
-        "var_pct": 7.39,
-        "financeiro": 32332547.000000004,
-        "logo": "https://icons.brapi.dev/icons/PGMN3.svg"
-      },
-      {
-        "ticker": "AZZA3",
-        "nome": "Azzas 2154",
-        "preco": 15.22,
-        "var_pct": 7.33,
-        "financeiro": 55072048.0,
-        "logo": "https://icons.brapi.dev/icons/AZZA3.svg"
+        "ticker": "MOVI3",
+        "nome": "Movida Participacoes",
+        "preco": 6.15,
+        "var_pct": 8.66,
+        "financeiro": 54345705.0,
+        "logo": "https://icons.brapi.dev/icons/MOVI3.svg"
       },
       {
         "ticker": "SBFG3",
         "nome": "Grupo Sbf",
-        "preco": 4.18,
-        "var_pct": 6.91,
-        "financeiro": 15329731.999999998,
+        "preco": 4.24,
+        "var_pct": 8.44,
+        "financeiro": 23720256.0,
         "logo": "https://icons.brapi.dev/icons/SBFG3.svg"
       },
       {
-        "ticker": "IRBR3",
-        "nome": "Irb Brasil Resseguros",
-        "preco": 62.29,
-        "var_pct": 6.75,
-        "financeiro": 48654719.0,
-        "logo": "https://icons.brapi.dev/icons/IRBR3.svg"
+        "ticker": "AZZA3",
+        "nome": "Azzas 2154",
+        "preco": 15.33,
+        "var_pct": 8.11,
+        "financeiro": 87716727.0,
+        "logo": "https://icons.brapi.dev/icons/AZZA3.svg"
+      },
+      {
+        "ticker": "VAMO3",
+        "nome": "Vamos Locação de Caminhões. Máquinas e Equip",
+        "preco": 2.78,
+        "var_pct": 7.75,
+        "financeiro": 58336075.99999999,
+        "logo": "https://icons.brapi.dev/icons/VAMO3.svg"
       }
     ],
     "baixas": [
       {
         "ticker": "BRKM5",
         "nome": "Braskem",
-        "preco": 2.26,
-        "var_pct": -9.6,
-        "financeiro": 20330733.999999996,
+        "preco": 2.24,
+        "var_pct": -10.4,
+        "financeiro": 26462464.000000004,
         "logo": "https://icons.brapi.dev/icons/BRKM5.svg"
       },
       {
         "ticker": "AZEV3",
         "nome": "Azevedo e Travassos",
-        "preco": 12.84,
-        "var_pct": -8.35,
-        "financeiro": 15284736.0,
+        "preco": 13.1,
+        "var_pct": -6.5,
+        "financeiro": 27016130.0,
         "logo": "https://icons.brapi.dev/icons/AZEV3.svg"
+      },
+      {
+        "ticker": "SAUD3",
+        "nome": "Bradsaude",
+        "preco": 15.53,
+        "var_pct": -5.48,
+        "financeiro": 108202169.0,
+        "logo": "https://icons.brapi.dev/icons/SAUD3.svg"
       },
       {
         "ticker": "EMBJ3",
         "nome": "Embraer",
-        "preco": 103.12,
-        "var_pct": -4.07,
-        "financeiro": 1075964392.0,
+        "preco": 103.2,
+        "var_pct": -4,
+        "financeiro": 1357420560.0,
         "logo": "https://icons.brapi.dev/icons/EMBJ3.svg"
       },
       {
         "ticker": "BMGB4",
         "nome": "Banco Bmg",
-        "preco": 4.7,
-        "var_pct": -3.49,
-        "financeiro": 7190060.0,
+        "preco": 4.72,
+        "var_pct": -3.08,
+        "financeiro": 10240512.0,
         "logo": "https://icons.brapi.dev/icons/BMGB4.svg"
-      },
-      {
-        "ticker": "SANB11",
-        "nome": "Bco Santander (brasil)",
-        "preco": 27.22,
-        "var_pct": -3.13,
-        "financeiro": 87177494.0,
-        "logo": "https://icons.brapi.dev/icons/SANB11.svg"
       }
     ],
     "negociadas": [
       {
         "ticker": "PETR4",
         "nome": "Petroleo Brasileiro Petrobras",
-        "preco": 41.43,
-        "var_pct": 2.17,
-        "financeiro": 1672065084.0,
+        "preco": 41.36,
+        "var_pct": 2,
+        "financeiro": 2656461808.0,
         "logo": "https://icons.brapi.dev/icons/PETR4.svg"
       },
       {
         "ticker": "VALE3",
         "nome": "Vale",
-        "preco": 56.93,
-        "var_pct": 3.15,
-        "financeiro": 1387088064.0,
+        "preco": 56.9,
+        "var_pct": 3.1,
+        "financeiro": 2157187110.0,
         "logo": "https://icons.brapi.dev/icons/VALE3.svg"
       },
       {
         "ticker": "EMBJ3",
         "nome": "Embraer",
-        "preco": 103.12,
-        "var_pct": -4.07,
-        "financeiro": 1075964392.0,
+        "preco": 103.2,
+        "var_pct": -4,
+        "financeiro": 1357420560.0,
         "logo": "https://icons.brapi.dev/icons/EMBJ3.svg"
       },
       {
         "ticker": "ITUB4",
         "nome": "Itau Unibanco Holding",
-        "preco": 40.4,
-        "var_pct": 1.66,
-        "financeiro": 974811600.0,
+        "preco": 40.01,
+        "var_pct": 0.68,
+        "financeiro": 1271201721.0,
         "logo": "https://icons.brapi.dev/icons/ITUB4.svg"
       },
       {
         "ticker": "BPAC11",
         "nome": "Bco Btg Pactual",
-        "preco": 52.89,
-        "var_pct": 5.78,
-        "financeiro": 808778013.0,
+        "preco": 52.95,
+        "var_pct": 5.9,
+        "financeiro": 1177570935.0,
         "logo": "https://icons.brapi.dev/icons/BPAC11.svg"
       }
     ]
@@ -443,18 +442,18 @@
   "cripto": [
     {
       "nome": "Bitcoin",
-      "valor": 347157,
-      "var_pct": -1.68
+      "valor": 353427,
+      "var_pct": 0.62
     },
     {
       "nome": "Ethereum",
-      "valor": 9770.88,
-      "var_pct": -1.32
+      "valor": 9872.81,
+      "var_pct": 0.44
     },
     {
       "nome": "Solana",
-      "valor": 405.92,
-      "var_pct": -0.75
+      "valor": 414.02,
+      "var_pct": 1.17
     }
   ],
   "fatos_relevantes": [
@@ -551,101 +550,101 @@
   ],
   "manchetes": [
     {
-      "titulo": "Brasil e Alemanha fortalecem acordo sobre minerais críticos e estratégicos",
-      "link": "https://www.infomoney.com.br/mercados/brasil-e-alemanha-fortalecem-acordo-sobre-minerais-criticos-e-estrategicos/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-25T15:56-03:00"
+      "titulo": "CMN e BC anunciam novas regras para conter endividamento das famílias",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/cmn-e-bc-anunciam-novas-regras-para-conter-endividamento-das-familias",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-25T20:37-03:00"
     },
     {
-      "titulo": "Telecom: JPMorgan revisa projeções e segue preferindo TIM em relação à Vivo",
-      "link": "https://www.infomoney.com.br/mercados/telecom-jpmorgan-revisa-projecoes-e-segue-preferindo-tim-em-relacao-a-vivo/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-25T15:52-03:00"
+      "titulo": "Amcham participará de consulta dos EUA sobre tarifas ao Brasil",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/amcham-participara-de-consulta-dos-eua-sobre-tarifas-ao-brasil",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-25T20:22-03:00"
     },
     {
-      "titulo": "Ibovespa sobe, dólar cai e um novo nome anima a Faria Lima: Luiz Carlos Trabuco na Fazenda?",
+      "titulo": "CMN aperta regras do cartão e limita crédito para cliente que recorre ao rotativo",
+      "link": "https://www.infomoney.com.br/economia/cmn-e-bc-aprovam-medidas-para-conter-riscos-do-endividamento/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-25T19:34-03:00"
+    },
+    {
+      "titulo": "Brasil critica possível novo tarifaço dos EUA e diz que não cederá",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brasil-critica-possivel-novo-tarifaco-dos-eua-e-diz-que-nao-cedera",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-25T19:34-03:00"
+    },
+    {
+      "titulo": "Citigroup avalia retorno à Venezuela após cinco anos e negocia sanções com os EUA",
+      "link": "https://www.infomoney.com.br/mercados/citigroup-avalia-retorno-a-venezuela-apos-cinco-anos-e-negocia-sancoes-com-os-eua/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-25T18:51-03:00"
+    },
+    {
+      "titulo": "Especulações para Fazenda e fiscal: o que fez Ibovespa subir 1,6% após 4 quedas",
+      "link": "https://www.infomoney.com.br/mercados/ibovespa-tem-alta-modesta-com-fiscal-no-foco/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-25T18:49-03:00"
+    },
+    {
+      "titulo": "Wall Street fecha no vermelho com pressão do setor tech — mas Dow Jones tem recuperação surpreendente",
+      "link": "https://www.moneytimes.com.br/wall-street-fecha-no-vermelho-com-pressao-do-setor-tech-mas-dow-jones-tem-recuperacao-surpreendente-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-25T18:43-03:00"
+    },
+    {
+      "titulo": "Ibovespa fecha em alta e recupera os 166 mil pontos com PEC fiscal e expectativas sobre equipe econômica de Lula",
+      "link": "https://www.moneytimes.com.br/ibovespa-fecha-em-alta-e-recupera-os-166-mil-pontos-com-pec-fiscal-e-expectativas-sobre-equipe-economica-de-lula-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-25T18:26-03:00"
+    },
+    {
+      "titulo": "Tesouro IPCA+, Treasurys e S&P 500: Itaú dobra a aposta no exterior e reduz o peso do Brasil nas carteiras para 2027",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/tesouro-ipca-treasurys-e-sp-500-itau-dobra-a-aposta-no-exterior-para-2027-mlim/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-25T17:45-03:00"
+    },
+    {
+      "titulo": "Dólar recua para os R$ 5,80 com expectativas sobre equipe econômica de Lula",
+      "link": "https://www.moneytimes.com.br/dolar-recua-para-os-r-580-com-expectativas-sobre-equipe-economica-de-lula-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-25T17:15-03:00"
+    },
+    {
+      "titulo": "Ibovespa sobe, dólar cai e novo nome anima mercado: Luiz Carlos Trabuco na Fazenda? O banqueiro responde Lula",
       "link": "https://www.seudinheiro.com/2026/bolsa-dolar/ibovespa-sobe-dolar-cai-e-um-novo-nome-anima-a-faria-lima-luiz-carlos-trabuco-na-fazenda-jcav/",
       "fonte": "Seu Dinheiro",
       "quando": "2026-11-25T15:51-03:00"
-    },
-    {
-      "titulo": "Dados da Nielsen trazem boas notícias para ações de Assaí, Grupo Mateus e GPA",
-      "link": "https://www.infomoney.com.br/mercados/dados-da-nielsen-trazem-boas-noticias-para-acoes-de-assai-grupo-mateus-e-gpa/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-25T15:49-03:00"
     },
     {
       "titulo": "O preço de segurar o dólar: Brasil precisa evitar as armadilhas de Argentina e Venezuela no câmbio, alerta UBS WM",
       "link": "https://www.seudinheiro.com/2026/bolsa-dolar/o-preco-de-segurar-o-dolar-brasil-precisa-evitar-as-armadilhas-de-argentina-e-venezuela-no-cambio-alerta-ubs-wm-miql/",
       "fonte": "Seu Dinheiro",
       "quando": "2026-11-25T15:03-03:00"
-    },
-    {
-      "titulo": "Trabuco na Fazenda? Banqueiro ganha força como favorito de Lula e anima o mercado",
-      "link": "https://www.moneytimes.com.br/trabuco-na-fazenda-banqueiro-ganha-forca-como-favorito-de-lula-e-anima-o-mercado-jcav/",
-      "fonte": "Money Times",
-      "quando": "2026-11-25T15:00-03:00"
-    },
-    {
-      "titulo": "Bolsas da Europa fecham em queda com nova proposta tarifária dos EUA e pressão tech",
-      "link": "https://www.moneytimes.com.br/bolsas-da-europa-fecham-em-queda-com-nova-proposta-tarifaria-dos-eua-e-pressao-tech-lmrs/",
-      "fonte": "Money Times",
-      "quando": "2026-11-25T14:12-03:00"
-    },
-    {
-      "titulo": "Mais S&P 500 e menos Ibovespa: a estratégia da Itaú Asset para os investimentos em 2027",
-      "link": "https://www.moneytimes.com.br/mais-sp-500-e-menos-ibovespa-a-estrategia-da-itau-asset-para-os-investimentos-em-2027-mlim/",
-      "fonte": "Money Times",
-      "quando": "2026-11-25T14:04-03:00"
-    },
-    {
-      "titulo": "Vai pingar na conta: fundo imobiliário anuncia ‘dividendo extra’ após venda milionária de imóvel",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/vai-pingar-fundo-imobiliario-anuncia-dividendo-extra-apos-venda-milionaria-de-imovel-igdl/",
-      "fonte": "Seu Dinheiro",
-      "quando": "2026-11-25T13:30-03:00"
-    },
-    {
-      "titulo": "IBGE: coleta seletiva avança e atinge 2.675 municípios brasileiros",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/ibge-coleta-seletiva-avanca-e-atinge-2675-municipios-brasileiros",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-25T10:02-03:00"
-    },
-    {
-      "titulo": "Confaz divulga preços médios de combustíveis para cálculo do ICMS",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/confaz-divulga-precos-medios-de-combustiveis-para-calculo-do-icms",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-25T09:40-03:00"
-    },
-    {
-      "titulo": "Governo libera R$ 3,43 bilhões do Orçamento após ajuste fiscal",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/governo-libera-r-343-bilhoes-do-orcamento-apos-ajuste-fiscal",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-25T07:02-03:00"
     }
   ],
   "oficiais": [
     {
-      "titulo": "BC divulga IBCR de setembro",
-      "link": "https://www.bcb.gov.br/detalhenoticia/21329/nota",
+      "titulo": "Diretor de Regulação do BC dará entrevista coletiva às 11 horas de quinta-feira (26/11) sobre as medidas que tratam dos riscos associados ao endividamento de famílias e empresas",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21332/nota",
       "fonte": "Banco Central",
-      "quando": "2026-11-25T14:31-03:00"
+      "quando": "2026-11-25T18:55-03:00"
     },
     {
-      "titulo": "BC aperfeiçoa norma sobre a participação em operações no mercado aberto",
-      "link": "https://www.bcb.gov.br/detalhenoticia/21326/nota",
+      "titulo": "CMN e BC aprimoram medidas para prevenir riscos associados ao endividamento",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21335/nota",
       "fonte": "Banco Central",
-      "quando": "2026-11-19T18:14-03:00"
+      "quando": "2026-11-25T18:52-03:00"
     },
     {
-      "titulo": "BC publica Pesquisa Trimestral de Condições de Crédito (PTC)",
-      "link": "https://www.bcb.gov.br/detalhenoticia/21324/nota",
+      "titulo": "O Adicional Contracíclico de Capital Principal relativo ao Brasil segue em 0%",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21333/nota",
       "fonte": "Banco Central",
-      "quando": "2026-11-19T14:31-03:00"
+      "quando": "2026-11-25T18:26-03:00"
     }
   ],
   "fiis_total": 309,
   "acoes_total": 343,
-  "fundamentos": "em cache",
+  "fundamentos": 467,
   "erros": [
     "Notícias CVM: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   ]
