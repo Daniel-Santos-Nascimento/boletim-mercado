@@ -1,6 +1,6 @@
 {
   "data_boletim": "2026-11-27",
-  "gerado_em": "2026-11-27T00:32-03:00",
+  "gerado_em": "2026-11-27T15:44-03:00",
   "exemplo": false,
   "juros": {
     "selic": {
@@ -65,7 +65,7 @@
     },
     "cdi": {
       "valor": 13.65,
-      "data": "2026-11-25",
+      "data": "2026-11-26",
       "hist": [
         14.9,
         14.9,
@@ -149,9 +149,9 @@
   },
   "cambio": {
     "dolar": {
-      "valor": 5.7446,
-      "data": "2026-11-26",
-      "var_pct": -2.34,
+      "valor": 5.543,
+      "data": "2026-11-27",
+      "var_pct": -3.51,
       "hist": [
         5.0096,
         5.0441,
@@ -183,13 +183,14 @@
         5.9708,
         5.8573,
         5.8825,
-        5.7446
+        5.7446,
+        5.543
       ]
     },
     "euro": {
-      "valor": 6.3041,
-      "data": "2026-11-26",
-      "var_pct": -2.13,
+      "valor": 6.0646,
+      "data": "2026-11-27",
+      "var_pct": -3.8,
       "hist": [
         5.6092,
         5.6111,
@@ -221,14 +222,15 @@
         6.5076,
         6.426,
         6.4413,
-        6.3041
+        6.3041,
+        6.0646
       ]
     }
   },
   "bolsa": {
     "ibov": {
-      "valor": 176799.84,
-      "var_pct": 6.07,
+      "valor": 176988.27,
+      "var_pct": 0.11,
       "data": "2026-11-27",
       "hist": [
         171006,
@@ -250,12 +252,13 @@
         164796,
         164090,
         166685,
-        176800
+        176800,
+        177045.5625
       ]
     },
     "ifix": {
-      "valor": 3578.98,
-      "var_pct": 1.07,
+      "valor": 3654.59,
+      "var_pct": 2.11,
       "data": "2026-11-27"
     }
   },
@@ -315,146 +318,146 @@
   "destaques": {
     "altas": [
       {
-        "ticker": "MRVE3",
-        "nome": "Mrv Engenharia e Participacoes",
-        "preco": 5.33,
-        "var_pct": 15.37,
-        "financeiro": 159632967.0,
-        "logo": "https://icons.brapi.dev/icons/MRVE3.svg"
-      },
-      {
-        "ticker": "RENT3",
-        "nome": "Localiza Rent A Car",
-        "preco": 33.77,
-        "var_pct": 15.18,
-        "financeiro": 665269000.0000001,
-        "logo": "https://icons.brapi.dev/icons/RENT3.svg"
-      },
-      {
         "ticker": "SIMH3",
         "nome": "Simpar",
-        "preco": 6.85,
-        "var_pct": 14.74,
-        "financeiro": 60492350.0,
+        "preco": 8.18,
+        "var_pct": 19.42,
+        "financeiro": 97981676.0,
         "logo": "https://icons.brapi.dev/icons/SIMH3.svg"
-      },
-      {
-        "ticker": "AZEV3",
-        "nome": "Azevedo e Travassos",
-        "preco": 15,
-        "var_pct": 14.5,
-        "financeiro": 47434500,
-        "logo": "https://icons.brapi.dev/icons/AZEV3.svg"
       },
       {
         "ticker": "LJQQ3",
         "nome": "Lojas Quero-quero",
-        "preco": 1.27,
-        "var_pct": 14.41,
-        "financeiro": 11164824.0,
+        "preco": 1.46,
+        "var_pct": 14.96,
+        "financeiro": 14336032.0,
         "logo": "https://icons.brapi.dev/icons/LJQQ3.svg"
+      },
+      {
+        "ticker": "TEND3",
+        "nome": "Construtora Tenda",
+        "preco": 18.71,
+        "var_pct": 13.33,
+        "financeiro": 100543798.0,
+        "logo": "https://icons.brapi.dev/icons/TEND3.svg"
+      },
+      {
+        "ticker": "ANIM3",
+        "nome": "Anima Holding",
+        "preco": 3.09,
+        "var_pct": 13.19,
+        "financeiro": 25488174.0,
+        "logo": "https://icons.brapi.dev/icons/ANIM3.svg"
+      },
+      {
+        "ticker": "MRVE3",
+        "nome": "Mrv Engenharia e Participacoes",
+        "preco": 5.91,
+        "var_pct": 10.88,
+        "financeiro": 147544923.0,
+        "logo": "https://icons.brapi.dev/icons/MRVE3.svg"
       }
     ],
     "baixas": [
       {
-        "ticker": "LIGT3",
-        "nome": "Light",
-        "preco": 2.78,
-        "var_pct": -13.13,
-        "financeiro": 48218822.0,
-        "logo": "https://icons.brapi.dev/icons/LIGT3.svg"
-      },
-      {
         "ticker": "BRKM5",
         "nome": "Braskem",
-        "preco": 2.17,
-        "var_pct": -3.13,
-        "financeiro": 24694383.0,
+        "preco": 2.06,
+        "var_pct": -5.07,
+        "financeiro": 16798064.0,
         "logo": "https://icons.brapi.dev/icons/BRKM5.svg"
+      },
+      {
+        "ticker": "NATU3",
+        "nome": "Natura Cosmeticos",
+        "preco": 5,
+        "var_pct": -3.85,
+        "financeiro": 106456500,
+        "logo": null
+      },
+      {
+        "ticker": "VBBR3",
+        "nome": "Vibra Energia",
+        "preco": 33.89,
+        "var_pct": -3.72,
+        "financeiro": 418361883.0,
+        "logo": "https://icons.brapi.dev/icons/VBBR3.svg"
+      },
+      {
+        "ticker": "PETR3",
+        "nome": "Petroleo Brasileiro Petrobras",
+        "preco": 47.39,
+        "var_pct": -3.46,
+        "financeiro": 864194562.0,
+        "logo": "https://icons.brapi.dev/icons/PETR3.svg"
       },
       {
         "ticker": "SUZB3",
         "nome": "Suzano",
-        "preco": 54.87,
-        "var_pct": -0.96,
-        "financeiro": 483026097.0,
+        "preco": 53.08,
+        "var_pct": -3.26,
+        "financeiro": 585881116.0,
         "logo": "https://icons.brapi.dev/icons/SUZB3.svg"
-      },
-      {
-        "ticker": "FIQE3",
-        "nome": "Unifique Telecomunicações",
-        "preco": 6.9,
-        "var_pct": 0.29,
-        "financeiro": 13147950.0,
-        "logo": "https://icons.brapi.dev/icons/FIQE3.svg"
-      },
-      {
-        "ticker": "CBAV3",
-        "nome": "Companhia Brasileira de Alumínio",
-        "preco": 11.41,
-        "var_pct": 0.71,
-        "financeiro": 26319447.0,
-        "logo": "https://icons.brapi.dev/icons/CBAV3.svg"
       }
     ],
     "negociadas": [
       {
+        "ticker": "ISAE4",
+        "nome": "Isa Energia Brasil",
+        "preco": 26.73,
+        "var_pct": -1.51,
+        "financeiro": 2268270378.0,
+        "logo": "https://icons.brapi.dev/icons/ISAE4.svg"
+      },
+      {
         "ticker": "PETR4",
         "nome": "Petroleo Brasileiro Petrobras",
-        "preco": 43.19,
-        "var_pct": 4.42,
-        "financeiro": 1880203227.0,
+        "preco": 42.01,
+        "var_pct": -2.73,
+        "financeiro": 2024067006.0,
         "logo": "https://icons.brapi.dev/icons/PETR4.svg"
       },
       {
         "ticker": "BBDC4",
         "nome": "Bco Bradesco",
-        "preco": 15.83,
-        "var_pct": 11.56,
-        "financeiro": 1570958119.0,
+        "preco": 15.9,
+        "var_pct": 0.44,
+        "financeiro": 1946086860.0,
         "logo": "https://icons.brapi.dev/icons/BBDC4.svg"
       },
       {
         "ticker": "BPAC11",
         "nome": "Bco Btg Pactual",
-        "preco": 59.04,
-        "var_pct": 11.5,
-        "financeiro": 1440534672.0,
+        "preco": 60.41,
+        "var_pct": 2.32,
+        "financeiro": 1735102061.0,
         "logo": "https://icons.brapi.dev/icons/BPAC11.svg"
       },
       {
-        "ticker": "ITUB4",
-        "nome": "Itau Unibanco Holding",
-        "preco": 42.56,
-        "var_pct": 6.37,
-        "financeiro": 1181380480.0,
-        "logo": "https://icons.brapi.dev/icons/ITUB4.svg"
-      },
-      {
-        "ticker": "VALE3",
-        "nome": "Vale",
-        "preco": 58.73,
-        "var_pct": 3.22,
-        "financeiro": 1103278288.0,
-        "logo": "https://icons.brapi.dev/icons/VALE3.svg"
+        "ticker": "BBAS3",
+        "nome": "Bco Brasil",
+        "preco": 16.74,
+        "var_pct": 1.21,
+        "financeiro": 1690291367.9999998,
+        "logo": "https://icons.brapi.dev/icons/BBAS3.svg"
       }
     ]
   },
   "cripto": [
     {
       "nome": "Bitcoin",
-      "valor": 348168,
-      "var_pct": -1.36
+      "valor": 330523,
+      "var_pct": -4.98
     },
     {
       "nome": "Ethereum",
-      "valor": 9778.54,
-      "var_pct": -0.85
+      "valor": 9216.44,
+      "var_pct": -5.53
     },
     {
       "nome": "Solana",
-      "valor": 412.79,
-      "var_pct": -0.14
+      "valor": 396.87,
+      "var_pct": -2.93
     }
   ],
   "fatos_relevantes": [
@@ -551,79 +554,85 @@
   ],
   "manchetes": [
     {
-      "titulo": "Anbima diz receber “com satisfação” escolha de Trabuco para a Fazenda",
-      "link": "https://www.infomoney.com.br/mercados/anbima-diz-receber-com-satisfacao-escolha-de-trabuco-para-a-fazenda/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-26T22:17-03:00"
-    },
-    {
-      "titulo": "Como a confirmação de Trabuco na Fazenda deve impactar a Bolsa e o dólar nesta sexta (27)",
-      "link": "https://www.moneytimes.com.br/como-a-confirmacao-de-trabuco-na-fazenda-deve-impactar-a-bolsa-e-o-dolar-nesta-sexta-27/",
-      "fonte": "Money Times",
-      "quando": "2026-11-26T22:02-03:00"
-    },
-    {
-      "titulo": "Mega-Sena não tem ganhador e prêmio acumula para R$ 82 milhões",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/mega-sena-nao-tem-ganhador-e-premio-acumula-para-r-82-milhoes",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-26T21:58-03:00"
-    },
-    {
-      "titulo": "Veja a repercussão da escolha de Trabuco para o Ministério da Fazenda",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/veja-repercussao-da-escolha-de-trabuco-para-o-ministerio-da-fazenda",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-26T21:51-03:00"
-    },
-    {
-      "titulo": "Governo e produtores repudiam crítica de Macron à carne brasileira",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/governo-e-produtores-repudiam-critica-de-macron-carne-brasileira",
-      "fonte": "Agência Brasil",
-      "quando": "2026-11-26T21:13-03:00"
-    },
-    {
-      "titulo": "ANCORD apoia escolha de Trabuco para Fazenda: “tem a credibilidade que momento exige”",
-      "link": "https://www.infomoney.com.br/economia/ancord-apoia-escolha-de-trabuco-para-fazenda-tem-a-credibilidade-que-momento-exige/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-26T20:49-03:00"
-    },
-    {
-      "titulo": "Trabuco muda jogo e BBI eleva Brasil para overweight, vendo alta de 30% para ações",
-      "link": "https://www.infomoney.com.br/mercados/trabuco-muda-jogo-e-bbi-eleva-brasil-para-overweight-vendo-alta-de-30-para-acoes/",
-      "fonte": "InfoMoney",
-      "quando": "2026-11-26T20:32-03:00"
-    },
-    {
-      "titulo": "Ibovespa dispara e recupera os 176 mil pontos com encontro entre Lula e Trabuco",
-      "link": "https://www.moneytimes.com.br/ibovespa-dispara-e-recupera-os-176-mil-pontos-com-encontro-entre-lula-e-trabuco-davs/",
-      "fonte": "Money Times",
-      "quando": "2026-11-26T18:20-03:00"
-    },
-    {
-      "titulo": "Petróleo fecha em alta em meio a escalada das tensões no Oriente Médio",
-      "link": "https://www.moneytimes.com.br/petroleo-fecha-em-alta-em-meio-a-temor-com-oferta-diante-de-escalada-de-tensao-no-oriente-medio-davs/",
-      "fonte": "Money Times",
-      "quando": "2026-11-26T17:33-03:00"
-    },
-    {
-      "titulo": "Tudo no azul: por que nenhuma ação está caindo no Ibovespa hoje?",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/nenhuma-acao-em-queda-no-ibovespa-os-dois-motivos-por-tras-da-festa-de-hoje-bdap/",
+      "titulo": "O efeito Trabuco na bolsa: Citi elege 5 ações para ter no radar com a chegada do banqueiro à Fazenda",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/o-efeito-trabuco-na-bolsa-citi-elege-5-acoes-para-ter-no-radar-com-a-chegada-do-banqueiro-a-fazenda-miql/",
       "fonte": "Seu Dinheiro",
-      "quando": "2026-11-26T15:09-03:00"
+      "quando": "2026-11-27T15:43-03:00"
     },
     {
-      "titulo": "FII estende projeção de dividendos após venda milionária e novos aluguéis no radar; saiba valor",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/fii-estende-projecao-de-dividendos-apos-venda-milionaria-e-novos-alugueis-no-radar-saiba-valor-igdl/",
-      "fonte": "Seu Dinheiro",
-      "quando": "2026-11-26T11:44-03:00"
+      "titulo": "Ibovespa Hoje Ao Vivo: Bolsa tem dia de ajustes, após euforia com Trabuco na Fazenda",
+      "link": "https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-27112026/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-27T15:42-03:00"
     },
     {
-      "titulo": "Ibovespa dispara mais de 6% e dólar chega a bater R$ 5,71 com Trabuco na Fazenda",
-      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/ibovespa-dispara-mais-de-3-e-dolar-recua-a-r-572-o-que-anima-o-mercado-hoje-davs/",
+      "titulo": "FII vende imóvel locado ao Banco do Brasil por R$ 14 milhões; veja lucro",
+      "link": "https://www.infomoney.com.br/onde-investir/fii-vende-imovel-locado-ao-banco-do-brasil-por-r-14-milhoes-veja-lucro/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-27T15:36-03:00"
+    },
+    {
+      "titulo": "Com Trabuco como “fiador”, Lula ganha tempo, mas frustrará quem espera “tesouraço”",
+      "link": "https://www.infomoney.com.br/economia/trabuco-ministerio-fazenda-fiador-lula-ajuste-fiscal/",
+      "fonte": "InfoMoney",
+      "quando": "2026-11-27T15:33-03:00"
+    },
+    {
+      "titulo": "Dividendo não é tudo: FIIs pagam todo mês, mas perdem para o CDI, diz estudo; entenda o que pesa contra os fundos na B3",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/dividendo-nao-e-tudo-fiis-pagam-todo-mes-mas-perdem-para-o-cdi-entenda-o-que-pesa-contra-os-fundos-na-b3-igdl/",
       "fonte": "Seu Dinheiro",
-      "quando": "2026-11-26T11:39-03:00"
+      "quando": "2026-11-27T14:35-03:00"
+    },
+    {
+      "titulo": "Bolsas da Europa fecham em alta com setor tech e expectativas sobre futuro do BCE",
+      "link": "https://www.moneytimes.com.br/bolsas-da-europa-fecham-em-alta-com-setor-tech-e-expectativas-sobre-futuro-do-bce-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-27T14:30-03:00"
+    },
+    {
+      "titulo": "Ferramenta gratuita reúne mudanças para MEIs e pequenos negócios",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/ferramenta-gratuita-reune-mudancas-para-meis-e-pequenos-negocios",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-27T14:26-03:00"
+    },
+    {
+      "titulo": "Ibovespa reduz fôlego após euforia com Trabuco no comando da Fazenda; entenda",
+      "link": "https://www.moneytimes.com.br/ibovespa-reduz-folego-apos-euforia-com-trabuco-no-comando-da-fazenda-davs/",
+      "fonte": "Money Times",
+      "quando": "2026-11-27T13:10-03:00"
+    },
+    {
+      "titulo": "Contas do governo têm superávit de R$ 52,3 bilhões em outubro",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/contas-do-governo-tem-superavit-de-r-523-bilhoes-em-outubro",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-27T12:57-03:00"
+    },
+    {
+      "titulo": "Itaú BBA reduz moagem de cana-de-açúcar no Centro-Sul e vê menor estoque de etanol em 10 anos",
+      "link": "https://www.moneytimes.com.br/itau-bba-reduz-moagem-de-cana-de-acucar-no-centro-sul-e-ve-menor-estoque-de-etanol-em-10-anos-pads/",
+      "fonte": "Money Times",
+      "quando": "2026-11-27T12:27-03:00"
+    },
+    {
+      "titulo": "‘Efeito Trabuco’ leva Ibovespa aos 183 mil pontos e derruba dólar em mais de 4,60%",
+      "link": "https://www.seudinheiro.com/2026/bolsa-dolar/efeito-trabuco-leva-ibovespa-aos-182-mil-pontos-e-derruba-dolar-em-mais-de-3-davs/",
+      "fonte": "Seu Dinheiro",
+      "quando": "2026-11-27T11:48-03:00"
+    },
+    {
+      "titulo": "Famílias mais pobres são 21,7%, mas ficam com apenas 4,7% da renda",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/familias-mais-pobres-sao-217-mas-ficam-com-apenas-47-da-renda",
+      "fonte": "Agência Brasil",
+      "quando": "2026-11-27T10:05-03:00"
     }
   ],
   "oficiais": [
+    {
+      "titulo": "BC divulga Estatísticas Monetárias e de Crédito à imprensa",
+      "link": "https://www.bcb.gov.br/detalhenoticia/21338/nota",
+      "fonte": "Banco Central",
+      "quando": "2026-11-27T08:32-03:00"
+    },
     {
       "titulo": "BC divulga Estatísticas do Setor Externo à imprensa",
       "link": "https://www.bcb.gov.br/detalhenoticia/21331/nota",
@@ -635,18 +644,12 @@
       "link": "https://www.bcb.gov.br/detalhenoticia/21332/nota",
       "fonte": "Banco Central",
       "quando": "2026-11-25T18:55-03:00"
-    },
-    {
-      "titulo": "CMN e BC aprimoram medidas para prevenir riscos associados ao endividamento",
-      "link": "https://www.bcb.gov.br/detalhenoticia/21335/nota",
-      "fonte": "Banco Central",
-      "quando": "2026-11-25T18:52-03:00"
     }
   ],
   "fiis_total": 313,
   "acoes_total": 344,
-  "fundamentos": 467,
+  "fundamentos": "em cache",
   "erros": [
-    "Notícias CVM: 404 Client Error:  for url: https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/RSS"
+    "Notícias CVM: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   ]
 }
